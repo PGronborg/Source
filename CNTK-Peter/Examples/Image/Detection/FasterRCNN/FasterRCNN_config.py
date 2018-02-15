@@ -65,8 +65,8 @@ __C.RESULTS_NMS_CONF_THRESHOLD = 0.0
 
 # Enable plotting of results generally / also plot background boxes / also plot unregressed boxes
 __C.VISUALIZE_RESULTS = True
-__C.DRAW_NEGATIVE_ROIS = True
-__C.DRAW_UNREGRESSED_ROIS = True
+__C.DRAW_NEGATIVE_ROIS = False
+__C.DRAW_UNREGRESSED_ROIS = False
 # only for plotting results: boxes with a score lower than this threshold will be considered background
 __C.RESULTS_BGR_PLOT_THRESHOLD = 0.1
 
