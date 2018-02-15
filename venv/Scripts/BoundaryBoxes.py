@@ -54,34 +54,33 @@ def saveNuclei(mask, scalenum, posneg, classer, texter):
             locTemp = loc + "/Image" + str(numim) + ".jpg"
 
             # Save part of the image
-            cv2.imwrite(locTemp, cv_img[ymin:ymax, xmin:xmax])
+            #cv2.imwrite(locTemp, cv_img[ymin:ymax, xmin:xmax])
 
             # Add coordinates of boundary box to region of interest text and increase counter
-            texter = texter+" "+str(ymin)+" "+str(ymax)+" "+str(xmin)+" "+str(xmax)+" "+str(classer)
+            texter = texter+" "+str(xmin)+" "+str(ymin)+" "+str(xmax)+" "+str(ymax)+" "+str(classer)
             numim = numim + 1
 
     return texter
 
 
 # Open files for write to training file and region of interest file
-trainFile = open("E:/F18_Peter/Data/Ki67/Sampled Test/trainval_nuclei.txt","w")
-roiFile = open("E:/F18_Peter/Data/Ki67/Sampled Test/trainval_nuclei_roi.txt","w")
+trainFile = open("E:/F18_Peter/Data/Ki67/Sampled Test/testval_nuclei.txt","w")
+roiFile = open("E:/F18_Peter/Data/Ki67/Sampled Test/testval_nuclei_roi.txt","w")
 
 # Predefine number
 countIm = 0
 
 # Run through all folders and all images in all folders
-for folderNum in range(0, 15):
+for folderNum in range(10, 15):
     for imgNum in range(0, 32):
 
         # Make path for image and mask
-        img_path = "E:/F18_Peter/Data/Ki67/Sampled Test/"+str(folderNum)+"/Features/FeatureImage"+str(imgNum)+".tif"
-        mask_path = "E:/F18_Peter/Data/Ki67/Sampled Test/"+str(folderNum)+"/Labels/LabelImage"+str(imgNum)+".tif"
+        img_path = 'E:/F18_Peter/Data/Ki67/Sampled Test/'+str(folderNum)+"/Features/FeatureImage"+str(imgNum)+".tif"
+        mask_path = 'E:/F18_Peter/Data/Ki67/Sampled Test/'+str(folderNum)+"/Labels/LabelImage"+str(imgNum)+".tif"
 
         # Save path to training file
-        textsave = str(countIm)+"\t"+img_path+"\t0\n"
+        textsave = str(countIm)+"\t"+str(folderNum)+"/Features/FeatureImage"+str(imgNum)+".tif\t0\n"
         trainFile.write(textsave)
-        countIm = countIm + 1
 
         # Read image and mask file
         cv_img = cv2.imread(img_path)
@@ -101,6 +100,7 @@ for folderNum in range(0, 15):
 
         # Start text for region of interest file
         text_roi = str(countIm)+" |roiAndLabel"
+        countIm = countIm + 1
 
         # Get region of interest for positive and negative nuclei
         text_roi = saveNuclei(mask_negative, 25, 'Negative',1,text_roi)
