@@ -13,7 +13,7 @@ cfg = __C
 
 # data set config
 __C.DATA.DATASET = "Grocery"
-__C.DATA.MAP_FILE_PATH = "../../SampledTest"
+__C.DATA.MAP_FILE_PATH = "../SampledTest"
 __C.DATA.CLASS_MAP_FILE = "class_map.txt"
 __C.DATA.TRAIN_MAP_FILE = "trainval_nuclei.txt"
 __C.DATA.TRAIN_ROI_FILE = "trainval_nuclei_roi.txt"
