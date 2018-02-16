@@ -13,7 +13,7 @@ cfg = __C
 
 # model config
 __C.MODEL.BASE_MODEL = "AlexNet"
-__C.MODEL.BASE_MODEL_FILE = "AlexNet_ImageNet_Caffe.model"
+__C.MODEL.BASE_MODEL_FILE = "AlexNet_ImageNet_CNTK.model"
 __C.MODEL.IMG_PAD_COLOR = [114, 114, 114]
 __C.MODEL.FEATURE_NODE_NAME = "data"
 __C.MODEL.LAST_CONV_NODE_NAME = "relu5"
