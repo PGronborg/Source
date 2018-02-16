@@ -21,8 +21,8 @@ def get_configuration():
     # for Pascal VOC 2007 data set use: from utils.configs.Pascal_config import cfg as dataset_cfg
     # for the Grocery data set use:     from utils.configs.Grocery_config import cfg as dataset_cfg
     #from utils.configs.Grocery_config import cfg as dataset_cfg
-	from utils.configs.Nuclei_config import cfg as dataset_cfg
-	
+    from utils.configs.Nuclei_config import cfg as dataset_cfg
+
     return merge_configs([detector_cfg, network_cfg, dataset_cfg])
 
 # trains and evaluates a Fast R-CNN model.
