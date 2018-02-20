@@ -93,7 +93,7 @@ __C.TRAIN.RPN_FG_FRACTION = 0.5
 # Total number of examples
 __C.TRAIN.RPN_BATCHSIZE = 256
 # NMS threshold used on RPN proposals
-__C.TRAIN.RPN_NMS_THRESH = 0.7
+__C.TRAIN.RPN_NMS_THRESH = 0.5
 # Number of top scoring boxes to keep before apply NMS to RPN proposals
 __C.TRAIN.RPN_PRE_NMS_TOP_N = 12000
 # Number of top scoring boxes to keep after applying NMS to RPN proposals
@@ -125,7 +125,7 @@ __C.BBOX_NORMALIZE_STDS = (0.1, 0.1, 0.2, 0.2)
 __C.TEST = edict()
 
 ## NMS threshold used on RPN proposals
-__C.TEST.RPN_NMS_THRESH = 0.7
+__C.TEST.RPN_NMS_THRESH = 0.6
 ## Number of top scoring boxes to keep before apply NMS to RPN proposals
 __C.TEST.RPN_PRE_NMS_TOP_N = 6000
 ## Number of top scoring boxes to keep after applying NMS to RPN proposals
@@ -142,7 +142,7 @@ __C.TEST.RPN_MIN_SIZE = 16
 __C.RND_SEED = 3
 
 # Use GPU implementation of non-maximum suppression
-__C.USE_GPU_NMS = False
+__C.USE_GPU_NMS = True
 
 # Default GPU device id
 __C.GPU_ID = 0
