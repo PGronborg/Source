@@ -12,7 +12,7 @@ __C.DATA = edict()
 cfg = __C
 
 # data set config
-__C.DATA.DATASET = "Grocery"
+__C.DATA.DATASET = "Nuclei"
 __C.DATA.MAP_FILE_PATH = "../SampledTest"
 __C.DATA.CLASS_MAP_FILE = "class_map.txt"
 __C.DATA.TRAIN_MAP_FILE = "trainval_nuclei.txt"
@@ -21,7 +21,7 @@ __C.DATA.TEST_MAP_FILE = "testval_nuclei.txt"
 __C.DATA.TEST_ROI_FILE = "testval_nuclei_roi.txt"
 __C.DATA.NUM_TRAIN_IMAGES = 320
 __C.DATA.NUM_TEST_IMAGES = 160
-__C.DATA.PROPOSAL_LAYER_SCALES = [8, 8, 8]
+__C.DATA.PROPOSAL_LAYER_SCALES = [2, 4, 8]
 
 # overwriting proposal parameters for Fast R-CNN
 # minimum relative width/height of an ROI
