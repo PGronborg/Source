@@ -46,8 +46,8 @@ __C.BBOX_NORMALIZE_STDS = (0.1, 0.1, 0.2, 0.2)
 
 # Maximum number of ground truth annotations per image
 __C.INPUT_ROIS_PER_IMAGE = 50
-__C.IMAGE_WIDTH = 850
-__C.IMAGE_HEIGHT = 850
+__C.IMAGE_WIDTH = 256
+__C.IMAGE_HEIGHT = 256
 
 # Use horizontally-flipped images during training?
 __C.TRAIN.USE_FLIPPED = True
