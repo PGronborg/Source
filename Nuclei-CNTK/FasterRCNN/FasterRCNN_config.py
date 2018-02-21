@@ -51,8 +51,8 @@ __C.CNTK.FRCN_LR_PER_SAMPLE = [0.001] * 6 + [0.0001] * 2
 
 # Maximum number of ground truth annotations per image
 __C.INPUT_ROIS_PER_IMAGE = 50
-__C.IMAGE_WIDTH = 800
-__C.IMAGE_HEIGHT = 800
+__C.IMAGE_WIDTH = 256
+__C.IMAGE_HEIGHT = 256
 
 # Sigma parameter for smooth L1 loss in the RPN and the detector (DET)
 __C.SIGMA_RPN_L1 = 3.0
@@ -85,7 +85,7 @@ __C.TRAIN_CONV_LAYERS = True
 # IOU >= thresh: positive example
 __C.TRAIN.RPN_POSITIVE_OVERLAP = 0.7
 # IOU < thresh: negative example
-__C.TRAIN.RPN_NEGATIVE_OVERLAP = 0.3
+__C.TRAIN.RPN_NEGATIVE_OVERLAP = 0.5
 # If an anchor statisfied by positive and negative conditions set to negative
 __C.TRAIN.RPN_CLOBBER_POSITIVES = False
 # Max number of foreground examples
@@ -125,13 +125,13 @@ __C.BBOX_NORMALIZE_STDS = (0.1, 0.1, 0.2, 0.2)
 __C.TEST = edict()
 
 ## NMS threshold used on RPN proposals
-__C.TEST.RPN_NMS_THRESH = 0.6
+__C.TEST.RPN_NMS_THRESH = 0.5
 ## Number of top scoring boxes to keep before apply NMS to RPN proposals
 __C.TEST.RPN_PRE_NMS_TOP_N = 6000
 ## Number of top scoring boxes to keep after applying NMS to RPN proposals
 __C.TEST.RPN_POST_NMS_TOP_N = 300
 # Proposal height and width both need to be greater than RPN_MIN_SIZE (at orig image scale)
-__C.TEST.RPN_MIN_SIZE = 16
+__C.TEST.RPN_MIN_SIZE = 8
 
 
 #
