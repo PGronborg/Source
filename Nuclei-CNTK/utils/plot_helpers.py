@@ -67,7 +67,7 @@ def visualize_detections(img_path, roi_coords, roi_labels, roi_scores,
                          draw_negative_rois = False, decision_threshold = 0.0):
     # read and resize image
     imgWidth, imgHeight = imWidthHeight(img_path)
-    scale = 800.0 / max(imgWidth, imgHeight)
+    scale = 256.0 / max(imgWidth, imgHeight)
     imgHeight = int(imgHeight * scale)
     imgWidth = int(imgWidth * scale)
     if imgWidth > imgHeight:
@@ -82,7 +82,7 @@ def visualize_detections(img_path, roi_coords, roi_labels, roi_scores,
     rgb_img = cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB)
     resized = cv2.resize(rgb_img, (imgWidth, imgHeight), interpolation=cv2.INTER_NEAREST)
     result_img = cv2.copyMakeBorder(resized,v_border,v_border,h_border,h_border,cv2.BORDER_CONSTANT,value=PAD_COLOR)
-    rect_scale = 800 / pad_width
+    rect_scale = 256 / pad_width
 
     assert(len(roi_labels) == len(roi_coords))
     if roi_scores is not None:
