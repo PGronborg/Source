@@ -108,10 +108,10 @@ def visualize_detections(img_path, roi_coords, roi_labels, roi_scores,
                 color = getColorsPalette()[label]
 
             rect = [(rect_scale * i) for i in roi_coords[roiIndex]]
-            rect[0] = int(max(0, min(pad_width, rect[0]-10)))
-            rect[1] = int(max(0, min(pad_height, rect[1]-10)))
-            rect[2] = int(max(0, min(pad_width, rect[2]+10)))
-            rect[3] = int(max(0, min(pad_height, rect[3]+10)))
+            rect[0] = int(max(0, min(pad_width, rect[0]+10)))
+            rect[1] = int(max(0, min(pad_height, rect[1]+10)))
+            rect[2] = int(max(0, min(pad_width, rect[2]-10)))
+            rect[3] = int(max(0, min(pad_height, rect[3]-10)))
 
             # draw in higher iterations only the detections
             if iter == 0 and draw_negative_rois:
