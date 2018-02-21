@@ -22,7 +22,7 @@ __C.CNTK.FORCE_DETERMINISTIC = False
 # set to 'True' to run only a single epoch
 __C.CNTK.FAST_MODE = False
 # Debug parameters
-__C.CNTK.DEBUG_OUTPUT = False
+__C.CNTK.DEBUG_OUTPUT = True
 __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 
 # Learning parameters
@@ -46,8 +46,8 @@ __C.BBOX_NORMALIZE_STDS = (0.1, 0.1, 0.2, 0.2)
 
 # Maximum number of ground truth annotations per image
 __C.INPUT_ROIS_PER_IMAGE = 50
-__C.IMAGE_WIDTH = 256
-__C.IMAGE_HEIGHT = 256
+__C.IMAGE_WIDTH = 850
+__C.IMAGE_HEIGHT = 850
 
 # Use horizontally-flipped images during training?
 __C.TRAIN.USE_FLIPPED = True
@@ -112,7 +112,7 @@ __C.roi_grid_aspect_ratios = [1.0, 2.0, 0.5]
 __C.RND_SEED = 3
 
 # Use GPU implementation of non-maximum suppression
-__C.USE_GPU_NMS = False
+__C.USE_GPU_NMS = True
 
 # Default GPU device id
 __C.GPU_ID = 0
