@@ -33,7 +33,7 @@ from FastRCNN.FastRCNN_train import clone_model, clone_conv_layers, create_fast_
     create_detection_losses
 
 def prepare(cfg, use_arg_parser=True):
-    cfg.MB_SIZE = 1
+    cfg.MB_SIZE = 5
     cfg.NUM_CHANNELS = 3
     cfg.OUTPUT_PATH = os.path.join(abs_path, "Output")
     cfg["DATA"].MAP_FILE_PATH = os.path.join(abs_path, cfg["DATA"].MAP_FILE_PATH)
