@@ -16,7 +16,7 @@ def SmoothL1Loss(sigma, bbox_pred, bbox_targets, bbox_inside_weights, bbox_outsi
                         |x| - 0.5 / sigma^2,    otherwise
     """
     sigma2 = sigma * sigma
-
+    print(len(bbox_pred))
     inside_mul_abs = [None]*4
     inside_mul_abs[0] = C.abs(C.element_times(bbox_inside_weights[0], C.minus(bbox_pred[0], bbox_targets[0])))
     print(inside_mul_abs[0])
