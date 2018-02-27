@@ -17,12 +17,31 @@ def SmoothL1Loss(sigma, bbox_pred, bbox_targets, bbox_inside_weights, bbox_outsi
     """
     sigma2 = sigma * sigma
 
-    inside_mul_abs = C.abs(C.element_times(bbox_inside_weights, C.minus(bbox_pred, bbox_targets)))
+    inside_mul_abs[0] = C.abs(C.element_times(bbox_inside_weights[0], C.minus(bbox_pred[0], bbox_targets[0])))
+    inside_mul_abs[1] = C.abs(C.element_times(bbox_inside_weights[1], C.minus(bbox_pred[1], bbox_targets[1])))
+    inside_mul_abs[2] = C.abs(C.element_times(bbox_inside_weights[2], C.minus(bbox_pred[2], bbox_targets[2])))
+    inside_mul_abs[3] = C.abs(C.element_times(bbox_inside_weights[3], C.minus(bbox_pred[3], bbox_targets[3])))
 
     smooth_l1_sign = C.less(inside_mul_abs, 1.0 / sigma2)
     smooth_l1_option1 = C.element_times(C.element_times(inside_mul_abs, inside_mul_abs), 0.5 * sigma2)
     smooth_l1_option2 = C.minus(inside_mul_abs, 0.5 / sigma2)
     smooth_l1_result = C.plus(C.element_times(smooth_l1_option1, smooth_l1_sign),
                               C.element_times(smooth_l1_option2, C.minus(1.0, smooth_l1_sign)))
+
+    return C.element_times(bbox_outside_weights, smooth_l1_result)
+
+def SmoothL2Loss(sigma, bbox_pred, bbox_targets, bbox_inside_weights, bbox_outside_weights):
+    """
+        From https://github.com/smallcorgi/Faster-RCNN_TF/blob/master/lib/fast_rcnn/train.py
+
+        ResultLoss = outside_weights * SmoothL1(inside_weights * (bbox_pred - bbox_targets))
+        SmoothL1(x) = 0.5 * (sigma * x)^2,    if |x| < 1 / sigma^2
+                        |x| - 0.5 / sigma^2,    otherwise
+    """
+    sigma2 = sigma * sigma
+
+    inside_mul_abs = C.abs(C.element_times(bbox_inside_weights, C.minus(bbox_pred, bbox_targets)))
+
+    smooth_l1_result = C.element_times(C.element_times(inside_mul_abs, inside_mul_abs), sigma2)
 
     return C.element_times(bbox_outside_weights, smooth_l1_result)
