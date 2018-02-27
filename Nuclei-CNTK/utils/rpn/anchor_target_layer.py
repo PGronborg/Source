@@ -221,7 +221,7 @@ class AnchorTargetLayer(UserFunction):
         bbox_targets = _compute_targets(anchors, gt_boxes[argmax_overlaps, :])
 
         bbox_inside_weights = np.zeros((len(inds_inside), 4), dtype=np.float32)
-        bbox_inside_weights[labels == 1, :] = np.array((1.0, 1.0, 1.0, 1.0))
+        bbox_inside_weights[labels == 1, :] = np.array((4.0, 4.0, 1.0, 1.0))
 
         if DEBUG:
             self._sums += bbox_targets[labels == 1, :].sum(axis=0)
