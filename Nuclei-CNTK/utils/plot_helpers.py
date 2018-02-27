@@ -108,17 +108,22 @@ def visualize_detections(img_path, roi_coords, roi_labels, roi_scores,
                 color = getColorsPalette()[label]
 
             rect = [(rect_scale * i) for i in roi_coords[roiIndex]]
-            rect[0] = int(max(0, min(pad_width, rect[0]+20)))
-            rect[1] = int(max(0, min(pad_height, rect[1]+20)))
-            rect[2] = int(max(0, min(pad_width, rect[2]-20)))
-            rect[3] = int(max(0, min(pad_height, rect[3]-20)))
+            rect[0] = int(max(0, min(pad_width, rect[0]+(rect[2]-rect[0])/2-1)))
+            rect[1] = int(max(0, min(pad_height, rect[1]+(rect[3]-rect[1])/2-1)))
+            rect[2] = int(max(0, min(pad_width, rect[0]+(rect[2]-rect[0])/2+1)))
+            rect[3] = int(max(0, min(pad_height, rect[1]+(rect[3]-rect[1])/2+1)))
 
             # draw in higher iterations only the detections
             if iter == 0 and draw_negative_rois:
                 drawRectangles(result_img, [rect], color=color, thickness=thickness)
-            elif iter==1 and label > 0:
+            elif iter==1 and label == 1:
                 thickness = 1
-                drawRectangles(result_img, [rect], color=color, thickness=thickness)
+                if round(score,2)>0.70:
+                    drawRectangles(result_img, [rect], color=color, thickness=thickness)
+            elif iter==1 and label == 2:
+                thickness = 1
+                if round(score,2)>0.60:
+                    drawRectangles(result_img, [rect], color=color, thickness=thickness)
             elif iter == 2 and label > 0:
                 try:
                     font = ImageFont.truetype(available_font, 18)
@@ -127,7 +132,7 @@ def visualize_detections(img_path, roi_coords, roi_labels, roi_scores,
                 #text = classes[label]
                 if roi_scores is not None:
                     text = str(round(score, 2))
-                result_img = drawText(result_img, (rect[0],rect[1]), text, color = (255,255,255), font = font, colorBackground=color)
+                #result_img = drawText(result_img, (rect[0],rect[1]), text, color = (255,255,255), font = font, colorBackground=color)
     return result_img
 
 def plot_test_set_results(evaluator, num_images_to_plot, results_base_path, cfg):
