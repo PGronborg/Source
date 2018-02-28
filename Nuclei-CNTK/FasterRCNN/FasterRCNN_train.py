@@ -573,6 +573,5 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
             progress_printer.update_with_trainer(trainer, with_metric=True)  # log progress
             if sample_count % 100 == 0:
                 #print("Processed {} samples".format(sample_count))
-
         progress_printer.epoch_summary(with_metric=True)
 
