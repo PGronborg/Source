@@ -13,6 +13,7 @@ import numpy.random as npr
 from utils.rpn.generate_anchors import generate_anchors
 from utils.rpn.bbox_transform import bbox_transform
 from utils.cython_modules.cython_bbox import bbox_overlaps
+from FasterRCNN_config import cfg
 
 DEBUG = False
 
@@ -221,7 +222,7 @@ class AnchorTargetLayer(UserFunction):
         bbox_targets = _compute_targets(anchors, gt_boxes[argmax_overlaps, :])
 
         bbox_inside_weights = np.zeros((len(inds_inside), 4), dtype=np.float32)
-        bbox_inside_weights[labels == 1, :] = np.array((4.0, 4.0, 1.0, 1.0))
+        bbox_inside_weights[labels == 1, :] = np.array((cfg.WEIGHT_CENTER, cfg.WEIGHT_CENTER, 1.0, 1.0))
 
         if DEBUG:
             self._sums += bbox_targets[labels == 1, :].sum(axis=0)
