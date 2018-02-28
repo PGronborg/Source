@@ -1,0 +1,33 @@
+Using base model:   VGG16
+lr_per_sample:      [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 1e-05]
+Training model for 20 epochs.
+Training 136449349 parameters in 32 parameter tensors.
+Finished Epoch[1 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 63.194s (  0.0 samples/s);
+Finished Epoch[2 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 55.637s (  0.0 samples/s);
+Finished Epoch[3 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 49.969s (  0.0 samples/s);
+Finished Epoch[4 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 51.403s (  0.0 samples/s);
+Finished Epoch[5 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 48.010s (  0.0 samples/s);
+Finished Epoch[6 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 47.564s (  0.0 samples/s);
+Finished Epoch[7 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 47.826s (  0.0 samples/s);
+Finished Epoch[8 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 46.809s (  0.0 samples/s);
+Finished Epoch[9 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 46.818s (  0.0 samples/s);
+Finished Epoch[10 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 47.352s (  0.0 samples/s);
+Finished Epoch[11 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 46.766s (  0.0 samples/s);
+Finished Epoch[12 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 49.803s (  0.0 samples/s);
+Finished Epoch[13 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 49.249s (  0.0 samples/s);
+Finished Epoch[14 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 45.213s (  0.0 samples/s);
+Finished Epoch[15 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 43.658s (  0.0 samples/s);
+Finished Epoch[16 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 44.353s (  0.0 samples/s);
+Finished Epoch[17 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 44.259s (  0.0 samples/s);
+Finished Epoch[18 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 46.326s (  0.0 samples/s);
+Finished Epoch[19 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 46.610s (  0.0 samples/s);
+Finished Epoch[20 of 20]: [Training] loss = 0.000000 * 0, metric = 0.00% * 0 46.218s (  0.0 samples/s);
+creating eval model
+Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
+Evaluating Faster R-CNN model for 160 images.
+Processed 100 samples
+Number of rois before non-maximum suppression: 22442
+Number of rois  after non-maximum suppression: 4594
+AP for        Negative = 0.5601
+AP for        Positive = 0.5823
+Mean AP = 0.5712
