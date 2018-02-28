@@ -563,7 +563,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     else:
         input_map[od_minibatch_source.dims_si] = dims_input
 
-    progress_printer = ProgressPrinter(freq = None,tag='Training', num_epochs=epochs_to_train, gen_heartbeat=True, distributed_freq = None, test_freq = None,)
+    progress_printer = ProgressPrinter(freq = 1000000000,tag='Training', num_epochs=epochs_to_train, gen_heartbeat=True, distributed_freq = None, test_freq = None,)
     for epoch in range(epochs_to_train):       # loop over epochs
         sample_count = 0
         while sample_count < cfg["DATA"].NUM_TRAIN_IMAGES:  # loop over minibatches in the epoch
