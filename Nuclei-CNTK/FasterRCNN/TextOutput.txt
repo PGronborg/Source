@@ -5,186 +5,127 @@ Training 136449349 parameters in 32 parameter tensors.
 PROGRESS: 0.00%
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[1 of 20]: [Training] loss = 1.130175 * 320, metric = 22.72% * 320 68.987s (  4.6 samples/s);
 PROGRESS: 0.00%
+Finished Epoch[1 of 20]: [Training] loss = 1.150516 * 320, metric = 22.98% * 320 67.137s (  4.8 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[2 of 20]: [Training] loss = 0.813986 * 320, metric = 17.53% * 320 47.708s (  6.7 samples/s);
 PROGRESS: 0.00%
+Finished Epoch[2 of 20]: [Training] loss = 0.824424 * 320, metric = 17.31% * 320 53.061s (  6.0 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
 PROGRESS: 0.00%
-Finished Epoch[3 of 20]: [Training] loss = 0.663928 * 320, metric = 15.10% * 320 44.274s (  7.2 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[3 of 20]: [Training] loss = 0.675060 * 320, metric = 15.32% * 320 49.326s (  6.5 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
 PROGRESS: 0.00%
-Finished Epoch[4 of 20]: [Training] loss = 0.608900 * 320, metric = 14.52% * 320 49.528s (  6.5 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[4 of 20]: [Training] loss = 0.613995 * 320, metric = 14.42% * 320 52.667s (  6.1 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[5 of 20]: [Training] loss = 0.568263 * 320, metric = 13.77% * 320 48.441s (  6.6 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[5 of 20]: [Training] loss = 0.572797 * 320, metric = 13.87% * 320 49.013s (  6.5 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[6 of 20]: [Training] loss = 0.532569 * 320, metric = 13.31% * 320 51.198s (  6.3 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[6 of 20]: [Training] loss = 0.539496 * 320, metric = 13.41% * 320 48.150s (  6.6 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[7 of 20]: [Training] loss = 0.504783 * 320, metric = 12.65% * 320 47.506s (  6.7 samples/s);
 PROGRESS: 0.00%
+Finished Epoch[7 of 20]: [Training] loss = 0.513906 * 320, metric = 12.50% * 320 48.565s (  6.6 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[8 of 20]: [Training] loss = 0.481487 * 320, metric = 12.21% * 320 47.090s (  6.8 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[8 of 20]: [Training] loss = 0.483177 * 320, metric = 11.90% * 320 48.149s (  6.6 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[9 of 20]: [Training] loss = 0.460391 * 320, metric = 11.82% * 320 47.177s (  6.8 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[9 of 20]: [Training] loss = 0.471136 * 320, metric = 11.79% * 320 48.023s (  6.7 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[10 of 20]: [Training] loss = 0.446706 * 320, metric = 11.41% * 320 47.384s (  6.8 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[10 of 20]: [Training] loss = 0.455880 * 320, metric = 11.36% * 320 47.725s (  6.7 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[11 of 20]: [Training] loss = 0.469263 * 320, metric = 11.77% * 320 46.658s (  6.9 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[11 of 20]: [Training] loss = 0.479095 * 320, metric = 11.59% * 320 47.467s (  6.7 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[12 of 20]: [Training] loss = 0.422757 * 320, metric = 11.10% * 320 46.803s (  6.8 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[12 of 20]: [Training] loss = 0.435632 * 320, metric = 11.28% * 320 47.919s (  6.7 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[13 of 20]: [Training] loss = 0.440514 * 320, metric = 11.30% * 320 46.736s (  6.8 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[13 of 20]: [Training] loss = 0.449857 * 320, metric = 11.38% * 320 47.458s (  6.7 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[14 of 20]: [Training] loss = 0.416478 * 320, metric = 10.87% * 320 49.272s (  6.5 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[14 of 20]: [Training] loss = 0.432600 * 320, metric = 11.07% * 320 45.520s (  7.0 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[15 of 20]: [Training] loss = 0.424243 * 320, metric = 10.90% * 320 42.671s (  7.5 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[15 of 20]: [Training] loss = 0.441835 * 320, metric = 11.20% * 320 44.212s (  7.2 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
 PROGRESS: 0.00%
-Finished Epoch[16 of 20]: [Training] loss = 0.412078 * 320, metric = 10.70% * 320 44.353s (  7.2 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[16 of 20]: [Training] loss = 0.429374 * 320, metric = 10.92% * 320 44.339s (  7.2 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[17 of 20]: [Training] loss = 0.418567 * 320, metric = 10.73% * 320 49.191s (  6.5 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[17 of 20]: [Training] loss = 0.436999 * 320, metric = 11.10% * 320 46.197s (  6.9 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 300 samples
-Finished Epoch[18 of 20]: [Training] loss = 0.410254 * 320, metric = 10.77% * 320 46.764s (  6.8 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[18 of 20]: [Training] loss = 0.430730 * 320, metric = 11.07% * 320 47.545s (  6.7 samples/s);
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
 PROGRESS: 0.00%
-Finished Epoch[19 of 20]: [Training] loss = 0.409213 * 320, metric = 10.54% * 320 45.862s (  7.0 samples/s);
 PROGRESS: 0.00%
-Processed 100 samples
+Finished Epoch[19 of 20]: [Training] loss = 0.429941 * 320, metric = 10.80% * 320 47.308s (  6.8 samples/s);
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-Processed 200 samples
 PROGRESS: 0.00%
-Processed 300 samples
 PROGRESS: 0.00%
-Finished Epoch[20 of 20]: [Training] loss = 0.406585 * 320, metric = 10.65% * 320 49.247s (  6.5 samples/s);
+PROGRESS: 0.00%
+Finished Epoch[20 of 20]: [Training] loss = 0.418779 * 320, metric = 10.78% * 320 47.624s (  6.7 samples/s);
 creating eval model
 Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
 Evaluating Faster R-CNN model for 160 images.
 Processed 100 samples
-Number of rois before non-maximum suppression: 21083
-Number of rois  after non-maximum suppression: 4559
-AP for        Negative = 0.5541
-AP for        Positive = 0.5240
-Mean AP = 0.5390
+Number of rois before non-maximum suppression: 22577
+Number of rois  after non-maximum suppression: 4727
+AP for        Positive = 0.5241
+AP for        Negative = 0.5712
+Mean AP = 0.5476
 Plotting results from for 100 images.
