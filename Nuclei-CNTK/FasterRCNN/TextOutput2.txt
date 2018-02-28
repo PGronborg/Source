@@ -8,14 +8,13 @@ PROGRESS: 0.00%
 PROGRESS: 0.00%
 PROGRESS: 0.00%
 PROGRESS: 0.00%
-PROGRESS: 0.00%
-Finished Epoch[1 of 1]: [Training] loss = 1.141538 * 320, metric = 22.75% * 320 66.839s (  4.8 samples/s);
+Finished Epoch[1 of 1]: [Training] loss = 1.145958 * 320, metric = 22.83% * 320 59.996s (  5.3 samples/s);
 creating eval model
 Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
 Evaluating Faster R-CNN model for 160 images.
 Processed 100 samples
-Number of rois before non-maximum suppression: 22071
-Number of rois  after non-maximum suppression: 7001
-AP for        Positive = 0.6345
-AP for        Negative = 0.5547
-Mean AP = 0.5946
+Number of rois before non-maximum suppression: 18169
+Number of rois  after non-maximum suppression: 5882
+AP for        Negative = 0.5264
+AP for        Positive = 0.5430
+Mean AP = 0.5347
