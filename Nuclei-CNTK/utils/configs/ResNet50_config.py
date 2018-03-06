@@ -13,7 +13,7 @@ cfg = __C
 
 # model config
 __C.MODEL.BASE_MODEL = "ResNet50"
-__C.MODEL.BASE_MODEL_FILE = "ResNet50_ImageNet_CNTK.model"
+__C.MODEL.BASE_MODEL_FILE = "ResNet50_ImageNet_Caffe.model"
 __C.MODEL.IMG_PAD_COLOR = [103, 116, 123]
 __C.MODEL.FEATURE_NODE_NAME = "data"
 __C.MODEL.LAST_CONV_NODE_NAME = "scale5c_branch2c"
