@@ -22,7 +22,7 @@ __C.MODEL.POOL_NODE_NAME = "pool5"
 __C.MODEL.LAST_HIDDEN_NODE_NAME = "res2c_relu"
 __C.MODEL.FEATURE_STRIDE = 16
 __C.MODEL.RPN_NUM_CHANNELS = 512
-__C.MODEL.ROI_DIM = 6
+__C.MODEL.ROI_DIM = 224
 ## Try changing `LR_FACTOR` parameters, if the training does not converge. 
 ## Ex.) For Grocery dataset, it may be better to set it to 0.1
 __C.MODEL.E2E_LR_FACTOR = 1.0
