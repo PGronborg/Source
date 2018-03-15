@@ -50,7 +50,7 @@ __C.CNTK.FRCN_EPOCHS = 8
 __C.CNTK.FRCN_LR_PER_SAMPLE = [0.001] * 6 + [0.0001] * 2
 
 # Maximum number of ground truth annotations per image
-__C.INPUT_ROIS_PER_IMAGE = 50
+__C.INPUT_ROIS_PER_IMAGE = 150
 __C.IMAGE_WIDTH = 256
 __C.IMAGE_HEIGHT = 256
 

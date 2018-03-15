@@ -19,9 +19,9 @@ __C.DATA.TRAIN_MAP_FILE = "train_256_20XX/trainval_nuclei.txt"
 __C.DATA.TRAIN_ROI_FILE = "train_256_20XX/trainval_nuclei_roi.txt"
 __C.DATA.TEST_MAP_FILE = "test_256_20XX/testval_nuclei.txt"
 __C.DATA.TEST_ROI_FILE = "test_256_20XX/testval_nuclei_roi.txt"
-__C.DATA.NUM_TRAIN_IMAGES = 320
-__C.DATA.NUM_TEST_IMAGES = 160
-__C.DATA.PROPOSAL_LAYER_SCALES = [2, 4, 8]
+__C.DATA.NUM_TRAIN_IMAGES = 347400
+__C.DATA.NUM_TEST_IMAGES = 50300
+__C.DATA.PROPOSAL_LAYER_SCALES = [2, 3, 4]
 
 # overwriting proposal parameters for Fast R-CNN
 # minimum relative width/height of an ROI
