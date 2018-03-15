@@ -12,13 +12,13 @@ __C.DATA = edict()
 cfg = __C
 
 # data set config
-__C.DATA.DATASET = "NucleiVGG16"
-__C.DATA.MAP_FILE_PATH = "/scratch/s124262"
+__C.DATA.DATASET = "NucleiResNet101"
+__C.DATA.MAP_FILE_PATH = "../SampledTest"
 __C.DATA.CLASS_MAP_FILE = "class_map.txt"
-__C.DATA.TRAIN_MAP_FILE = "train_256_20XX/trainval_nuclei.txt"
-__C.DATA.TRAIN_ROI_FILE = "train_256_20XX/trainval_nuclei_roi.txt"
-__C.DATA.TEST_MAP_FILE = "test_256_20XX/testval_nuclei.txt"
-__C.DATA.TEST_ROI_FILE = "test_256_20XX/testval_nuclei_roi.txt"
+__C.DATA.TRAIN_MAP_FILE = "trainval_nuclei.txt"
+__C.DATA.TRAIN_ROI_FILE = "trainval_nuclei_roi.txt"
+__C.DATA.TEST_MAP_FILE = "testval_nuclei.txt"
+__C.DATA.TEST_ROI_FILE = "testval_nuclei_roi.txt"
 __C.DATA.NUM_TRAIN_IMAGES = 320
 __C.DATA.NUM_TEST_IMAGES = 160
 __C.DATA.PROPOSAL_LAYER_SCALES = [2, 4, 8]
