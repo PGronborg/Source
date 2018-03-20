@@ -627,9 +627,9 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         #write train + val (epoch, val_error) () to csv file 
 
         #trainer.save_checkpoint(cfg["LOGGING"].CHECKPOINT_FILE)
-        early_stopping_counter +=1
+        early_stop_final_count +=1
         if cfg["CNTK"].EARLY_STOP:
-            early_stop_final_count +=1
+            early_stopping_counter +=1
             if (val_error[epoch] < early_stopping_criteria):
                 early_stopping_criteria = val_error[epoch]
                 early_stopping_counter = 0
