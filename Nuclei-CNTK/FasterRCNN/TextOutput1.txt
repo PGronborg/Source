@@ -1,0 +1,46 @@
+Using base model:   VGG16
+lr_per_sample:      [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 1e-05]
+Training model for 20 epochs.
+Training 136449349 parameters in 32 parameter tensors.
+Learning rate per minibatch: 0.001
+Momentum per minibatch: 0.9
+Learning rate per minibatch: 0.002
+Momentum per minibatch: 0.9
+ Minibatch[   1- 100]: loss = 1.297338 * 100, metric = 25.91% * 100;
+ Minibatch[ 101- 200]: loss = 1.076882 * 100, metric = 23.48% * 100;
+ Minibatch[ 201- 300]: loss = 0.971618 * 100, metric = 20.83% * 100;
+Finished Epoch[1 of 20]: [Training] loss = 1.103450 * 320, metric = 23.15% * 320 99.804s (  3.2 samples/s);
+Finished Evaluation [1]: Minibatch[1-384]: metric = 24.09% * 384;
+ Minibatch[   1- 100]: loss = 0.906956 * 100, metric = 19.25% * 100;
+ Minibatch[ 101- 200]: loss = 0.799671 * 100, metric = 17.26% * 100;
+ Minibatch[ 201- 300]: loss = 0.738384 * 100, metric = 16.62% * 100;
+Finished Epoch[2 of 20]: [Training] loss = 0.807946 * 320, metric = 17.60% * 320 71.952s (  4.4 samples/s);
+Finished Evaluation [2]: Minibatch[1-384]: metric = 22.09% * 384;
+ Minibatch[   1- 100]: loss = 0.722995 * 100, metric = 16.19% * 100;
+ Minibatch[ 101- 200]: loss = 0.636357 * 100, metric = 14.64% * 100;
+ Minibatch[ 201- 300]: loss = 0.637199 * 100, metric = 14.89% * 100;
+Finished Epoch[3 of 20]: [Training] loss = 0.662363 * 320, metric = 15.16% * 320 75.362s (  4.2 samples/s);
+Finished Evaluation [3]: Minibatch[1-384]: metric = 19.26% * 384;
+ Minibatch[   1- 100]: loss = 0.656188 * 100, metric = 15.43% * 100;
+ Minibatch[ 101- 200]: loss = 0.605375 * 100, metric = 14.22% * 100;
+ Minibatch[ 201- 300]: loss = 0.580936 * 100, metric = 13.50% * 100;
+Finished Epoch[4 of 20]: [Training] loss = 0.610472 * 320, metric = 14.32% * 320 72.385s (  4.4 samples/s);
+Finished Evaluation [4]: Minibatch[1-384]: metric = 21.42% * 384;
+ Minibatch[   1- 100]: loss = 0.591498 * 100, metric = 14.12% * 100;
+ Minibatch[ 101- 200]: loss = 0.551240 * 100, metric = 13.19% * 100;
+ Minibatch[ 201- 300]: loss = 0.519259 * 100, metric = 12.32% * 100;
+Finished Epoch[5 of 20]: [Training] loss = 0.554205 * 320, metric = 13.21% * 320 75.777s (  4.2 samples/s);
+Finished Evaluation [5]: Minibatch[1-384]: metric = 19.35% * 384;
+ Minibatch[   1- 100]: loss = 0.567330 * 100, metric = 14.06% * 100;
+ Minibatch[ 101- 200]: loss = 0.506130 * 100, metric = 12.32% * 100;
+ Minibatch[ 201- 300]: loss = 0.490225 * 100, metric = 11.99% * 100;
+Finished Epoch[6 of 20]: [Training] loss = 0.520488 * 320, metric = 12.77% * 320 72.338s (  4.4 samples/s);
+Finished Evaluation [6]: Minibatch[1-384]: metric = 20.23% * 384;
+creating eval model
+Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
+Evaluating Faster R-CNN model for 96 images.
+Number of rois before non-maximum suppression: 10433
+Number of rois  after non-maximum suppression: 2920
+AP for        Negative = 0.3949
+AP for        Positive = 0.3608
+Mean AP = 0.3778

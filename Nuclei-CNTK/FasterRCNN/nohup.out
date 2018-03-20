@@ -1,0 +1,3 @@
+./runner.sh: line 4:   475 Terminated              CUDA_VISIBLE_DEVICES=7 python run_faster_rcnn_VGG16.py > TextOutput1.txt 2> err1.txt
+./runner3.sh: line 4:   757 Terminated              CUDA_VISIBLE_DEVICES=5 python run_faster_rcnn_VGG16.py > TextOutput3.txt 2> err3.txt
+./runner2.sh: line 4:   685 Terminated              CUDA_VISIBLE_DEVICES=6 python run_faster_rcnn_VGG16.py > TextOutput2.txt 2> err2.txt
