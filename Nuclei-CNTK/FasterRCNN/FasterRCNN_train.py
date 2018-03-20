@@ -568,7 +568,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         pad_height=cfg.IMAGE_HEIGHT,
         pad_value=cfg["MODEL"].IMG_PAD_COLOR,
         randomize=True,
-        use_flipping=cfg["TRAIN"].USE_FLIPPED,
+        use_flipping=False,
         max_images=cfg["DATA"].NUM_VAL_IMAGES,
         proposal_provider=None)
 
@@ -581,6 +581,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     val_input_map = {
         val_minibatch_source.image_si: image_input,
         val_minibatch_source.roi_si: roi_input,
+        val_minibatch_source.dims_si: dims_input,
     }
 
     if buffered_rpn_proposals is not None:
