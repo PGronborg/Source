@@ -50,7 +50,7 @@ __C.CNTK.FRCN_EPOCHS = 8
 __C.CNTK.FRCN_LR_PER_SAMPLE = [0.001] * 6 + [0.0001] * 2
 
 # Stopping criteria
-__C.CNTK.EARLY_STOP = True
+__C.CNTK.EARLY_STOP = False
 __C.CNTK.EARLY_STOP_NUM = 5
 
 # Maximum number of ground truth annotations per image
