@@ -618,8 +618,8 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
             validation_count += cfg.MB_SIZE         # count samples processed so far   
             count+=1
         val_error[epoch] = val_err/count
-        trainer.summerize_traning_progress()
-        trainer.summerize_test_progress()
+        trainer.summarize_training_progress()
+        trainer.summarize_test_progress()
 
         #write train + val (epoch, val_error) () to csv file 
 
