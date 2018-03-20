@@ -609,14 +609,14 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         epoch_train_error[epoch] = error / sample_count
 
         validation_count = 0
-        val_error = 0
+        val_err = 0
         count = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
             data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-validation_count), input_map=val_input_map)
             val_err += trainer.test_minibatch(data)                                    # update model with it
             validation_count += cfg.MB_SIZE         # count samples processed so far   
             count+=1
-        val_error[epoch] = val_error/count
+        val_error[epoch] = val_err/count
         trainer.summarize_traning_progress()
         trainer.summerize_test_progress()
 
