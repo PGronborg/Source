@@ -602,7 +602,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
 
         while sample_count < cfg["DATA"].EPOCH_SIZE:  # loop over minibatches in the epoch
             data = train_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
-            loss, error += trainer.train_minibatch(data, outputs = [loss, pred_error]) #check syntax                                   # update model with it
+            loss, error += trainer.train_minibatch(data, outputs = True) #check syntax                                   # update model with it
             sample_count += trainer.previous_minibatch_sample_count          # count samples processed so far
         epoch_train_loss[epoch] = loss / sample_count
         epoch_train_error[epoch] = error / sample_count
