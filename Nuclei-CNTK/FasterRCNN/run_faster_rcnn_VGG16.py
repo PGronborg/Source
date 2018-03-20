@@ -31,6 +31,7 @@ def get_configuration():
 if __name__ == '__main__':
     cfg = get_configuration()
     cfg.SAVE_COUNT = sys.argv[1]
+    print(cfg.SAVE_COUNT)
     prepare(cfg, False)
     cntk.device.try_set_default_device(cntk.device.gpu(cfg.GPU_ID))
 
