@@ -71,7 +71,7 @@ def prepare(cfg, use_arg_parser=True):
                                           cfg["MODEL"].BASE_MODEL_FILE)
 
     cfg['VAL_PATH'] = os.path.join(cfg.OUTPUT_PATH, "faster_rcnn_eval_{}_{}.csv"
-                                     .format(cfg.SAVE_COUNT, "e2e" if cfg["CNTK"].TRAIN_E2E else "4stage"))
+                                     .format(str(cfg.SAVE_COUNT), "e2e" if cfg["CNTK"].TRAIN_E2E else "4stage"))
 
     cfg["DATA"].CLASSES = parse_class_map_file(cfg["DATA"].CLASS_MAP_FILE)
     cfg["DATA"].NUM_CLASSES = len(cfg["DATA"].CLASSES)

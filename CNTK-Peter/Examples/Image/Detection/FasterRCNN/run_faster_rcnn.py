@@ -28,6 +28,7 @@ def get_configuration():
 # trains and evaluates a Fast R-CNN model.
 if __name__ == '__main__':
     cfg = get_configuration()
+    print(sys.argv[1])
     prepare(cfg, False)
     cfg.SAVE_COUNT = sys.argv[1]
     print(sys.argv[1])
