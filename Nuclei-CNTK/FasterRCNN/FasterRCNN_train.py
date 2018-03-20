@@ -603,7 +603,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         while sample_count < cfg["DATA"].EPOCH_SIZE:  # loop over minibatches in the epoch
             data = train_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
             trainer.train_minibatch(data) #check syntax                                   # update model with it
-            error += trainer.eval_model(data)
+            error += trainer.test_minibatch(data)
             sample_count += trainer.previous_minibatch_sample_count          # count samples processed so far
         epoch_train_loss[epoch] = loss / sample_count
         epoch_train_error[epoch] = error / sample_count
@@ -613,7 +613,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         count = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
             data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-sample_count), input_map=val_input_map)
-            val_err += trainer.eval_model(data)                                    # update model with it
+            val_err += trainer.test_minibatch(data)                                    # update model with it
             validation_count += cfg.MB_SIZE         # count samples processed so far   
             count+=1
         val_error[epoch] = val_error/count
