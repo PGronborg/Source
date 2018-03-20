@@ -5,6 +5,7 @@
 # ==============================================================================
 
 import os
+import sys
 import numpy as np
 import cntk
 from FasterRCNN_train import prepare, train_faster_rcnn, store_eval_model_with_native_udf
@@ -29,6 +30,7 @@ def get_configuration():
 # trains and evaluates a Fast R-CNN model.
 if __name__ == '__main__':
     cfg = get_configuration()
+    cfg.SAVE_COUNT = sys.argv[1]
     prepare(cfg, False)
     cntk.device.try_set_default_device(cntk.device.gpu(cfg.GPU_ID))
 
