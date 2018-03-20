@@ -7,6 +7,7 @@
 from __future__ import print_function
 import numpy as np
 import os, sys
+import csv
 import argparse
 import easydict # pip install easydict
 import cntk
@@ -58,14 +59,19 @@ def prepare(cfg, use_arg_parser=True):
 
     cfg["DATA"].CLASS_MAP_FILE = os.path.join(data_path, cfg["DATA"].CLASS_MAP_FILE)
     cfg["DATA"].TRAIN_MAP_FILE = os.path.join(data_path, cfg["DATA"].TRAIN_MAP_FILE)
+    cfg["DATA"].VAL_MAP_FILE = os.path.join(data_path, cfg["DATA"].VAL_MAP_FILE)
     cfg["DATA"].TEST_MAP_FILE = os.path.join(data_path, cfg["DATA"].TEST_MAP_FILE)
     cfg["DATA"].TRAIN_ROI_FILE = os.path.join(data_path, cfg["DATA"].TRAIN_ROI_FILE)
+    cfg["DATA"].VAL_ROI_FILE = os.path.join(data_path, cfg["DATA"].VAL_ROI_FILE)
     cfg["DATA"].TEST_ROI_FILE = os.path.join(data_path, cfg["DATA"].TEST_ROI_FILE)
 
     cfg['MODEL_PATH'] = os.path.join(cfg.OUTPUT_PATH, "faster_rcnn_eval_{}_{}.model"
                                      .format(cfg["MODEL"].BASE_MODEL, "e2e" if cfg["CNTK"].TRAIN_E2E else "4stage"))
     cfg['BASE_MODEL_PATH'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "PretrainedModels",
                                           cfg["MODEL"].BASE_MODEL_FILE)
+
+    cfg['VAL_PATH'] = os.path.join(cfg.OUTPUT_PATH, "faster_rcnn_eval_{}_{}.csv"
+                                     .format(cfg["MODEL"].BASE_MODEL, "e2e" if cfg["CNTK"].TRAIN_E2E else "4stage"))
 
     cfg["DATA"].CLASSES = parse_class_map_file(cfg["DATA"].CLASS_MAP_FILE)
     cfg["DATA"].NUM_CLASSES = len(cfg["DATA"].CLASSES)
@@ -107,7 +113,7 @@ def parse_arguments(cfg):
     parser.add_argument('-m', '--minibatch_size', help='Minibatch size', type=int,
                         required=False, default=cfg["CNTK"].MB_SIZE)
     parser.add_argument('-e', '--epoch_size', help='Epoch size', type=int,
-                        required=False, default=cfg["CNTK"].NUM_TRAIN_IMAGES)
+                        required=False, default=cfg["CNTK"].EPOCH_SIZE)
     parser.add_argument('-q', '--quantized_bits', help='Number of quantized bits used for gradient aggregation',
                         type=int,
                         required=False, default='32')
@@ -524,12 +530,13 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     lr_schedule = learning_parameter_schedule_per_sample(lr_per_sample)
     learner = momentum_sgd(others, lr_schedule, mm_schedule, l2_regularization_weight=l2_reg_weight,
                            unit_gain=False, use_mean_gradient=True)
+    progress_printer = ProgressPrinter(freq = 100, tag='Training', num_epochs=epochs_to_train, gen_heartbeat=False)
 
     bias_lr_per_sample = [v * bias_lr_mult for v in lr_per_sample]
     bias_lr_schedule = learning_parameter_schedule_per_sample(bias_lr_per_sample)
     bias_learner = momentum_sgd(biases, bias_lr_schedule, mm_schedule, l2_regularization_weight=l2_reg_weight,
                            unit_gain=False, use_mean_gradient=True)
-    trainer = Trainer(None, (loss, pred_error), [learner, bias_learner])
+    trainer = Trainer(None, (loss, pred_error), [learner, bias_learner], progress_writers = [progress_printer])
 
     # Get minibatches of images and perform model training
     print("Training model for %s epochs." % epochs_to_train)
@@ -541,7 +548,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     else:
         proposal_provider = None
 
-    od_minibatch_source = ObjectDetectionMinibatchSource(
+    train_minibatch_source = ObjectDetectionMinibatchSource(
         cfg["DATA"].TRAIN_MAP_FILE, cfg["DATA"].TRAIN_ROI_FILE,
         num_classes=cfg["DATA"].NUM_CLASSES,
         max_annotations_per_image=cfg.INPUT_ROIS_PER_IMAGE,
@@ -553,25 +560,83 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         max_images=cfg["DATA"].NUM_TRAIN_IMAGES,
         proposal_provider=proposal_provider)
 
-    # define mapping from reader streams to network inputs
-    input_map = {
-        od_minibatch_source.image_si: image_input,
-        od_minibatch_source.roi_si: roi_input,
-    }
-    if buffered_rpn_proposals is not None:
-        input_map[od_minibatch_source.proposals_si] = rpn_rois_input
-    else:
-        input_map[od_minibatch_source.dims_si] = dims_input
+    val_minibatch_source = ObjectDetectionMinibatchSource(
+        cfg["DATA"].VAL_MAP_FILE, cfg["DATA"].VAL_ROI_FILE,
+        num_classes=cfg["DATA"].NUM_CLASSES,
+        max_annotations_per_image=cfg.INPUT_ROIS_PER_IMAGE,
+        pad_width=cfg.IMAGE_WIDTH,
+        pad_height=cfg.IMAGE_HEIGHT,
+        pad_value=cfg["MODEL"].IMG_PAD_COLOR,
+        randomize=True,
+        use_flipping=cfg["TRAIN"].USE_FLIPPED,
+        max_images=cfg["DATA"].NUM_TRAIN_IMAGES,
+        proposal_provider=proposal_provider)
 
-    progress_printer = ProgressPrinter(tag='Training', num_epochs=epochs_to_train, gen_heartbeat=False)
+    # define mapping from reader streams to network inputs
+    train_input_map = {
+        train_minibatch_source.image_si: image_input,
+        train_minibatch_source.roi_si: roi_input,
+    }
+
+    val_input_map = {
+        val_minibatch_source.image_si: image_input,
+        val_minibatch_source.roi_si: roi_input,
+    }
+
+    if buffered_rpn_proposals is not None:
+        train_input_map[train_minibatch_source.proposals_si] = rpn_rois_input
+    else:
+        train_input_map[train_minibatch_source.dims_si] = dims_input
+
+    early_stopping_counter = 0
+    early_stopping_criteria = np.inf
+    early_stop_final_count = 0
     for epoch in range(epochs_to_train):       # loop over epochs
+        loss = 0 
+        error = 0
         sample_count = 0
-        while sample_count < cfg["DATA"].NUM_TRAIN_IMAGES:  # loop over minibatches in the epoch
-            data = od_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=input_map)
-            trainer.train_minibatch(data)                                    # update model with it
+
+        while sample_count < cfg["DATA"].EPOCH_SIZE:  # loop over minibatches in the epoch
+            data = train_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
+            loss, error += trainer.train_minibatch(data, outputs = [loss, pred_error]) #check syntax                                   # update model with it
             sample_count += trainer.previous_minibatch_sample_count          # count samples processed so far
-            progress_printer.update_with_trainer(trainer, with_metric=True)  # log progress
+        epoch_train_loss[epoch] = loss / sample_count
+        epoch_train_error[epoch] = error / sample_count
+
+        validation_count = 0
+        val_error = 0
+        count = 0
+        while validation_count < cfg["DATA"].VAL_SIZE:
+            data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
+            val_err += trainer.eval_model(data)                                    # update model with it
+            validation_count += cfg.MB_SIZE         # count samples processed so far   
+            count+=1
+        val_error[epoch] = val_error/count
+        trainer.summarize_traning_progress()
+        trainer.summerize_test_progress()
+
+        #write train + val (epoch, val_error) () to csv file 
+
+        #trainer.save_checkpoint(cfg["LOGGING"].CHECKPOINT_FILE)
+
+        if cfg["CNTK"].EARLY_STOP:
+            early_stopping_counter +=1
+            early_stop_final_count +=1
+            if (val_error < early_stopping_criteria):
+                early_stopping_criteria = val_error
+                early_stopping_counter = 0
+            if (early_stopping_counter == cfg["CNTK"].EARLY_STOP_NUM)
+                early_stop_final_count -=1
+                break
+
+    with open(cfg['VAL_PATH'], 'w') as csvfile:
+        valwriter = csv.writer(csvfile, delimiter=';')
+        valwriter.writerow(['Count','Train Loss','Train error','Val error'])
+        for saver in range(early_stop_final_count)
+            valwriter.writerow([saver,epoch_train_loss[saver],epoch_train_error[saver],val_error[saver]])
+
+            #progress_printer.update_with_trainer(trainer, with_metric=True)  # log progress
             #if sample_count % 100 == 0:
                 #print("Processed {} samples".format(sample_count))
-        progress_printer.epoch_summary(with_metric=True)
+        #progress_printer.epoch_summary(with_metric=True)
 
