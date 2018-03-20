@@ -7,6 +7,7 @@
 import os
 import numpy as np
 import cntk
+import sys
 from FasterRCNN_train import prepare, train_faster_rcnn, store_eval_model_with_native_udf
 from FasterRCNN_eval import compute_test_set_aps, FasterRCNN_Evaluator
 from utils.config_helpers import merge_configs
@@ -28,6 +29,8 @@ def get_configuration():
 if __name__ == '__main__':
     cfg = get_configuration()
     prepare(cfg, False)
+    cfg.SAVE_COUNT = sys.argv[1]
+    print(sys.argv[1])
     cntk.device.try_set_default_device(cntk.device.gpu(cfg.GPU_ID))
 
     # train and test
