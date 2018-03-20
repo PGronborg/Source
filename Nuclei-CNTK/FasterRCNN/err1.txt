@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "run_faster_rcnn_VGG16.py", line 32, in <module>
+    prepare(cfg, False)
+  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 74, in prepare
+    .format(cfg.SAVE_COUNT, "e2e" if cfg["CNTK"].TRAIN_E2E else "4stage"))
+AttributeError: 'EasyDict' object has no attribute 'SAVE_COUNT'

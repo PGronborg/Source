@@ -1,6 +1,6 @@
 #!/bin/bash 
 mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start"
 
-CUDA_VISIBLE_DEVICES=7 python run_faster_rcnn_VGG16.py 1 > TextOutput1.txt 2> err1.txt
+CUDA_VISIBLE_DEVICES=6 python run_faster_rcnn_VGG16.py 1 > TextOutput1.txt 2> err1.txt
 
 mail -s 'Finished'  peter.gronborg.7@gmail.com <<< "Done"
