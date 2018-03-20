@@ -570,7 +570,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         randomize=True,
         use_flipping=cfg["TRAIN"].USE_FLIPPED,
         max_images=cfg["DATA"].NUM_VAL_IMAGES,
-        proposal_provider=proposal_provider)
+        proposal_provider=None)
 
     # define mapping from reader streams to network inputs
     train_input_map = {
