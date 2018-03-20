@@ -569,7 +569,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         pad_value=cfg["MODEL"].IMG_PAD_COLOR,
         randomize=True,
         use_flipping=cfg["TRAIN"].USE_FLIPPED,
-        max_images=cfg["DATA"].NUM_TRAIN_IMAGES,
+        max_images=cfg["DATA"].NUM_VAL_IMAGES,
         proposal_provider=proposal_provider)
 
     # define mapping from reader streams to network inputs
@@ -591,6 +591,10 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     early_stopping_counter = 0
     early_stopping_criteria = np.inf
     early_stop_final_count = 0
+    epoch_train_loss = [0]*epochs_to_train
+    epoch_train_error = [0]*epochs_to_train
+    val_error = [0]*epochs_to_train
+    
     for epoch in range(epochs_to_train):       # loop over epochs
         loss = 0 
         error = 0
@@ -607,7 +611,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         val_error = 0
         count = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
-            data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
+            data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-sample_count), input_map=val_input_map)
             val_err += trainer.eval_model(data)                                    # update model with it
             validation_count += cfg.MB_SIZE         # count samples processed so far   
             count+=1
