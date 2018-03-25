@@ -34,13 +34,13 @@ __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 __C.STORE_EVAL_MODEL_WITH_NATIVE_UDF = False
 
 # Learning parameters
-__C.CNTK.L2_REG_WEIGHT = 0.0005
+__C.CNTK.L2_REG_WEIGHT = 0.005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
 # The learning rate multiplier for all bias weights
 __C.CNTK.BIAS_LR_MULT = 2.0
 
 # E2E learning parameters
-__C.CNTK.E2E_MAX_EPOCHS = 20
+__C.CNTK.E2E_MAX_EPOCHS = 200
 __C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001]
 
 # 4-stage learning parameters (alternating training scheme)
@@ -50,8 +50,8 @@ __C.CNTK.FRCN_EPOCHS = 8
 __C.CNTK.FRCN_LR_PER_SAMPLE = [0.001] * 6 + [0.0001] * 2
 
 # Stopping criteria
-__C.CNTK.EARLY_STOP = False
-__C.CNTK.EARLY_STOP_NUM = 5
+__C.CNTK.EARLY_STOP = True
+__C.CNTK.EARLY_STOP_NUM = 10
 
 # Maximum number of ground truth annotations per image
 __C.INPUT_ROIS_PER_IMAGE = 200
@@ -106,11 +106,11 @@ __C.TRAIN.RPN_PRE_NMS_TOP_N = 12000
 # Number of top scoring boxes to keep after applying NMS to RPN proposals
 __C.TRAIN.RPN_POST_NMS_TOP_N = 2000
 # Proposal height and width both need to be greater than RPN_MIN_SIZE (at orig image scale)
-__C.TRAIN.RPN_MIN_SIZE = 16
+__C.TRAIN.RPN_MIN_SIZE = 8
 
 # Detector parameters
 # Minibatch size (number of regions of interest [ROIs]) -- was: __C.TRAIN.BATCH_SIZE = 128
-__C.NUM_ROI_PROPOSALS = 256
+__C.NUM_ROI_PROPOSALS = 512
 # Fraction of minibatch that is labeled foreground (i.e. class > 0)
 __C.TRAIN.FG_FRACTION = 0.25
 # Overlap threshold for a ROI to be considered foreground (if >= FG_THRESH)
