@@ -1,30 +1,18 @@
-Traceback (most recent call last):
-  File "run_faster_rcnn_VGG16.py", line 35, in <module>
-    cntk.device.try_set_default_device(cntk.device.gpu(cfg.GPU_ID))
-  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
-    result = f(*args, **kwds)
-  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/device.py", line 96, in gpu
-    return cntk_py.DeviceDescriptor.gpu_device(device_id)
-ValueError: Specified GPU device id (0) is invalid.
+Selected GPU[0] GeForce GTX TITAN X as the process wide default device.
+-------------------------------------------------------------------
+Build info: 
 
-[CALL STACK]
-[0x7fc8975ca5f9]                                                       + 0x88d5f9
-[0x7fc8975c6594]    CNTK::DeviceDescriptor::  GPUDevice  (unsigned int) + 0xd4
-[0x7fc89820633d]                                                       + 0xb833d
-[0x559233de4b27]    PyCFunction_Call                                   + 0x47
-[0x559233e4128c]    PyEval_EvalFrameEx                                 + 0x3fc
-[0x559233e4bf1d]    PyEval_EvalCodeEx                                  + 0x20d
-[0x559233e4d9cf]                                                       + 0x1af9cf
-[0x559233da2dfa]    PyObject_Call                                      + 0x3a
-[0x559233e43aab]    PyEval_EvalFrameEx                                 + 0x2c1b
-[0x559233e46990]    PyEval_EvalFrameEx                                 + 0x5b00
-[0x559233e4bf1d]    PyEval_EvalCodeEx                                  + 0x20d
-[0x559233e4ce6c]    PyEval_EvalCode                                    + 0x1c
-[0x559233ea8424]                                                       + 0x20a424
-[0x559233ea9a91]    PyRun_FileExFlags                                  + 0xa1
-[0x559233ea9c9e]    PyRun_SimpleFileExFlags                            + 0x1de
-[0x559233eaa392]    Py_Main                                            + 0x612
-[0x559233d76061]    main                                               + 0xe1
-[0x7fc8ed17e830]    __libc_start_main                                  + 0xf0
-[0x559233e4e818]                                                       + 0x1b0818
-
+		Built time: Jan 31 2018 15:03:41
+		Last modified date: Tue Jan 30 03:26:13 2018
+		Build type: release
+		Build target: GPU
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		CUDA version: 9.0.0
+		CUDNN version: 7.0.3
+		Build Branch: HEAD
+		Build SHA1: a70455c7abe76596853f8e6a77a4d6de1e3ba76e
+		MPI distribution: Open MPI
+		MPI version: 1.10.7
+-------------------------------------------------------------------
