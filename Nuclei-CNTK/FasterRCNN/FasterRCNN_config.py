@@ -41,7 +41,7 @@ __C.CNTK.BIAS_LR_MULT = 2.0
 
 # E2E learning parameters
 __C.CNTK.E2E_MAX_EPOCHS = 200
-__C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001]
+__C.CNTK.E2E_LR_PER_SAMPLE = [0.00001] * 200# + [0.0001] * 10 + [0.00001]
 
 # 4-stage learning parameters (alternating training scheme)
 __C.CNTK.RPN_EPOCHS = 16
@@ -51,7 +51,7 @@ __C.CNTK.FRCN_LR_PER_SAMPLE = [0.001] * 6 + [0.0001] * 2
 
 # Stopping criteria
 __C.CNTK.EARLY_STOP = True
-__C.CNTK.EARLY_STOP_NUM = 10
+__C.CNTK.EARLY_STOP_NUM = 30
 
 # Maximum number of ground truth annotations per image
 __C.INPUT_ROIS_PER_IMAGE = 200
