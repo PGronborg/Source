@@ -1,5 +1,0 @@
-./runner.sh: line 4: 18484 Terminated              CUDA_VISIBLE_DEVICES=0 python run_faster_rcnn_VGG16.py TestRun1 > TextOutput11.txt 2> err11.txt
-
-real	90m16.972s
-user	75m58.974s
-sys	12m59.247s
