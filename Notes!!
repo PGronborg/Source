@@ -1,0 +1,24 @@
+Notes!!
+Bruge 10.000 billeder i stedet for 50.000... Antallet af objekter er MEGET højt og giver ikke nødvendigvis bedre resultater
+Early stopping eller ej?... Stoppede efter 16 epochs med 50.000
+
+
+
+
+
+
+
+To-do!
+Ændre så gfc bliver kaldt de rigtige steder
+Kig eval func igennem og se hvad den skriver ud
+
+
+Skrive:
+Deep learning!
+Skrive generelt
+- ALLE de forskellige parametre
+Faster R-CNN
+
+Configuration!
+model og data skrives færdigt
+Preprocessing skal skrives

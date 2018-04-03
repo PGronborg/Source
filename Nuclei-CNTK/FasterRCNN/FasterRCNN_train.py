@@ -70,8 +70,8 @@ def prepare(cfg, use_arg_parser=True):
     cfg['BASE_MODEL_PATH'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "PretrainedModels",
                                           cfg["MODEL"].BASE_MODEL_FILE)
 
-    cfg['VAL_PATH'] = os.path.join(cfg.OUTPUT_PATH, "faster_rcnn_eval_{}_{}.csv"
-                                     .format(cfg.SAVE_COUNT, "e2e" if cfg["CNTK"].TRAIN_E2E else "4stage"))
+    cfg['VAL_PATH'] = os.path.join(cfg.OUTPUT_PATH, "{}.csv"
+                                     .format(cfg.SAVE_NAME))
 
     cfg["DATA"].CLASSES = parse_class_map_file(cfg["DATA"].CLASS_MAP_FILE)
     cfg["DATA"].NUM_CLASSES = len(cfg["DATA"].CLASSES)
@@ -567,7 +567,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         pad_width=cfg.IMAGE_WIDTH,
         pad_height=cfg.IMAGE_HEIGHT,
         pad_value=cfg["MODEL"].IMG_PAD_COLOR,
-        randomize=True,
+        randomize=False,
         use_flipping=False,
         max_images=cfg["DATA"].NUM_VAL_IMAGES,
         proposal_provider=None)
@@ -617,14 +617,12 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         count = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
             data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-validation_count), input_map=val_input_map)
-            val_err += trainer.test_minibatch(data)                                    # update model with it
-            validation_count += cfg.MB_SIZE         # count samples processed so far   
+            val_err += trainer.test_minibatch(data)
+            validation_count += cfg.MB_SIZE 
             count+=1
         val_error[epoch] = val_err/count
         trainer.summarize_training_progress()
         trainer.summarize_test_progress()
-
-        #write train + val (epoch, val_error) () to csv file 
 
         #trainer.save_checkpoint(cfg["LOGGING"].CHECKPOINT_FILE)
         early_stop_final_count +=1

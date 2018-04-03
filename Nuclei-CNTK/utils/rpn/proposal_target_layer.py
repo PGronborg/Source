@@ -11,6 +11,7 @@ import numpy as np
 import numpy.random as npr
 from utils.rpn.bbox_transform import bbox_transform
 from utils.cython_modules.cython_bbox import bbox_overlaps
+from FasterRCNN_config import cfg
 
 DEBUG = False
 
@@ -230,7 +231,7 @@ class ProposalTargetLayer(UserFunction):
             start = 4 * cls
             end = start + 4
             bbox_targets[ind, start:end] = bbox_target_data[ind, 1:]
-            bbox_inside_weights[ind, start:end] = [1.0, 1.0, 1.0, 1.0]
+            bbox_inside_weights[ind, start:end] = [cfg.WEIGHT_CENTER, cfg.WEIGHT_CENTER, 1.0, 1.0]
         return bbox_targets, bbox_inside_weights
 
 

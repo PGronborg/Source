@@ -30,7 +30,7 @@ def get_configuration():
 # trains and evaluates a Fast R-CNN model.
 if __name__ == '__main__':
     cfg = get_configuration()
-    cfg.SAVE_COUNT = sys.argv[1]
+    cfg.SAVE_NAME = sys.argv[1]
     prepare(cfg, False)
     cntk.device.try_set_default_device(cntk.device.gpu(cfg.GPU_ID))
 

@@ -64,7 +64,7 @@ class AnchorTargetLayer(UserFunction):
             self._count = 0
 
         # allow boxes to sit over the edge by a small amount
-        self._allowed_border = False # layer_params.get('allowed_border', 0)
+        self._allowed_border = True # layer_params.get('allowed_border', 0)
 
     def infer_outputs(self):
         # This is a necessary work around since after cloning the cloned inputs are just place holders without the proper shape
@@ -223,6 +223,7 @@ class AnchorTargetLayer(UserFunction):
 
         bbox_inside_weights = np.zeros((len(inds_inside), 4), dtype=np.float32)
         bbox_inside_weights[labels == 1, :] = np.array((cfg.WEIGHT_CENTER, cfg.WEIGHT_CENTER, 1.0, 1.0))
+        bbox_inside_weights[labels == 2, :] = np.array((cfg.WEIGHT_CENTER, cfg.WEIGHT_CENTER, 1.0, 1.0))
 
         if DEBUG:
             self._sums += bbox_targets[labels == 1, :].sum(axis=0)
