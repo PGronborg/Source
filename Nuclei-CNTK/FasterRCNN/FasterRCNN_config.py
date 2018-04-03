@@ -34,7 +34,7 @@ __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 __C.STORE_EVAL_MODEL_WITH_NATIVE_UDF = False
 
 # Learning parameters
-__C.CNTK.L2_REG_WEIGHT = 0.005
+__C.CNTK.L2_REG_WEIGHT = 0.000005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
 # The learning rate multiplier for all bias weights
 __C.CNTK.BIAS_LR_MULT = 2.0
