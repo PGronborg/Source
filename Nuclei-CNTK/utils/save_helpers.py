@@ -51,7 +51,7 @@ def save_data(evaluator, results_base_path, cfg):
 				if filtered_scores is not None:
 					score = filtered_scores[roiIndex]
 					if cfg.RESULTS_BGR_PLOT_THRESHOLD and score < cfg.RESULTS_BGR_PLOT_THRESHOLD:
-					label = 0
+						label = 0
 
 				rect = [i for i in filtered_bboxes[roiIndex]]
 				rect[0] = int(max(0, min(img_shape[2], rect[0]+(rect[2]-rect[0])/2-1)))
