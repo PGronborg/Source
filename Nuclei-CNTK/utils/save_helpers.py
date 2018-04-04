@@ -24,9 +24,9 @@ def save_data(evaluator, results_base_path, cfg):
 
 	img_shape = (cfg.NUM_CHANNELS, cfg.IMAGE_HEIGHT, cfg.IMAGE_WIDTH)
 
-    saver_file = os.path.join(cfg.OUTPUT_PATH, "{}.txt"
-                                     .format(cfg.SAVE_NAME))
-    with open(saver_file, 'w') as txtf:
+	saver_file = os.path.join(cfg.OUTPUT_PATH, "{}.txt"
+	                                 .format(cfg.SAVE_NAME))
+	with open(saver_file, 'w') as txtf:
 	    for i in range(0, len(content)):
 	        img_path = img_file_names[i]
 	        out_cls_pred, out_rpn_rois, out_bbox_regr, dims = evaluator.process_image_detailed(img_path)
@@ -47,8 +47,8 @@ def save_data(evaluator, results_base_path, cfg):
 
 	        txtString = ""
 	        for roiIndex in range(len(filtered_bboxes)):
-            	label = filtered_labels[roiIndex]
-            	if filtered_scores is not None:
+	        	label = filtered_labels[roiIndex]
+	        	if filtered_scores is not None:
 	                score = filtered_scores[roiIndex]
 	                if cfg.RESULTS_BGR_PLOT_THRESHOLD and score < cfg.RESULTS_BGR_PLOT_THRESHOLD:
 	                    label = 0
@@ -63,4 +63,4 @@ def save_data(evaluator, results_base_path, cfg):
 	            	txtString = txtString + "{} {} {} {} {} {} ".format(str(rect[0]),str(rect[1]),str(rect[2]),str(rect[3]),str(label),str(score))
 
 	       	txtf.write(txtString+"\n")
-   	return
+		return
