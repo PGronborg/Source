@@ -34,14 +34,14 @@ __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 __C.STORE_EVAL_MODEL_WITH_NATIVE_UDF = False
 
 # Learning parameters
-__C.CNTK.L2_REG_WEIGHT = 0.000005
+__C.CNTK.L2_REG_WEIGHT = 0.0005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
 # The learning rate multiplier for all bias weights
 __C.CNTK.BIAS_LR_MULT = 2.0
 
 # E2E learning parameters
 __C.CNTK.E2E_MAX_EPOCHS = 200
-__C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001]# * 20 + [0.000001]
+__C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001] * 20 + [0.000001]
 
 # 4-stage learning parameters (alternating training scheme)
 __C.CNTK.RPN_EPOCHS = 16
