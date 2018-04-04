@@ -12,6 +12,7 @@ from FasterRCNN_train import prepare, train_faster_rcnn, store_eval_model_with_n
 from FasterRCNN_eval import compute_test_set_aps, FasterRCNN_Evaluator
 from utils.config_helpers import merge_configs
 from utils.plot_helpers import plot_test_set_results
+from utils.save_helpers import save_data
 
 def get_configuration():
     # load configs for detector, base network and data set
@@ -47,6 +48,9 @@ if __name__ == '__main__':
     for class_name in eval_results: print('AP for {:>15} = {:.4f}'.format(class_name, eval_results[class_name]))
     print('Mean AP = {:.4f}'.format(np.nanmean(list(eval_results.values()))))
 
+    results_folder = os.path.join(cfg.OUTPUT_PATH, cfg["DATA"].DATASET)
+    evaluator = FasterRCNN_Evaluator(trained_model, cfg)
+    save_data(evaluator, results_folder, cfg)
     # Plot results on test set images
     if cfg.VISUALIZE_RESULTS:
         num_eval = min(cfg["DATA"].NUM_TEST_IMAGES, 100)
