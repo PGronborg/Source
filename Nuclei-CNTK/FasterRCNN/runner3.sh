@@ -1,6 +1,6 @@
 #!/bin/bash 
-mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start HighHigh"
+mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start Tester1"
 
-time CUDA_VISIBLE_DEVICES=2 python run_faster_rcnn_VGG16.py 0.0005  > HighHigh.txt 2> errHighHigh.txt
+time CUDA_VISIBLE_DEVICES=2 python run_faster_rcnn_VGG16.py Tester1 0.005  > Tester1.txt 2> errTester1.txt
 
-mail -s 'Finished'  peter.gronborg.7@gmail.com <<< "Done HighHigh"
+mail -s 'Finished'  peter.gronborg.7@gmail.com <<< "Done Tester1"
