@@ -14,12 +14,14 @@ import cv2 # pip install opencv-python
 
 
 def save_data(evaluator, results_base_path, cfg):
-	
+
 	with open(cfg["DATA"].TEST_MAP_FILE) as f:
 		content = f.readlines()
 
     img_base_path = os.path.dirname(os.path.abspath(cfg["DATA"].TEST_MAP_FILE))
+
     img_file_names = [os.path.join(img_base_path, x.split('\t')[1]) for x in content]
+
     img_shape = (cfg.NUM_CHANNELS, cfg.IMAGE_HEIGHT, cfg.IMAGE_WIDTH)
 
     saver_file = os.path.join(cfg.OUTPUT_PATH, "{}.txt"
@@ -61,3 +63,4 @@ def save_data(evaluator, results_base_path, cfg):
 	            	txtString = txtString + "{} {} {} {} {} {} ".format(str(rect[0]),str(rect[1]),str(rect[2]),str(rect[3]),str(label),str(score))
 
 	       	txtf.write(txtString+"\n")
+   	return
