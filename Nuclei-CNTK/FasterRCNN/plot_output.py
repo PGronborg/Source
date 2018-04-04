@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Pre allocate containers
-count = [0]*50
-train_err = [0]*50
-val_err = [0]*50
+count = [0]*200
+train_err = [0]*200
+val_err = [0]*200
 counter = 0
 
 # Read .csv file and extracting data

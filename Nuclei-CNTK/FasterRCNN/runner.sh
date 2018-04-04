@@ -1,6 +1,6 @@
 #!/bin/bash 
-mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start LowLow"
+mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start Low"
 
-time CUDA_VISIBLE_DEVICES=0 python run_faster_rcnn_VGG16.py LowLow [0.00001]*200 0.000005  > LowLow.txt 2> errLowLow.txt
+time CUDA_VISIBLE_DEVICES=0 python run_faster_rcnn_VGG16.py Low 0.0000005  > Low.txt 2> errLow.txt
 
-mail -s 'Finished'  peter.gronborg.7@gmail.com <<< "Done LowLow"
+mail -s 'Finished'  peter.gronborg.7@gmail.com <<< "Done Low"

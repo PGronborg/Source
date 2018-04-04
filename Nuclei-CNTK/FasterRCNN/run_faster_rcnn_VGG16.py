@@ -31,6 +31,11 @@ def get_configuration():
 if __name__ == '__main__':
     cfg = get_configuration()
     cfg.SAVE_NAME = sys.argv[1]
+    cfg.CNTK.L2_REG_WEIGHT= sys.argv[2]
+
+    # Changing parameters
+
+
     prepare(cfg, False)
     cntk.device.try_set_default_device(cntk.device.gpu(cfg.GPU_ID))
 
