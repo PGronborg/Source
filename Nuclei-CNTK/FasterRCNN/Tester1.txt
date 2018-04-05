@@ -6,30 +6,30 @@ Learning rate per minibatch: 0.001
 Momentum per minibatch: 0.9
 Learning rate per minibatch: 0.002
 Momentum per minibatch: 0.9
- Minibatch[   1- 100]: loss = 1.243307 * 100, metric = 23.70% * 100;
- Minibatch[ 101- 200]: loss = 1.019222 * 100, metric = 23.46% * 100;
- Minibatch[ 201- 300]: loss = 0.896272 * 100, metric = 21.23% * 100;
- Minibatch[ 301- 400]: loss = 0.850486 * 100, metric = 19.73% * 100;
- Minibatch[ 401- 500]: loss = 0.792956 * 100, metric = 18.48% * 100;
- Minibatch[ 501- 600]: loss = 0.770234 * 100, metric = 17.22% * 100;
- Minibatch[ 601- 700]: loss = 0.746944 * 100, metric = 16.80% * 100;
- Minibatch[ 701- 800]: loss = 0.688395 * 100, metric = 15.09% * 100;
- Minibatch[ 801- 900]: loss = 0.715371 * 100, metric = 15.79% * 100;
- Minibatch[ 901-1000]: loss = 0.715843 * 100, metric = 16.02% * 100;
-Finished Epoch[1 of 2]: [Training] loss = 0.843903 * 1000, metric = 18.75% * 1000 351.999s (  2.8 samples/s);
-Finished Evaluation [1]: Minibatch[1-1100]: metric = 25.10% * 1100;
- Minibatch[   1- 100]: loss = 0.712713 * 100, metric = 16.15% * 100;
- Minibatch[ 101- 200]: loss = 0.692837 * 100, metric = 15.39% * 100;
- Minibatch[ 201- 300]: loss = 0.689089 * 100, metric = 15.56% * 100;
- Minibatch[ 301- 400]: loss = 0.647098 * 100, metric = 14.20% * 100;
- Minibatch[ 401- 500]: loss = 0.664098 * 100, metric = 14.86% * 100;
- Minibatch[ 501- 600]: loss = 0.641911 * 100, metric = 13.93% * 100;
- Minibatch[ 601- 700]: loss = 0.622836 * 100, metric = 13.87% * 100;
- Minibatch[ 701- 800]: loss = 0.638989 * 100, metric = 14.03% * 100;
- Minibatch[ 801- 900]: loss = 0.631417 * 100, metric = 13.91% * 100;
- Minibatch[ 901-1000]: loss = 0.619353 * 100, metric = 13.33% * 100;
-Finished Epoch[2 of 2]: [Training] loss = 0.656034 * 1000, metric = 14.52% * 1000 298.126s (  3.4 samples/s);
-Finished Evaluation [2]: Minibatch[1-1100]: metric = 24.49% * 1100;
+ Minibatch[   1- 100]: loss = 1.236850 * 100, metric = 24.45% * 100;
+ Minibatch[ 101- 200]: loss = 0.963302 * 100, metric = 22.37% * 100;
+ Minibatch[ 201- 300]: loss = 0.851375 * 100, metric = 20.27% * 100;
+ Minibatch[ 301- 400]: loss = 0.825299 * 100, metric = 19.15% * 100;
+ Minibatch[ 401- 500]: loss = 0.770253 * 100, metric = 17.66% * 100;
+ Minibatch[ 501- 600]: loss = 0.743818 * 100, metric = 16.93% * 100;
+ Minibatch[ 601- 700]: loss = 0.707428 * 100, metric = 15.44% * 100;
+ Minibatch[ 701- 800]: loss = 0.668673 * 100, metric = 14.80% * 100;
+ Minibatch[ 801- 900]: loss = 0.694199 * 100, metric = 15.11% * 100;
+ Minibatch[ 901-1000]: loss = 0.694704 * 100, metric = 15.29% * 100;
+Finished Epoch[1 of 2]: [Training] loss = 0.815590 * 1000, metric = 18.15% * 1000 359.718s (  2.8 samples/s);
+Finished Evaluation [1]: Minibatch[1-1100]: metric = 26.69% * 1100;
+ Minibatch[   1- 100]: loss = 0.677776 * 100, metric = 15.29% * 100;
+ Minibatch[ 101- 200]: loss = 0.664853 * 100, metric = 14.64% * 100;
+ Minibatch[ 201- 300]: loss = 0.653133 * 100, metric = 14.30% * 100;
+ Minibatch[ 301- 400]: loss = 0.637755 * 100, metric = 14.04% * 100;
+ Minibatch[ 401- 500]: loss = 0.644547 * 100, metric = 14.34% * 100;
+ Minibatch[ 501- 600]: loss = 0.613979 * 100, metric = 13.28% * 100;
+ Minibatch[ 601- 700]: loss = 0.609525 * 100, metric = 13.14% * 100;
+ Minibatch[ 701- 800]: loss = 0.614872 * 100, metric = 13.27% * 100;
+ Minibatch[ 801- 900]: loss = 0.612880 * 100, metric = 13.24% * 100;
+ Minibatch[ 901-1000]: loss = 0.591469 * 100, metric = 12.61% * 100;
+Finished Epoch[2 of 2]: [Training] loss = 0.632079 * 1000, metric = 13.81% * 1000 313.160s (  3.2 samples/s);
+Finished Evaluation [2]: Minibatch[1-1100]: metric = 25.28% * 1100;
 creating eval model
 Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
 Evaluating Faster R-CNN model for 30200 images.
@@ -335,8 +335,8 @@ Processed 29900 samples
 Processed 30000 samples
 Processed 30100 samples
 Processed 30200 samples
-Number of rois before non-maximum suppression: 5999924
-Number of rois  after non-maximum suppression: 3422781
-AP for        Positive = 0.3798
-AP for        Negative = 0.3703
-Mean AP = 0.3751
+Number of rois before non-maximum suppression: 6116697
+Number of rois  after non-maximum suppression: 3513800
+AP for        Positive = 0.3872
+AP for        Negative = 0.3873
+Mean AP = 0.3873
