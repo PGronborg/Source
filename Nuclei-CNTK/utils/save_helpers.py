@@ -13,7 +13,7 @@ from utils.rpn.bbox_transform import regress_rois
 import cv2 # pip install opencv-python
 
 
-def save_data(evaluator, results_base_path, cfg):
+def save_data(evaluator, num_eval, results_base_path, cfg):
 
 	with open(cfg["DATA"].TEST_MAP_FILE) as f:
 		content = f.readlines()
@@ -27,7 +27,7 @@ def save_data(evaluator, results_base_path, cfg):
 	saver_file = os.path.join(cfg.OUTPUT_PATH, "{}.txt"
 	                                 .format(cfg.SAVE_NAME))
 	with open(saver_file, 'w') as txtf:
-		for i in range(0, len(content)):
+		for i in range(0, num_eval):
 			img_path = img_file_names[i]
 			out_cls_pred, out_rpn_rois, out_bbox_regr, dims = evaluator.process_image_detailed(img_path)
 			labels = out_cls_pred.argmax(axis=1)

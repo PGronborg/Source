@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     results_folder = os.path.join(cfg.OUTPUT_PATH, cfg["DATA"].DATASET)
     evaluator = FasterRCNN_Evaluator(trained_model, cfg)
-    save_data(evaluator, results_folder, cfg)
+    save_data(evaluator, num_eval, results_folder, cfg)
     # Plot results on test set images
     if cfg.VISUALIZE_RESULTS:
         num_eval = min(cfg["DATA"].NUM_TEST_IMAGES, 100)
