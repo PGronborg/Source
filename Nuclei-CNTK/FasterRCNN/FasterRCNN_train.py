@@ -511,6 +511,8 @@ def train_faster_rcnn_alternating(cfg):
 def train_model(image_input, roi_input, dims_input, loss, pred_error,
                 lr_per_sample, mm_schedule, l2_reg_weight, epochs_to_train, cfg,
                 rpn_rois_input=None, buffered_rpn_proposals=None):
+    import copy
+
     if isinstance(loss, cntk.Variable):
         loss = combine([loss])
 
@@ -607,8 +609,8 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
             data = train_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
             trainer.train_minibatch(data) #check syntax
             if sample_count%10==0:                                   # update model with it
-                error += trainer.test_minibatch(data)
-                loss += trainer.previous_minibatch_loss_average
+                error += copy.copy(trainer.previous_minibatch_evaluation_average)
+                loss += copy.copy(trainer.previous_minibatch_loss_average)
                 count += 1
             sample_count += trainer.previous_minibatch_sample_count          # count samples processed so far
         epoch_train_loss[epoch] = loss / count
@@ -620,8 +622,9 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         count = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
             data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-validation_count), input_map=val_input_map)
-            val_err += trainer.test_minibatch(data)
-            val_loss += trainer.previous_minibatch_loss_average
+            trainer.test_minibatch()
+            val_err += copy.copy(trainer.previous_minibatch_evaluation_average)
+            val_loss += copy.copy(trainer.previous_minibatch_loss_average)
             validation_count += cfg.MB_SIZE 
             count+=1
         val_error[epoch] = val_err/count
