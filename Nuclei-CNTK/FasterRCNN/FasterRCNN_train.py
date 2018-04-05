@@ -623,7 +623,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         tester = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
             data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-validation_count), input_map=val_input_map)
-            val_err, val_loss += trainer.test_minibatch(data)
+            val_err, val_loss = trainer.test_minibatch(data)
             #if validation_count>1:
                 #val_err += copy.copy(trainer.previous_minibatch_evaluation_average)
                 #val_loss += copy.copy(trainer.previous_minibatch_loss_average)
