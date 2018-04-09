@@ -595,12 +595,14 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     early_stopping_criteria = np.inf
     early_stop_final_count = 0
     epoch_train_loss = [0]*epochs_to_train
+    epoch_train_loss2 = [0]*epochs_to_train
     epoch_train_error = [0]*epochs_to_train
     val_error = [0]*epochs_to_train
     val_losses = [0]*epochs_to_train
 
     for epoch in range(epochs_to_train):       # loop over epochs
         loss = 0 
+        loss2 = 0
         error = 0
         sample_count = 0
         count = 0
@@ -610,11 +612,12 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
             trainer.train_minibatch(data) #check syntax
             if sample_count%10==0:                                   # update model with it
                 error += copy.copy(trainer.previous_minibatch_evaluation_average)
-                #loss += copy.copy(trainer.previous_minibatch_loss_average)
-                loss += float(trainer.loss_function.eval(data))
+                loss += copy.copy(trainer.previous_minibatch_loss_average)
+                loss2 += float(trainer.loss_function.eval(data))
                 count += 1
             sample_count += trainer.previous_minibatch_sample_count          # count samples processed so far
         epoch_train_loss[epoch] = loss / count
+        epoch_train_loss2[epoch] = loss2 / count
         epoch_train_error[epoch] = error / count
 
         validation_count = 0
@@ -640,7 +643,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         if cfg["CNTK"].EARLY_STOP:
             early_stopping_counter +=1
             if (val_losses[epoch] < early_stopping_criteria):
-                early_stopping_criteria = val_error[epoch]
+                early_stopping_criteria = val_loss[epoch]
                 early_stopping_counter = 0
             if (early_stopping_counter == cfg["CNTK"].EARLY_STOP_NUM):
                 early_stop_final_count -=1
@@ -648,9 +651,9 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
 
     with open(cfg['VAL_PATH'], 'w') as csvfile:
         valwriter = csv.writer(csvfile, delimiter=';')
-        valwriter.writerow(['Count','Train Loss','Train error','Val Loss','Val error'])
+        valwriter.writerow(['Count','Train Loss','Train Loss2','Train error','Val Loss','Val error'])
         for saver in range(early_stop_final_count):
-            valwriter.writerow([saver,epoch_train_loss[saver],epoch_train_error[saver],val_losses[saver],val_error[saver]])
+            valwriter.writerow([saver,epoch_train_loss[saver],epoch_train_loss2[saver],epoch_train_error[saver],val_losses[saver],val_error[saver]])
 
             #progress_printer.update_with_trainer(trainer, with_metric=True)  # log progress
             #if sample_count % 100 == 0:
