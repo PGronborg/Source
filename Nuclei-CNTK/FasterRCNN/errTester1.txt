@@ -16,3 +16,7 @@ Build info:
 		MPI distribution: Open MPI
 		MPI version: 1.10.7
 -------------------------------------------------------------------
+Traceback (most recent call last):
+  File "run_faster_rcnn_VGG16.py", line 53, in <module>
+    save_data(evaluator, num_eval, results_folder, cfg)
+NameError: name 'num_eval' is not defined
