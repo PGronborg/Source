@@ -1,0 +1,24 @@
+Using base model:   VGG16
+lr_per_sample:      [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-06]
+Training model for 2 epochs.
+Training 136449349 parameters in 32 parameter tensors.
+Learning rate per minibatch: 0.001
+Momentum per minibatch: 0.9
+Learning rate per minibatch: 0.002
+Momentum per minibatch: 0.9
+ Minibatch[   1- 100]: loss = 1.230166 * 100, metric = 24.89% * 100;
+ Minibatch[ 101- 200]: loss = 1.001722 * 100, metric = 23.00% * 100;
+ Minibatch[ 201- 300]: loss = 0.877965 * 100, metric = 21.00% * 100;
+ Minibatch[ 301- 400]: loss = 0.868269 * 100, metric = 19.85% * 100;
+ Minibatch[ 401- 500]: loss = 0.796681 * 100, metric = 18.79% * 100;
+Finished Epoch[1 of 2]: [Training] loss = 0.954961 * 500, metric = 21.51% * 500 270.177s (  1.9 samples/s);
+Finished Evaluation [1]: Minibatch[1-500]: metric = 26.95% * 500;
+ Minibatch[   1- 100]: loss = 0.778344 * 100, metric = 17.29% * 100;
+ Minibatch[ 101- 200]: loss = 0.740223 * 100, metric = 16.71% * 100;
+ Minibatch[ 201- 300]: loss = 0.701756 * 100, metric = 15.66% * 100;
+ Minibatch[ 301- 400]: loss = 0.714203 * 100, metric = 16.06% * 100;
+ Minibatch[ 401- 500]: loss = 0.723930 * 100, metric = 16.49% * 100;
+Finished Epoch[2 of 2]: [Training] loss = 0.731691 * 500, metric = 16.44% * 500 204.955s (  2.4 samples/s);
+Finished Evaluation [2]: Minibatch[1-500]: metric = 28.02% * 500;
+creating eval model
+Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
