@@ -62,5 +62,5 @@ def save_data(evaluator, num_eval, results_base_path, cfg):
 				if label > 0:
 					txtString = txtString + "{} {} {} {} {} {} ".format(str(rect[0]),str(rect[1]),str(rect[2]),str(rect[3]),str(label),str(score))
 
-				txtf.write(txtString+"\n")
-		return
+			txtf.write(txtString+"\n")
+	return
