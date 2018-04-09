@@ -6,29 +6,29 @@ Learning rate per minibatch: 0.001
 Momentum per minibatch: 0.9
 Learning rate per minibatch: 0.002
 Momentum per minibatch: 0.9
- Minibatch[   1- 100]: loss = 1.257670 * 100, metric = 24.74% * 100;
- Minibatch[ 101- 200]: loss = 0.990442 * 100, metric = 23.59% * 100;
- Minibatch[ 201- 300]: loss = 0.892328 * 100, metric = 21.89% * 100;
- Minibatch[ 301- 400]: loss = 0.865382 * 100, metric = 20.46% * 100;
- Minibatch[ 401- 500]: loss = 0.779968 * 100, metric = 18.70% * 100;
- Minibatch[ 501- 600]: loss = 0.773604 * 100, metric = 17.76% * 100;
- Minibatch[ 601- 700]: loss = 0.745012 * 100, metric = 16.96% * 100;
- Minibatch[ 701- 800]: loss = 0.696396 * 100, metric = 15.70% * 100;
- Minibatch[ 801- 900]: loss = 0.734013 * 100, metric = 16.62% * 100;
- Minibatch[ 901-1000]: loss = 0.726104 * 100, metric = 16.78% * 100;
-Finished Epoch[1 of 2]: [Training] loss = 0.846092 * 1000, metric = 19.32% * 1000 501.679s (  2.0 samples/s);
-Finished Evaluation [1]: Minibatch[1-2000]: metric = 25.50% * 2000;
- Minibatch[   1- 100]: loss = 0.715087 * 100, metric = 16.25% * 100;
- Minibatch[ 101- 200]: loss = 0.695488 * 100, metric = 15.75% * 100;
- Minibatch[ 201- 300]: loss = 0.693910 * 100, metric = 16.16% * 100;
- Minibatch[ 301- 400]: loss = 0.670833 * 100, metric = 15.03% * 100;
- Minibatch[ 401- 500]: loss = 0.676783 * 100, metric = 15.31% * 100;
- Minibatch[ 501- 600]: loss = 0.660443 * 100, metric = 15.01% * 100;
- Minibatch[ 601- 700]: loss = 0.643551 * 100, metric = 14.39% * 100;
- Minibatch[ 701- 800]: loss = 0.654442 * 100, metric = 14.65% * 100;
- Minibatch[ 801- 900]: loss = 0.650413 * 100, metric = 14.80% * 100;
- Minibatch[ 901-1000]: loss = 0.637651 * 100, metric = 14.16% * 100;
-Finished Epoch[2 of 2]: [Training] loss = 0.669860 * 1000, metric = 15.15% * 1000 452.150s (  2.2 samples/s);
-Finished Evaluation [2]: Minibatch[1-2000]: metric = 23.53% * 2000;
+ Minibatch[   1- 100]: loss = 1.254438 * 100, metric = 24.57% * 100;
+ Minibatch[ 101- 200]: loss = 0.959438 * 100, metric = 22.79% * 100;
+ Minibatch[ 201- 300]: loss = 0.857511 * 100, metric = 20.82% * 100;
+ Minibatch[ 301- 400]: loss = 0.860468 * 100, metric = 20.25% * 100;
+ Minibatch[ 401- 500]: loss = 0.780063 * 100, metric = 18.36% * 100;
+ Minibatch[ 501- 600]: loss = 0.757091 * 100, metric = 16.79% * 100;
+ Minibatch[ 601- 700]: loss = 0.731000 * 100, metric = 16.36% * 100;
+ Minibatch[ 701- 800]: loss = 0.686855 * 100, metric = 15.36% * 100;
+ Minibatch[ 801- 900]: loss = 0.697722 * 100, metric = 15.49% * 100;
+ Minibatch[ 901-1000]: loss = 0.707325 * 100, metric = 15.88% * 100;
+Finished Epoch[1 of 2]: [Training] loss = 0.829191 * 1000, metric = 18.67% * 1000 490.586s (  2.0 samples/s);
+Finished Evaluation [1]: Minibatch[1-2000]: metric = 29.49% * 2000;
+ Minibatch[   1- 100]: loss = 0.707177 * 100, metric = 16.19% * 100;
+ Minibatch[ 101- 200]: loss = 0.680105 * 100, metric = 15.07% * 100;
+ Minibatch[ 201- 300]: loss = 0.674313 * 100, metric = 14.89% * 100;
+ Minibatch[ 301- 400]: loss = 0.653506 * 100, metric = 14.21% * 100;
+ Minibatch[ 401- 500]: loss = 0.661903 * 100, metric = 14.55% * 100;
+ Minibatch[ 501- 600]: loss = 0.644522 * 100, metric = 14.32% * 100;
+ Minibatch[ 601- 700]: loss = 0.617238 * 100, metric = 13.28% * 100;
+ Minibatch[ 701- 800]: loss = 0.632941 * 100, metric = 13.65% * 100;
+ Minibatch[ 801- 900]: loss = 0.631816 * 100, metric = 13.65% * 100;
+ Minibatch[ 901-1000]: loss = 0.617830 * 100, metric = 13.42% * 100;
+Finished Epoch[2 of 2]: [Training] loss = 0.652135 * 1000, metric = 14.32% * 1000 453.346s (  2.2 samples/s);
+Finished Evaluation [2]: Minibatch[1-2000]: metric = 25.98% * 2000;
 creating eval model
 Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
