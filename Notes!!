@@ -1,23 +1,10 @@
 Notes!!
-Bruge 10.000(20.000/30.000?) billeder i stedet for 50.000... Antallet af objekter er MEGET højt og giver ikke nødvendigvis bedre resultater
-Early stopping eller ej?... Stoppede efter 16 epochs med 50.000
-
-Spørgsmål fra Jeppe:
-Vær helt sikker på at data bliver shuffled, enten efter hver epoch eller efter alt data er kørt igennem. Hint: Check CNTK reader’en --> Data bliver shufflet hver gang next batch bliver kaldt
-
-Jeg mistænker lidt, at det er de samme 10.000 billeder i alle epochs --> Skulle det gerne ikke være, men billederne kan godt være samme, i den samme epoch
-
-Det er positivt, at trænings mAP går mod nul, dvs. den kan lære det, men overfitter --> Det ser meget fornuftigt ud
-
-Tilføj mere data, enten direkte eller brug augmentering (flip, rotate, color). Hint: Check reader’en --> Flip bliver allerede brugt(men på alt data), Rotate og color er ikke i spil til at blive brugt(ikke en parameter)
-
-Max epochs må gerne øges en del, især hvis epoch_size = 10.000 (lidt lavt) --> Giver det mening når der er over 100 objekter i hvert billede??... epoch_size=50.000 => 2.5h/epoch
-
-L2 regularisering for at modvirke overfitting. --> Kan sagtens sættes meget ned, dog obs. mange objekter i hvert billede... Måske sætte learning rate ned?
-
-Bliver der brugt dropout nogle steder? --> Nej, det bliver kørt hele vejen igennem fra Pool2 til relu5_3/drop7
-
-
+Loss for test image, virker ikke til at være muligt med trainer...........
+Efter train_minibatch, kan man få loss ud med previous_minibatch_loss_average
+Virker bare ikke efter test_minibatch.
+Kan løses med enten at gemme checkpoint, bruge train_minibatch og derefter kalde previous_minibatch_loss_average, hvorefter man kalder, restore_from_checkpoint og gør det hele igen.
+Eller man skal hive det hele ud og beregne det et andet sted..... Her vil man ende med at få mAP, kan det sammenlignes???
+Kan også løses ved at "nøjes" med pred_error.
 
 
 
