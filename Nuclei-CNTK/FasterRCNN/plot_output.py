@@ -31,10 +31,14 @@ plt.plot(count, train_err, 'r-', count, val_err, 'b-')
 # Adding title and correct ticks
 plt.title('Training vs. validation')
 plt.xticks(count[0:-1:2])
+axes = plt.gca()
+axes.set_ylim([0,100])
+plt.xlabel('Epoch')
+plt.ylabel('%')
 
 # Setting legend
-plt.text(count[-6], np.max(val_err),'-- Training error',{'color': 'r','fontsize': 11})
-plt.text(count[-6], np.max(val_err)-0.7,'-- Validation error',{'color': 'b','fontsize': 11})
+plt.text(np.percentile(count,70.0), 90,'-- Training error',{'color': 'r','fontsize': 11})
+plt.text(np.percentile(count,70.0), 85,'-- Validation error',{'color': 'b','fontsize': 11})
 
 # Displaying the plot
 plt.show()
