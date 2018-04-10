@@ -40,7 +40,7 @@ __C.CNTK.MOMENTUM_PER_MB = 0.9
 __C.CNTK.BIAS_LR_MULT = 2.0
 
 # E2E learning parameters
-__C.CNTK.E2E_MAX_EPOCHS = 200
+__C.CNTK.E2E_MAX_EPOCHS = 20#0
 __C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001] * 20 + [0.000001]
 
 # 4-stage learning parameters (alternating training scheme)
