@@ -17,8 +17,8 @@ with open(sys.argv[1], 'r') as csvfile:
     reader = csv.DictReader(csvfile, delimiter=';')
     for row in reader:
         count[counter] = int(row['Count'])
-        train_err[counter] = float(row['Train error'])*100
-        val_err[counter] = float(row['Val error'])*100
+        train_err[counter] = float(row['Train Loss'])*100
+        val_err[counter] = float(row['Val Loss'])*100
         counter += 1
 
 # Removing empty spaces

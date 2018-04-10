@@ -11,7 +11,7 @@ imgFolder = "/Volumes/Visiopharm Student HDD/F18_Peter/Data/Ki67/test_256_20XX/"
 #file = "/Users/Greenborg/Desktop/Experiments/"
 file = "/Volumes/Visiopharm Student HDD/F18_Peter/Data/Ki67/test_256_20X/"
 fileEval = "/Users/Greenborg/Desktop/Source/Nuclei-CNTK/FasterRCNN/Output/"
-name = "Tester1.txt"
+name = "Fail.txt"
 num = int(sys.argv[1])
 
 #imgVal = num % 100
@@ -35,8 +35,8 @@ roi[0:2] = []
 
 for i in range(int(len(roi)/5)):
     ind = int(i*5)
-    #cv2.rectangle(img,(round(float(roi[ind])),round(float(roi[ind+1]))),(round(float(roi[ind+2])),round(float(roi[ind+3]))),(0,255,0),1)
-    cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(0,255,0),-1)
+    cv2.rectangle(img,(round(float(roi[ind])),round(float(roi[ind+1]))),(round(float(roi[ind+2])),round(float(roi[ind+3]))),(0,255,0),1)
+    #cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(0,255,0),-1)
     #if int(round(float(roi[ind+4]))) == 1:
      #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(255,0,0),-1)
     #else:
@@ -49,8 +49,8 @@ roiEval = lineRoiEval.split()
 
 for i in range(int(len(roiEval)/6)):
     ind = int(i*6)
-    #cv2.rectangle(img,(round(float(roiEval[ind])),round(float(roiEval[ind+1]))),(round(float(roiEval[ind+2])),round(float(roiEval[ind+3]))),(255,0,0),1)
-    cv2.circle(img,(int(round(np.mean((float(roiEval[ind]),float(roiEval[ind+2]))))),int(round(np.mean((float(roiEval[ind+1]),float(roiEval[ind+3])))))),2,(255,0,0),-1)
+    cv2.rectangle(img,(round(float(roiEval[ind])),round(float(roiEval[ind+1]))),(round(float(roiEval[ind+2])),round(float(roiEval[ind+3]))),(255,0,0),1)
+    #cv2.circle(img,(int(round(np.mean((float(roiEval[ind]),float(roiEval[ind+2]))))),int(round(np.mean((float(roiEval[ind+1]),float(roiEval[ind+3])))))),2,(255,0,0),-1)
     #if int(round(float(roi[ind+4]))) == 1:
      #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(255,0,0),-1)
     #else:

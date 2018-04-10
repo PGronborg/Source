@@ -54,11 +54,11 @@ def save_data(evaluator, num_eval, results_base_path, cfg):
 						label = 0
 
 				rect = [i for i in filtered_bboxes[roiIndex]]
-				rect[0] = int(max(0, min(img_shape[2], rect[0]+(rect[2]-rect[0])/2-1)))
-				rect[1] = int(max(0, min(img_shape[1], rect[1]+(rect[3]-rect[1])/2-1)))
-				rect[2] = int(max(0, min(img_shape[2], rect[0]+(rect[2]-rect[0])/2+1)))
-				rect[3] = int(max(0, min(img_shape[1], rect[1]+(rect[3]-rect[1])/2+1)))
-
+				rect[0] = int(max(0, min(img_shape[2], rect[0])))
+				rect[1] = int(max(0, min(img_shape[1], rect[1])))
+				rect[2] = int(max(0, min(img_shape[2], rect[2])))
+				rect[3] = int(max(0, min(img_shape[1], rect[3])))
+				
 				if label > 0:
 					txtString = txtString + "{} {} {} {} {} {} ".format(str(rect[0]),str(rect[1]),str(rect[2]),str(rect[3]),str(label),str(score))
 
