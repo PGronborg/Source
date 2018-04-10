@@ -16,13 +16,3 @@ Build info:
 		MPI distribution: Open MPI
 		MPI version: 1.10.7
 -------------------------------------------------------------------
-Traceback (most recent call last):
-  File "run_faster_rcnn_VGG16.py", line 44, in <module>
-    trained_model = train_faster_rcnn(cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 297, in train_faster_rcnn
-    eval_model = train_faster_rcnn_e2e(cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 335, in train_faster_rcnn_e2e
-    e2e_lr_per_sample_scaled, mm_schedule, cfg["CNTK"].L2_REG_WEIGHT, cfg["CNTK"].E2E_MAX_EPOCHS, cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 646, in train_model
-    early_stopping_criteria = val_loss[epoch]
-TypeError: 'float' object is not subscriptable
