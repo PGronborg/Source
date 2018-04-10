@@ -643,7 +643,8 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         if cfg["CNTK"].EARLY_STOP:
             early_stopping_counter +=1
             if (val_losses[epoch] < early_stopping_criteria):
-                early_stopping_criteria = val_loss[epoch]
+                print(val_losses[epoch])
+                early_stopping_criteria = val_losses[epoch]
                 early_stopping_counter = 0
             if (early_stopping_counter == cfg["CNTK"].EARLY_STOP_NUM):
                 early_stop_final_count -=1
