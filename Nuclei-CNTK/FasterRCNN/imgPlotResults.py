@@ -11,7 +11,7 @@ imgFolder = "/Volumes/Visiopharm Student HDD/F18_Peter/Data/Ki67/test_256_20XX/"
 #file = "/Users/Greenborg/Desktop/Experiments/"
 file = "/Volumes/Visiopharm Student HDD/F18_Peter/Data/Ki67/test_256_20X/"
 fileEval = "/Users/Greenborg/Desktop/Source/Nuclei-CNTK/FasterRCNN/Output/"
-name = "Fail.txt"
+name = "Tester2.txt"
 num = int(sys.argv[1])
 
 #imgVal = num % 100

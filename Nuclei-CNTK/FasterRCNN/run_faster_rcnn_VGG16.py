@@ -32,7 +32,8 @@ def get_configuration():
 if __name__ == '__main__':
     cfg = get_configuration()
     cfg.SAVE_NAME = sys.argv[1]
-    cfg.CNTK.L2_REG_WEIGHT = float(sys.argv[2])
+    cfg.SIGMA_RPN_L1 = float(sys.argv[2])
+    cfg.SIGMA_DET_L1 = float(sys.argv[3])
 
     # Changing parameters
 
@@ -45,8 +46,8 @@ if __name__ == '__main__':
     #eval_results = compute_test_set_aps(trained_model, cfg)
 
     # write AP results to output
-    #for class_name in eval_results: print('AP for {:>15} = {:.4f}'.format(class_name, eval_results[class_name]))
-    #print('Mean AP = {:.4f}'.format(np.nanmean(list(eval_results.values()))))
+    for class_name in eval_results: print('AP for {:>15} = {:.4f}'.format(class_name, eval_results[class_name]))
+    print('Mean AP = {:.4f}'.format(np.nanmean(list(eval_results.values()))))
 
     results_folder = os.path.join(cfg.OUTPUT_PATH, cfg["DATA"].DATASET)
     evaluator = FasterRCNN_Evaluator(trained_model, cfg)
