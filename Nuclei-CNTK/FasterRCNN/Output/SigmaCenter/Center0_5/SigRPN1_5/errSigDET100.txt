@@ -1,0 +1,60 @@
+Selected GPU[0] GeForce GTX TITAN X as the process wide default device.
+CUDA failure 2: out of memory ; GPU=0 ; hostname=theia ; expr=cudaMalloc((void**) &deviceBufferPtr, sizeof(AllocatedElemType) * AsMultipleOf(numElements, 2))
+Traceback (most recent call last):
+  File "run_faster_rcnn_VGG16.py", line 45, in <module>
+    trained_model = train_faster_rcnn(cfg)
+  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 297, in train_faster_rcnn
+    eval_model = train_faster_rcnn_e2e(cfg)
+  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 320, in train_faster_rcnn_e2e
+    loss, pred_error = create_faster_rcnn_model(image_input, roi_input, dims_node, cfg)
+  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 183, in create_faster_rcnn_model
+    base_model = load_model(cfg['BASE_MODEL_PATH'])
+  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/ops/functions.py", line 1666, in load_model
+    return Function.load(model, device, format)
+  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/ops/functions.py", line 1580, in load
+    return cntk_py.Function.load(str(model), device, format.value)
+RuntimeError: CUDA failure 2: out of memory ; GPU=0 ; hostname=theia ; expr=cudaMalloc((void**) &deviceBufferPtr, sizeof(AllocatedElemType) * AsMultipleOf(numElements, 2))
+
+[CALL STACK]
+[0x7f7ce9d0c139]                                                       + 0x6f0139
+[0x7f7ce15185ef]                                                       + 0xdc65ef
+[0x7f7ce1568f77]    float* Microsoft::MSR::CNTK::TracingGPUMemoryAllocator::  Allocate  <float>(int,  unsigned long,  unsigned long) + 0x57
+[0x7f7ce159a0b8]    Microsoft::MSR::CNTK::GPUMatrix<float>::  GPUMatrix  (unsigned long,  unsigned long,  int) + 0xb8
+[0x7f7ce1485a1d]    Microsoft::MSR::CNTK::Matrix<float>::  Matrix  (unsigned long,  unsigned long,  int,  Microsoft::MSR::CNTK::MatrixType,  Microsoft::MSR::CNTK::MatrixFormat,  unsigned long) + 0xdd
+[0x7f7cea014769]                                                       + 0x9f8769
+[0x7f7cea015820]    CNTK::NDArrayView::  NDArrayView  (CNTK::DataType,  CNTK::StorageFormat,  CNTK::NDShape const&,  CNTK::DeviceDescriptor const&) + 0x60
+[0x7f7cea015905]    CNTK::NDArrayView::  DeepClone  (CNTK::DeviceDescriptor const&,  bool) const + 0x65
+[0x7f7cea05adf9]    CNTK::Variable::  Deserialize  (CNTK::Dictionary const&,  CNTK::DeviceDescriptor const&) + 0x499
+[0x7f7ce9f16b3b]    CNTK::CompositeFunction::  Deserialize  (CNTK::Dictionary const&,  CNTK::DeviceDescriptor const&) + 0x2ab
+[0x7f7ce9ead86d]    CNTK::Function::  Deserialize  (CNTK::Dictionary const&,  CNTK::DeviceDescriptor const&) + 0x1d
+[0x7f7ce9eadec1]    CNTK::Function::  Load  (std::__cxx11::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> const&,  CNTK::DeviceDescriptor const&,  CNTK::ModelFormat) + 0xb1
+[0x7f7ceabe3386]                                                       + 0x1b6386
+[0x564c8471bb27]    PyCFunction_Call                                   + 0x47
+[0x564c8477828c]    PyEval_EvalFrameEx                                 + 0x3fc
+[0x564c84782f1d]    PyEval_EvalCodeEx                                  + 0x20d
+[0x564c847849cf]                                                       + 0x1af9cf
+[0x564c846d9dfa]    PyObject_Call                                      + 0x3a
+[0x564c8477aaab]    PyEval_EvalFrameEx                                 + 0x2c1b
+[0x564c8477d990]    PyEval_EvalFrameEx                                 + 0x5b00
+[0x564c84782f1d]    PyEval_EvalCodeEx                                  + 0x20d
+[0x564c847849cf]                                                       + 0x1af9cf
+[0x564c846d9dfa]    PyObject_Call                                      + 0x3a
+[0x564c8477aaab]    PyEval_EvalFrameEx                                 + 0x2c1b
+[0x564c8477d990]    PyEval_EvalFrameEx                                 + 0x5b00
+[0x564c84778950]    PyEval_EvalFrameEx                                 + 0xac0
+[0x564c8477d990]    PyEval_EvalFrameEx                                 + 0x5b00
+[0x564c84778950]    PyEval_EvalFrameEx                                 + 0xac0
+[0x564c84782f1d]    PyEval_EvalCodeEx                                  + 0x20d
+[0x564c84783e6c]    PyEval_EvalCode                                    + 0x1c
+[0x564c847df424]                                                       + 0x20a424
+[0x564c847e0a91]    PyRun_FileExFlags                                  + 0xa1
+[0x564c847e0c9e]    PyRun_SimpleFileExFlags                            + 0x1de
+[0x564c847e1392]    Py_Main                                            + 0x612
+[0x564c846ad061]    main                                               + 0xe1
+[0x7f7d3fa5d830]    __libc_start_main                                  + 0xf0
+[0x564c84785818]                                                       + 0x1b0818
+

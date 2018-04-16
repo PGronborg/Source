@@ -1,0 +1,22 @@
+Selected GPU[0] GeForce GTX TITAN X as the process wide default device.
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Jan 31 2018 15:03:41
+		Last modified date: Tue Jan 30 03:26:13 2018
+		Build type: release
+		Build target: GPU
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		CUDA version: 9.0.0
+		CUDNN version: 7.0.3
+		Build Branch: HEAD
+		Build SHA1: a70455c7abe76596853f8e6a77a4d6de1e3ba76e
+		MPI distribution: Open MPI
+		MPI version: 1.10.7
+-------------------------------------------------------------------
+Traceback (most recent call last):
+  File "run_faster_rcnn_VGG16.py", line 49, in <module>
+    for class_name in eval_results: print('AP for {:>15} = {:.4f}'.format(class_name, eval_results[class_name]))
+NameError: name 'eval_results' is not defined

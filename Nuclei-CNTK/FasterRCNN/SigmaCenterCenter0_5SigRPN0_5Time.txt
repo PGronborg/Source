@@ -1,40 +1,32 @@
-./runner.sh: line 4: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET0_5.txt: No such file or directory
-./runner.sh: line 6: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET1.txt: No such file or directory
 
-real	0m0.015s
-user	0m0.000s
-sys	0m0.001s
+real	551m15.422s
+user	486m50.443s
+sys	63m24.664s
 
-real	0m0.015s
-user	0m0.001s
-sys	0m0.001s
-./runner.sh: line 12: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET2.txt: No such file or directory
-./runner.sh: line 10: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET1_5.txt: No such file or directory
+real	1656m4.786s
+user	1430m36.843s
+sys	223m27.981s
 
+real	1070m49.654s
+user	930m40.560s
+sys	139m29.985s
 
-real	0m0.003s
-real	0m0.002s
-user	0m0.001s
-user	0m0.001s
-sys	0m0.000s
-sys	0m0.000s
-./runner.sh: line 17: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET5.txt: No such file or directory
-./runner.sh: line 19: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET10.txt: No such file or directory
+real	1222m1.313s
+user	1060m19.211s
+sys	160m56.467s
 
-real	0m0.002s
+real	1057m15.688s
+user	921m43.695s
+sys	134m51.938s
 
-user	0m0.001s
-real	0m0.003s
-sys	0m0.000s
-user	0m0.001s
-sys	0m0.000s
-./runner.sh: line 26: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET100.txt: No such file or directory
+real	1499m26.316s
+user	1297m20.946s
+sys	201m28.342s
 
-real	0m0.001s
-user	0m0.001s
-sys	0m0.000s
-./runner.sh: line 24: Output/SigmaCenter/Center0_5/SigRPN0_5/OutputSigDET50.txt: No such file or directory
+real	772m18.951s
+user	673m22.002s
+sys	98m18.983s
 
-real	0m0.003s
-user	0m0.001s
-sys	0m0.000s
+real	1200m7.815s
+user	1037m29.463s
+sys	162m3.505s
