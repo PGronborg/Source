@@ -34,8 +34,8 @@ if __name__ == '__main__':
     cfg.SAVE_NAME = sys.argv[1]
     #cfg.SIGMA_RPN_L1 = float(sys.argv[2])
     #cfg.SIGMA_DET_L1 = float(sys.argv[3])
-    cfg.MODEL.START_TRAIN_CONV_NODE_NAME = sys.argv[2]
-    cfg.MODEL.LAST_HIDDEN_NODE_NAME = sys.argv[3]
+    #cfg.MODEL.START_TRAIN_CONV_NODE_NAME = sys.argv[2]
+    #cfg.MODEL.LAST_HIDDEN_NODE_NAME = sys.argv[3]
 
     # Changing parameters
 
