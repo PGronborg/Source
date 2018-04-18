@@ -17,6 +17,16 @@ Skrive generelt
 - ALLE de forskellige parametre
 Faster R-CNN
 
-Configuration!
-model og data skrives færdigt
-Preprocessing skal skrives
+
+Plan:
+uge 16:
+Kør dobbelt eksperiment med Sigma RPN og center RPN.
+Kør eksperiment med Sigma Detektor
+Analyser resultater
+Start med eksperiment for L2 regu. weight evt momentum
+Skriv om Faster R-CNN i rapporten
+Uge 17:
+Forsæt med L2 regu. weight
+Lav Momentum per mb.
+Learning rate constant vs decreasing
+Begynd på at ændre hvilke lag som bliver taget med
