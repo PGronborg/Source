@@ -190,7 +190,7 @@ __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 __C.STORE_EVAL_MODEL_WITH_NATIVE_UDF = False
 
 # Learning parameters
-__C.CNTK.L2_REG_WEIGHT = 0.005
+__C.CNTK.L2_REG_WEIGHT = 0.0005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
 # The learning rate multiplier for all bias weights
 __C.CNTK.BIAS_LR_MULT = 2.0
@@ -294,7 +294,7 @@ __C.TEST.RPN_PRE_NMS_TOP_N = 6000
 ## Number of top scoring boxes to keep after applying NMS to RPN proposals
 __C.TEST.RPN_POST_NMS_TOP_N = 300
 # Proposal height and width both need to be greater than RPN_MIN_SIZE (at orig image scale)
-__C.TEST.RPN_MIN_SIZE = 16
+__C.TEST.RPN_MIN_SIZE = 8
 
 
 #
