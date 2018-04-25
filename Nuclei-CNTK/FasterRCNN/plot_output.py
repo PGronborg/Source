@@ -36,17 +36,17 @@ train_loss2 = train_loss2[0:counter]
 val_loss = val_loss[0:counter]
 axes = plt.gca()
 # Plotting the results
-#plt.plot(count, train_err, 'c-'),plt.text(np.percentile(count,70.0), 75,'-- Training error',{'color': 'c','fontsize': 11}), axes.set_ylim([0,100])
-#plt.plot(count, val_err, 'm-'),plt.text(np.percentile(count,70.0), 70,'-- Validation error',{'color': 'm','fontsize': 11})
+plt.plot(count, train_err, 'c-'),plt.text(np.percentile(count,70.0), 75,'-- Training error',{'color': 'c','fontsize': 11}), axes.set_ylim([0,100])
+plt.plot(count, val_err, 'm-'),plt.text(np.percentile(count,70.0), 70,'-- Validation error',{'color': 'm','fontsize': 11})
 
-plt.plot(count, train_loss, 'r-'),plt.text(np.percentile(count,70.0), 0.90,'-- Training Loss',{'color': 'r','fontsize': 11}), axes.set_ylim([0,1])
-plt.plot(count, val_loss, 'b-'),plt.text(np.percentile(count,70.0), 0.85,'-- Validation Loss',{'color': 'b','fontsize': 11})
+#plt.plot(count, train_loss, 'r-'),plt.text(np.percentile(count,70.0), 0.90,'-- Training Loss',{'color': 'r','fontsize': 11}), axes.set_ylim([0,1])
+#plt.plot(count, val_loss, 'b-'),plt.text(np.percentile(count,70.0), 0.85,'-- Validation Loss',{'color': 'b','fontsize': 11})
 #plt.plot(count, train_loss2, 'g-'),plt.text(np.percentile(count,70.0), 0.80,'-- Training Loss2',{'color': 'g','fontsize': 11})
 # Adding title and correct ticks
 plt.title('Training vs. validation')
 plt.xticks(count[0:-1:4])
 plt.xlabel('Epoch')
-#plt.ylabel('%')
+plt.ylabel('%')
 
 # Setting legend
 #plt.text(np.percentile(count,70.0), 90,'-- Training error',{'color': 'r','fontsize': 11})
