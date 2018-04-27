@@ -599,6 +599,8 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
     epoch_train_error = [0]*epochs_to_train
     val_error = [0]*epochs_to_train
     val_losses = [0]*epochs_to_train
+    model_val = trainer.model
+    loss_val = trainer.loss_function
 
     for epoch in range(epochs_to_train):       # loop over epochs
         loss = 0 
