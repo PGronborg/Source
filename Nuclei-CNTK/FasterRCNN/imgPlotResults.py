@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+##Plot all results for image 5
+# python3 imgPlotResults.py 5
+
+##Plot all results with IOU under 0.3 but higher than 0.0
+# python3 imgPlotResults.py 5 0.3
+
+##Plot all results with IOU over 0.7
+# python3 imgPlotResults.py 5 0.7
+
+##Plot outliers
+# python3 imgPlotResults.py 5 out
 import sys
 import csv
 import matplotlib.pyplot as plt
@@ -36,7 +48,7 @@ imgFolder = "/Users/Greenborg/Desktop/Experiments/Test/"
 #file = "/Users/Greenborg/Desktop/Experiments/"
 file = "/Users/Greenborg/Desktop/Experiments/Test/"
 fileEval = "/Users/Greenborg/Desktop/Source/Nuclei-CNTK/FasterRCNN/Output/"
-name = "Fail.txt"
+name = "/Ref/Ref.txt"
 num = int(sys.argv[1])
 
 #imgVal = num % 100
@@ -149,7 +161,7 @@ elif len(sys.argv)>3:
 for i in range(int(len(roi)/5)):
     ind = int(i*5)
     #cv2.rectangle(img,(round(float(roi[ind])),round(float(roi[ind+1]))),(round(float(roi[ind+2])),round(float(roi[ind+3]))),(0,255,0),1)
-    #cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(0,255,0),-1)
+    cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(0,255,0),-1)
     #if int(round(float(roi[ind+4]))) == 1:
      #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(255,0,0),-1)
     #else:
