@@ -223,8 +223,9 @@ class ObjectDetectionReader:
             resized_with_pad = cv2.flip(resized_with_pad, 1)
 
         if sam_count%3==0:
-            data = np.asarray(resized_with_pad)
-            resized_with_pad = Image.fromarray(np.roll(data, 1, axis=-1))
+            resized_with_pad = resized_with_pad[...,::-1]
+            #data = np.asarray(resized_with_pad)
+            #resized_with_pad = Image.fromarray(np.roll(data, 1, axis=-1))
             #resized_with_pad = cv2.cvtColor(resized_with_pad, cv2.COLOR_BGR2RGB)
 
         # transpose(2,0,1) converts the image to the HWC format which CNTK expects
