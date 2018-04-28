@@ -222,7 +222,7 @@ class ObjectDetectionReader:
         if self._flip_image:
             resized_with_pad = cv2.flip(resized_with_pad, 1)
 
-        if sam_count%3==0
+        if sam_count%3==0:
             b, g, r = resized_with_pad.split()
             resized_with_pad = Image.merge("RGB", (r, g, b))
             #resized_with_pad = cv2.cvtColor(resized_with_pad, cv2.COLOR_BGR2RGB)
