@@ -16,13 +16,13 @@ __C.MODEL.BASE_MODEL = "VGG16"
 __C.MODEL.BASE_MODEL_FILE = "VGG16_ImageNet_Caffe.model"
 __C.MODEL.IMG_PAD_COLOR = [103, 116, 123]
 __C.MODEL.FEATURE_NODE_NAME = "data"
-__C.MODEL.LAST_CONV_NODE_NAME = "relu4_3"
+__C.MODEL.LAST_CONV_NODE_NAME = "relu5_3"
 __C.MODEL.START_TRAIN_CONV_NODE_NAME = "pool2" # __C.MODEL.FEATURE_NODE_NAME
-__C.MODEL.POOL_NODE_NAME = "pool4"
+__C.MODEL.POOL_NODE_NAME = "pool5"
 __C.MODEL.LAST_HIDDEN_NODE_NAME = "drop7"
-__C.MODEL.FEATURE_STRIDE = 8
+__C.MODEL.FEATURE_STRIDE = 16
 __C.MODEL.RPN_NUM_CHANNELS = 512
-__C.MODEL.ROI_DIM = 14#7
+__C.MODEL.ROI_DIM = 7
 ## Try changing `LR_FACTOR` parameters, if the training does not converge. 
 ## Ex.) For Grocery dataset, it may be better to set it to 0.1
 __C.MODEL.E2E_LR_FACTOR = 1.0

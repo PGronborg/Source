@@ -45,7 +45,7 @@ class ObjectDetectionReader:
         self._reading_order = None
         self._reading_index = -1
         
-    def get_next_input(self):
+    def get_next_input(self,sam_count=1):
         '''
         Reads image data and return image, annotations and shape information
         :return:
@@ -57,10 +57,10 @@ class ObjectDetectionReader:
         index = self._get_next_image_index()
         roi_data = self._get_gt_annotations(index)
         if DEBUG:
-            img_data, img_dims, resized_with_pad = self._load_resize_and_pad_image(index)
+            img_data, img_dims, resized_with_pad = self._load_resize_and_pad_image(index,sam_count=sam_count)
             self._debug_plot(resized_with_pad, roi_data)
         else:
-            img_data, img_dims = self._load_resize_and_pad_image(index)
+            img_data, img_dims = self._load_resize_and_pad_image(index,sam_count=sam_count)
 
         proposals, label_targets, bbox_targets, bbox_inside_weights = self._get_proposals_and_targets(index)
 
@@ -207,7 +207,7 @@ class ObjectDetectionReader:
         self._reading_index += 1
         return next_image_index
 
-    def _load_resize_and_pad_image(self, index):
+    def _load_resize_and_pad_image(self, index, sam_count=1):
         image_path = self._img_file_paths[index]
 
         img = self._read_image(image_path)
@@ -221,6 +221,11 @@ class ObjectDetectionReader:
                                               value=self._pad_value)
         if self._flip_image:
             resized_with_pad = cv2.flip(resized_with_pad, 1)
+
+        if sam_count%3==0
+            b, g, r = resized_with_pad.split()
+            resized_with_pad = Image.merge("RGB", (r, g, b))
+            #resized_with_pad = cv2.cvtColor(resized_with_pad, cv2.COLOR_BGR2RGB)
 
         # transpose(2,0,1) converts the image to the HWC format which CNTK expects
         model_arg_rep = np.ascontiguousarray(np.array(resized_with_pad, dtype=np.float32).transpose(2, 0, 1))

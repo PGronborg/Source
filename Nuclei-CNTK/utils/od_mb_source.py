@@ -62,12 +62,12 @@ class ObjectDetectionMinibatchSource(UserMinibatchSource):
     def bbiw_si(self):
         return self.bbiw_si
 
-    def next_minibatch(self, num_samples, number_of_workers=1, worker_rank=1, device=None, input_map=None):
+    def next_minibatch(self, num_samples, number_of_workers=1, worker_rank=1, device=None, input_map=None, sam_count=1):
         if num_samples > 1:
             print("Only single item mini batches are supported currently by od_mb_source.py")
             exit(1)
 
-        img_data, roi_data, img_dims, proposals, label_targets, bbox_targets, bbox_inside_weights = self.od_reader.get_next_input()
+        img_data, roi_data, img_dims, proposals, label_targets, bbox_targets, bbox_inside_weights = self.od_reader.get_next_input(sam_count=sam_count)
         sweep_end = self.od_reader.sweep_end()
 
         if input_map is None:

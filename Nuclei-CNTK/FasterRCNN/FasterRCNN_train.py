@@ -610,7 +610,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         count = 0
 
         while sample_count < cfg["DATA"].EPOCH_SIZE:  # loop over minibatches in the epoch
-            data = train_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map)
+            data = train_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_TRAIN_IMAGES-sample_count), input_map=train_input_map, sam_count=sample_count)
             trainer.train_minibatch(data) #check syntax
             if sample_count%10==0:                                   # update model with it
                 error += copy.copy(trainer.previous_minibatch_evaluation_average)
@@ -628,7 +628,7 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
         count = 0
         tester = 0
         while validation_count < cfg["DATA"].VAL_SIZE:
-            data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-validation_count), input_map=val_input_map)
+            data = val_minibatch_source.next_minibatch(min(cfg.MB_SIZE, cfg["DATA"].NUM_VAL_IMAGES-validation_count), input_map=val_input_map, sam_count=validation_count)
             #trainer.test_minibatch(data)
             #if validation_count>1:
             val_err += trainer.test_minibatch(data)# copy.copy(trainer.previous_minibatch_evaluation_average)
