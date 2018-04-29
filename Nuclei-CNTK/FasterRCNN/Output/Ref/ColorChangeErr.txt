@@ -16,19 +16,3 @@ Build info:
 		MPI distribution: Open MPI
 		MPI version: 1.10.7
 -------------------------------------------------------------------
-Traceback (most recent call last):
-  File "run_faster_rcnn_VGG16.py", line 47, in <module>
-    trained_model = train_faster_rcnn(cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 297, in train_faster_rcnn
-    eval_model = train_faster_rcnn_e2e(cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 335, in train_faster_rcnn_e2e
-    e2e_lr_per_sample_scaled, mm_schedule, cfg["CNTK"].L2_REG_WEIGHT, cfg["CNTK"].E2E_MAX_EPOCHS, cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 655, in train_model
-    trainer.model = model_val
-  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/cntk_py.py", line 2964, in <lambda>
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Trainer, name, value)
-  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/cntk_py.py", line 74, in _swig_setattr
-    return _swig_setattr_nondynamic(self, class_type, name, value, 0)
-  File "/home/s124262/.conda/envs/myjob/lib/python3.5/site-packages/cntk/cntk_py.py", line 66, in _swig_setattr_nondynamic
-    object.__setattr__(self, name, value)
-AttributeError: can't set attribute
