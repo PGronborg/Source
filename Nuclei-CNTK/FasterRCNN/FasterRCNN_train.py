@@ -648,12 +648,12 @@ def train_model(image_input, roi_input, dims_input, loss, pred_error,
                 print(val_losses[epoch])
                 early_stopping_criteria = val_losses[epoch]
                 early_stopping_counter = 0
-                model_val = trainer.model
-                loss_val = trainer.loss_function
+                #model_val = trainer.model
+                #loss_val = trainer.loss_function
             if (early_stopping_counter == cfg["CNTK"].EARLY_STOP_NUM):
                 early_stop_final_count -=1
-                trainer.model = model_val
-                trainer.loss_function = loss_val
+                #trainer.model = model_val
+                #trainer.loss_function = loss_val
                 break
 
     with open(cfg['VAL_PATH'], 'w') as csvfile:
