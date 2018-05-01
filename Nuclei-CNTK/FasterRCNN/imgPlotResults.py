@@ -48,7 +48,7 @@ imgFolder = "/Users/Greenborg/Desktop/Experiments/Test/"
 #file = "/Users/Greenborg/Desktop/Experiments/"
 file = "/Users/Greenborg/Desktop/Experiments/Test/"
 fileEval = "/Users/Greenborg/Desktop/Source/Nuclei-CNTK/FasterRCNN/Output/"
-name = "/Ref/Ref.txt"
+name = "/Ref/ColorChange.txt"
 num = int(sys.argv[1])
 
 #imgVal = num % 100
