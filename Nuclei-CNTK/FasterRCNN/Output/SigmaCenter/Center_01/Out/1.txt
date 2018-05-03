@@ -1,0 +1,984 @@
+Using base model:   VGG16
+lr_per_sample:      [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-05, 1e-06]
+Training model for 200 epochs.
+Training 136449349 parameters in 32 parameter tensors.
+Learning rate per minibatch: 0.001
+Momentum per minibatch: 0.9
+Learning rate per minibatch: 0.002
+Momentum per minibatch: 0.9
+ Minibatch[   1- 100]: loss = 0.988227 * 100, metric = 24.46% * 100;
+ Minibatch[ 101- 200]: loss = 0.792893 * 100, metric = 23.18% * 100;
+ Minibatch[ 201- 300]: loss = 0.718241 * 100, metric = 22.52% * 100;
+ Minibatch[ 301- 400]: loss = 0.700501 * 100, metric = 21.60% * 100;
+ Minibatch[ 401- 500]: loss = 0.654146 * 100, metric = 20.70% * 100;
+ Minibatch[ 501- 600]: loss = 0.617283 * 100, metric = 19.28% * 100;
+ Minibatch[ 601- 700]: loss = 0.591637 * 100, metric = 18.78% * 100;
+ Minibatch[ 701- 800]: loss = 0.553401 * 100, metric = 17.54% * 100;
+ Minibatch[ 801- 900]: loss = 0.570861 * 100, metric = 18.15% * 100;
+ Minibatch[ 901-1000]: loss = 0.568669 * 100, metric = 18.48% * 100;
+ Minibatch[1001-1100]: loss = 0.556255 * 100, metric = 17.65% * 100;
+ Minibatch[1101-1200]: loss = 0.538159 * 100, metric = 16.95% * 100;
+ Minibatch[1201-1300]: loss = 0.531583 * 100, metric = 16.84% * 100;
+ Minibatch[1301-1400]: loss = 0.508773 * 100, metric = 16.20% * 100;
+ Minibatch[1401-1500]: loss = 0.526317 * 100, metric = 16.77% * 100;
+ Minibatch[1501-1600]: loss = 0.500707 * 100, metric = 16.31% * 100;
+ Minibatch[1601-1700]: loss = 0.498874 * 100, metric = 16.33% * 100;
+ Minibatch[1701-1800]: loss = 0.499718 * 100, metric = 16.09% * 100;
+ Minibatch[1801-1900]: loss = 0.498269 * 100, metric = 16.28% * 100;
+ Minibatch[1901-2000]: loss = 0.476943 * 100, metric = 15.36% * 100;
+Finished Epoch[1 of 200]: [Training] loss = 0.594573 * 2000, metric = 18.47% * 2000 729.140s (  2.7 samples/s);
+Finished Evaluation [1]: Minibatch[1-1000]: metric = 23.53% * 1000;
+0.57402608717978
+ Minibatch[   1- 100]: loss = 0.478535 * 100, metric = 15.50% * 100;
+ Minibatch[ 101- 200]: loss = 0.489171 * 100, metric = 16.16% * 100;
+ Minibatch[ 201- 300]: loss = 0.478755 * 100, metric = 15.25% * 100;
+ Minibatch[ 301- 400]: loss = 0.473481 * 100, metric = 15.41% * 100;
+ Minibatch[ 401- 500]: loss = 0.466780 * 100, metric = 15.36% * 100;
+ Minibatch[ 501- 600]: loss = 0.487832 * 100, metric = 15.36% * 100;
+ Minibatch[ 601- 700]: loss = 0.452373 * 100, metric = 14.99% * 100;
+ Minibatch[ 701- 800]: loss = 0.475990 * 100, metric = 15.97% * 100;
+ Minibatch[ 801- 900]: loss = 0.454189 * 100, metric = 15.20% * 100;
+ Minibatch[ 901-1000]: loss = 0.434628 * 100, metric = 14.21% * 100;
+ Minibatch[1001-1100]: loss = 0.462206 * 100, metric = 15.43% * 100;
+ Minibatch[1101-1200]: loss = 0.449025 * 100, metric = 14.59% * 100;
+ Minibatch[1201-1300]: loss = 0.441177 * 100, metric = 14.55% * 100;
+ Minibatch[1301-1400]: loss = 0.457590 * 100, metric = 15.26% * 100;
+ Minibatch[1401-1500]: loss = 0.439576 * 100, metric = 14.35% * 100;
+ Minibatch[1501-1600]: loss = 0.425543 * 100, metric = 14.15% * 100;
+ Minibatch[1601-1700]: loss = 0.442544 * 100, metric = 14.52% * 100;
+ Minibatch[1701-1800]: loss = 0.441564 * 100, metric = 14.48% * 100;
+ Minibatch[1801-1900]: loss = 0.445342 * 100, metric = 14.86% * 100;
+ Minibatch[1901-2000]: loss = 0.408876 * 100, metric = 13.59% * 100;
+Finished Epoch[2 of 200]: [Training] loss = 0.455259 * 2000, metric = 14.96% * 2000 636.306s (  3.1 samples/s);
+Finished Evaluation [2]: Minibatch[1-1000]: metric = 19.47% * 1000;
+0.4918450101390481
+ Minibatch[   1- 100]: loss = 0.425287 * 100, metric = 13.95% * 100;
+ Minibatch[ 101- 200]: loss = 0.435320 * 100, metric = 14.19% * 100;
+ Minibatch[ 201- 300]: loss = 0.421312 * 100, metric = 13.93% * 100;
+ Minibatch[ 301- 400]: loss = 0.437019 * 100, metric = 14.62% * 100;
+ Minibatch[ 401- 500]: loss = 0.439830 * 100, metric = 14.72% * 100;
+ Minibatch[ 501- 600]: loss = 0.429062 * 100, metric = 14.13% * 100;
+ Minibatch[ 601- 700]: loss = 0.442896 * 100, metric = 14.41% * 100;
+ Minibatch[ 701- 800]: loss = 0.406852 * 100, metric = 13.47% * 100;
+ Minibatch[ 801- 900]: loss = 0.435853 * 100, metric = 14.39% * 100;
+ Minibatch[ 901-1000]: loss = 0.405326 * 100, metric = 13.72% * 100;
+ Minibatch[1001-1100]: loss = 0.426329 * 100, metric = 14.46% * 100;
+ Minibatch[1101-1200]: loss = 0.411662 * 100, metric = 13.73% * 100;
+ Minibatch[1201-1300]: loss = 0.413004 * 100, metric = 13.88% * 100;
+ Minibatch[1301-1400]: loss = 0.418896 * 100, metric = 13.95% * 100;
+ Minibatch[1401-1500]: loss = 0.420554 * 100, metric = 14.40% * 100;
+ Minibatch[1501-1600]: loss = 0.405243 * 100, metric = 13.48% * 100;
+ Minibatch[1601-1700]: loss = 0.401464 * 100, metric = 13.13% * 100;
+ Minibatch[1701-1800]: loss = 0.412519 * 100, metric = 13.65% * 100;
+ Minibatch[1801-1900]: loss = 0.400325 * 100, metric = 13.27% * 100;
+ Minibatch[1901-2000]: loss = 0.401465 * 100, metric = 13.40% * 100;
+Finished Epoch[3 of 200]: [Training] loss = 0.419511 * 2000, metric = 13.94% * 2000 635.915s (  3.1 samples/s);
+Finished Evaluation [3]: Minibatch[1-1000]: metric = 17.10% * 1000;
+0.4414212795570493
+ Minibatch[   1- 100]: loss = 0.424582 * 100, metric = 13.74% * 100;
+ Minibatch[ 101- 200]: loss = 0.393875 * 100, metric = 13.21% * 100;
+ Minibatch[ 201- 300]: loss = 0.405609 * 100, metric = 13.74% * 100;
+ Minibatch[ 301- 400]: loss = 0.382400 * 100, metric = 13.11% * 100;
+ Minibatch[ 401- 500]: loss = 0.412511 * 100, metric = 13.63% * 100;
+ Minibatch[ 501- 600]: loss = 0.380112 * 100, metric = 12.59% * 100;
+ Minibatch[ 601- 700]: loss = 0.391926 * 100, metric = 13.30% * 100;
+ Minibatch[ 701- 800]: loss = 0.399923 * 100, metric = 13.48% * 100;
+ Minibatch[ 801- 900]: loss = 0.397279 * 100, metric = 13.12% * 100;
+ Minibatch[ 901-1000]: loss = 0.402054 * 100, metric = 13.67% * 100;
+ Minibatch[1001-1100]: loss = 0.401402 * 100, metric = 13.49% * 100;
+ Minibatch[1101-1200]: loss = 0.385403 * 100, metric = 13.12% * 100;
+ Minibatch[1201-1300]: loss = 0.392119 * 100, metric = 13.16% * 100;
+ Minibatch[1301-1400]: loss = 0.402050 * 100, metric = 13.52% * 100;
+ Minibatch[1401-1500]: loss = 0.410026 * 100, metric = 14.07% * 100;
+ Minibatch[1501-1600]: loss = 0.381616 * 100, metric = 12.83% * 100;
+ Minibatch[1601-1700]: loss = 0.393947 * 100, metric = 13.57% * 100;
+ Minibatch[1701-1800]: loss = 0.402632 * 100, metric = 13.79% * 100;
+ Minibatch[1801-1900]: loss = 0.390633 * 100, metric = 13.27% * 100;
+ Minibatch[1901-2000]: loss = 0.391501 * 100, metric = 13.28% * 100;
+Finished Epoch[4 of 200]: [Training] loss = 0.397080 * 2000, metric = 13.38% * 2000 638.321s (  3.1 samples/s);
+Finished Evaluation [4]: Minibatch[1-1000]: metric = 18.19% * 1000;
+ Minibatch[   1- 100]: loss = 0.402925 * 100, metric = 13.43% * 100;
+ Minibatch[ 101- 200]: loss = 0.387720 * 100, metric = 13.10% * 100;
+ Minibatch[ 201- 300]: loss = 0.381320 * 100, metric = 12.81% * 100;
+ Minibatch[ 301- 400]: loss = 0.410607 * 100, metric = 13.94% * 100;
+ Minibatch[ 401- 500]: loss = 0.372050 * 100, metric = 12.63% * 100;
+ Minibatch[ 501- 600]: loss = 0.378496 * 100, metric = 12.71% * 100;
+ Minibatch[ 601- 700]: loss = 0.379131 * 100, metric = 12.42% * 100;
+ Minibatch[ 701- 800]: loss = 0.389661 * 100, metric = 12.87% * 100;
+ Minibatch[ 801- 900]: loss = 0.372847 * 100, metric = 12.50% * 100;
+ Minibatch[ 901-1000]: loss = 0.382033 * 100, metric = 12.81% * 100;
+ Minibatch[1001-1100]: loss = 0.387806 * 100, metric = 12.91% * 100;
+ Minibatch[1101-1200]: loss = 0.369741 * 100, metric = 12.38% * 100;
+ Minibatch[1201-1300]: loss = 0.383635 * 100, metric = 12.89% * 100;
+ Minibatch[1301-1400]: loss = 0.393814 * 100, metric = 13.28% * 100;
+ Minibatch[1401-1500]: loss = 0.374075 * 100, metric = 12.72% * 100;
+ Minibatch[1501-1600]: loss = 0.382603 * 100, metric = 12.92% * 100;
+ Minibatch[1601-1700]: loss = 0.395633 * 100, metric = 13.37% * 100;
+ Minibatch[1701-1800]: loss = 0.391595 * 100, metric = 13.32% * 100;
+ Minibatch[1801-1900]: loss = 0.387266 * 100, metric = 13.00% * 100;
+ Minibatch[1901-2000]: loss = 0.374267 * 100, metric = 12.56% * 100;
+Finished Epoch[5 of 200]: [Training] loss = 0.384861 * 2000, metric = 12.93% * 2000 643.743s (  3.1 samples/s);
+Finished Evaluation [5]: Minibatch[1-1000]: metric = 19.12% * 1000;
+ Minibatch[   1- 100]: loss = 0.370745 * 100, metric = 12.60% * 100;
+ Minibatch[ 101- 200]: loss = 0.368444 * 100, metric = 12.60% * 100;
+ Minibatch[ 201- 300]: loss = 0.373370 * 100, metric = 12.46% * 100;
+ Minibatch[ 301- 400]: loss = 0.377570 * 100, metric = 12.57% * 100;
+ Minibatch[ 401- 500]: loss = 0.355629 * 100, metric = 11.98% * 100;
+ Minibatch[ 501- 600]: loss = 0.371280 * 100, metric = 12.61% * 100;
+ Minibatch[ 601- 700]: loss = 0.364031 * 100, metric = 12.34% * 100;
+ Minibatch[ 701- 800]: loss = 0.376800 * 100, metric = 12.87% * 100;
+ Minibatch[ 801- 900]: loss = 0.371551 * 100, metric = 12.34% * 100;
+ Minibatch[ 901-1000]: loss = 0.369026 * 100, metric = 12.24% * 100;
+ Minibatch[1001-1100]: loss = 0.370140 * 100, metric = 12.33% * 100;
+ Minibatch[1101-1200]: loss = 0.376489 * 100, metric = 12.53% * 100;
+ Minibatch[1201-1300]: loss = 0.383249 * 100, metric = 12.88% * 100;
+ Minibatch[1301-1400]: loss = 0.373326 * 100, metric = 12.68% * 100;
+ Minibatch[1401-1500]: loss = 0.374198 * 100, metric = 12.81% * 100;
+ Minibatch[1501-1600]: loss = 0.355568 * 100, metric = 11.70% * 100;
+ Minibatch[1601-1700]: loss = 0.358990 * 100, metric = 11.70% * 100;
+ Minibatch[1701-1800]: loss = 0.354172 * 100, metric = 11.91% * 100;
+ Minibatch[1801-1900]: loss = 0.370368 * 100, metric = 12.56% * 100;
+ Minibatch[1901-2000]: loss = 0.353906 * 100, metric = 11.88% * 100;
+Finished Epoch[6 of 200]: [Training] loss = 0.368443 * 2000, metric = 12.38% * 2000 644.757s (  3.1 samples/s);
+Finished Evaluation [6]: Minibatch[1-1000]: metric = 20.81% * 1000;
+ Minibatch[   1- 100]: loss = 0.363952 * 100, metric = 12.32% * 100;
+ Minibatch[ 101- 200]: loss = 0.370610 * 100, metric = 11.99% * 100;
+ Minibatch[ 201- 300]: loss = 0.373007 * 100, metric = 12.22% * 100;
+ Minibatch[ 301- 400]: loss = 0.361300 * 100, metric = 12.15% * 100;
+ Minibatch[ 401- 500]: loss = 0.364385 * 100, metric = 12.17% * 100;
+ Minibatch[ 501- 600]: loss = 0.345476 * 100, metric = 11.63% * 100;
+ Minibatch[ 601- 700]: loss = 0.356915 * 100, metric = 11.80% * 100;
+ Minibatch[ 701- 800]: loss = 0.366048 * 100, metric = 12.30% * 100;
+ Minibatch[ 801- 900]: loss = 0.370569 * 100, metric = 12.46% * 100;
+ Minibatch[ 901-1000]: loss = 0.362812 * 100, metric = 12.28% * 100;
+ Minibatch[1001-1100]: loss = 0.375122 * 100, metric = 12.60% * 100;
+ Minibatch[1101-1200]: loss = 0.350321 * 100, metric = 11.68% * 100;
+ Minibatch[1201-1300]: loss = 0.362292 * 100, metric = 12.46% * 100;
+ Minibatch[1301-1400]: loss = 0.354959 * 100, metric = 12.21% * 100;
+ Minibatch[1401-1500]: loss = 0.351537 * 100, metric = 11.74% * 100;
+ Minibatch[1501-1600]: loss = 0.359994 * 100, metric = 12.34% * 100;
+ Minibatch[1601-1700]: loss = 0.371868 * 100, metric = 12.81% * 100;
+ Minibatch[1701-1800]: loss = 0.354423 * 100, metric = 11.93% * 100;
+ Minibatch[1801-1900]: loss = 0.359628 * 100, metric = 11.94% * 100;
+ Minibatch[1901-2000]: loss = 0.363396 * 100, metric = 12.20% * 100;
+Finished Epoch[7 of 200]: [Training] loss = 0.361931 * 2000, metric = 12.16% * 2000 645.846s (  3.1 samples/s);
+Finished Evaluation [7]: Minibatch[1-1000]: metric = 17.65% * 1000;
+ Minibatch[   1- 100]: loss = 0.364523 * 100, metric = 12.38% * 100;
+ Minibatch[ 101- 200]: loss = 0.362993 * 100, metric = 12.23% * 100;
+ Minibatch[ 201- 300]: loss = 0.345426 * 100, metric = 11.54% * 100;
+ Minibatch[ 301- 400]: loss = 0.345222 * 100, metric = 11.80% * 100;
+ Minibatch[ 401- 500]: loss = 0.363225 * 100, metric = 12.33% * 100;
+ Minibatch[ 501- 600]: loss = 0.373554 * 100, metric = 12.77% * 100;
+ Minibatch[ 601- 700]: loss = 0.344981 * 100, metric = 11.96% * 100;
+ Minibatch[ 701- 800]: loss = 0.362851 * 100, metric = 12.15% * 100;
+ Minibatch[ 801- 900]: loss = 0.343235 * 100, metric = 11.30% * 100;
+ Minibatch[ 901-1000]: loss = 0.331853 * 100, metric = 11.34% * 100;
+ Minibatch[1001-1100]: loss = 0.340569 * 100, metric = 11.50% * 100;
+ Minibatch[1101-1200]: loss = 0.341197 * 100, metric = 11.39% * 100;
+ Minibatch[1201-1300]: loss = 0.358488 * 100, metric = 12.09% * 100;
+ Minibatch[1301-1400]: loss = 0.357978 * 100, metric = 12.23% * 100;
+ Minibatch[1401-1500]: loss = 0.356673 * 100, metric = 11.86% * 100;
+ Minibatch[1501-1600]: loss = 0.352156 * 100, metric = 11.99% * 100;
+ Minibatch[1601-1700]: loss = 0.342636 * 100, metric = 11.43% * 100;
+ Minibatch[1701-1800]: loss = 0.345859 * 100, metric = 11.47% * 100;
+ Minibatch[1801-1900]: loss = 0.340831 * 100, metric = 11.53% * 100;
+ Minibatch[1901-2000]: loss = 0.344350 * 100, metric = 11.68% * 100;
+Finished Epoch[8 of 200]: [Training] loss = 0.350930 * 2000, metric = 11.85% * 2000 645.886s (  3.1 samples/s);
+Finished Evaluation [8]: Minibatch[1-1000]: metric = 16.84% * 1000;
+0.4240348005592823
+ Minibatch[   1- 100]: loss = 0.334553 * 100, metric = 11.21% * 100;
+ Minibatch[ 101- 200]: loss = 0.364074 * 100, metric = 12.29% * 100;
+ Minibatch[ 201- 300]: loss = 0.337400 * 100, metric = 11.12% * 100;
+ Minibatch[ 301- 400]: loss = 0.363827 * 100, metric = 12.25% * 100;
+ Minibatch[ 401- 500]: loss = 0.348579 * 100, metric = 11.64% * 100;
+ Minibatch[ 501- 600]: loss = 0.340607 * 100, metric = 11.59% * 100;
+ Minibatch[ 601- 700]: loss = 0.342546 * 100, metric = 11.40% * 100;
+ Minibatch[ 701- 800]: loss = 0.331231 * 100, metric = 11.31% * 100;
+ Minibatch[ 801- 900]: loss = 0.334175 * 100, metric = 11.56% * 100;
+ Minibatch[ 901-1000]: loss = 0.341052 * 100, metric = 11.50% * 100;
+ Minibatch[1001-1100]: loss = 0.322159 * 100, metric = 10.82% * 100;
+ Minibatch[1101-1200]: loss = 0.343531 * 100, metric = 11.88% * 100;
+ Minibatch[1201-1300]: loss = 0.337256 * 100, metric = 11.60% * 100;
+ Minibatch[1301-1400]: loss = 0.333412 * 100, metric = 11.02% * 100;
+ Minibatch[1401-1500]: loss = 0.349146 * 100, metric = 11.71% * 100;
+ Minibatch[1501-1600]: loss = 0.342448 * 100, metric = 11.55% * 100;
+ Minibatch[1601-1700]: loss = 0.344344 * 100, metric = 11.68% * 100;
+ Minibatch[1701-1800]: loss = 0.332357 * 100, metric = 10.89% * 100;
+ Minibatch[1801-1900]: loss = 0.335800 * 100, metric = 11.22% * 100;
+ Minibatch[1901-2000]: loss = 0.344465 * 100, metric = 11.62% * 100;
+Finished Epoch[9 of 200]: [Training] loss = 0.341148 * 2000, metric = 11.49% * 2000 647.585s (  3.1 samples/s);
+Finished Evaluation [9]: Minibatch[1-1000]: metric = 15.79% * 1000;
+0.40509021760523317
+ Minibatch[   1- 100]: loss = 0.356893 * 100, metric = 12.34% * 100;
+ Minibatch[ 101- 200]: loss = 0.337748 * 100, metric = 11.47% * 100;
+ Minibatch[ 201- 300]: loss = 0.341243 * 100, metric = 11.34% * 100;
+ Minibatch[ 301- 400]: loss = 0.327688 * 100, metric = 11.02% * 100;
+ Minibatch[ 401- 500]: loss = 0.345818 * 100, metric = 11.67% * 100;
+ Minibatch[ 501- 600]: loss = 0.329220 * 100, metric = 11.12% * 100;
+ Minibatch[ 601- 700]: loss = 0.324577 * 100, metric = 10.80% * 100;
+ Minibatch[ 701- 800]: loss = 0.320436 * 100, metric = 10.44% * 100;
+ Minibatch[ 801- 900]: loss = 0.329641 * 100, metric = 11.08% * 100;
+ Minibatch[ 901-1000]: loss = 0.339330 * 100, metric = 11.56% * 100;
+ Minibatch[1001-1100]: loss = 0.338026 * 100, metric = 11.38% * 100;
+ Minibatch[1101-1200]: loss = 0.334904 * 100, metric = 11.10% * 100;
+ Minibatch[1201-1300]: loss = 0.335915 * 100, metric = 11.48% * 100;
+ Minibatch[1301-1400]: loss = 0.333836 * 100, metric = 11.29% * 100;
+ Minibatch[1401-1500]: loss = 0.321070 * 100, metric = 10.86% * 100;
+ Minibatch[1501-1600]: loss = 0.326591 * 100, metric = 11.07% * 100;
+ Minibatch[1601-1700]: loss = 0.323306 * 100, metric = 10.64% * 100;
+ Minibatch[1701-1800]: loss = 0.335068 * 100, metric = 11.13% * 100;
+ Minibatch[1801-1900]: loss = 0.329976 * 100, metric = 11.13% * 100;
+ Minibatch[1901-2000]: loss = 0.319446 * 100, metric = 10.82% * 100;
+Finished Epoch[10 of 200]: [Training] loss = 0.332537 * 2000, metric = 11.19% * 2000 627.950s (  3.2 samples/s);
+Finished Evaluation [10]: Minibatch[1-1000]: metric = 15.67% * 1000;
+0.4048393698036671
+ Minibatch[   1- 100]: loss = 0.308996 * 100, metric = 10.32% * 100;
+ Minibatch[ 101- 200]: loss = 0.318286 * 100, metric = 10.59% * 100;
+ Minibatch[ 201- 300]: loss = 0.329071 * 100, metric = 11.24% * 100;
+ Minibatch[ 301- 400]: loss = 0.324873 * 100, metric = 11.03% * 100;
+ Minibatch[ 401- 500]: loss = 0.319684 * 100, metric = 10.68% * 100;
+ Minibatch[ 501- 600]: loss = 0.326546 * 100, metric = 11.11% * 100;
+ Minibatch[ 601- 700]: loss = 0.321012 * 100, metric = 10.73% * 100;
+ Minibatch[ 701- 800]: loss = 0.328420 * 100, metric = 11.07% * 100;
+ Minibatch[ 801- 900]: loss = 0.323432 * 100, metric = 10.86% * 100;
+ Minibatch[ 901-1000]: loss = 0.330787 * 100, metric = 11.11% * 100;
+ Minibatch[1001-1100]: loss = 0.327382 * 100, metric = 10.83% * 100;
+ Minibatch[1101-1200]: loss = 0.326090 * 100, metric = 11.00% * 100;
+ Minibatch[1201-1300]: loss = 0.311409 * 100, metric = 10.65% * 100;
+ Minibatch[1301-1400]: loss = 0.306826 * 100, metric = 10.36% * 100;
+ Minibatch[1401-1500]: loss = 0.326023 * 100, metric = 11.18% * 100;
+ Minibatch[1501-1600]: loss = 0.314676 * 100, metric = 10.58% * 100;
+ Minibatch[1601-1700]: loss = 0.315338 * 100, metric = 10.82% * 100;
+ Minibatch[1701-1800]: loss = 0.329666 * 100, metric = 11.03% * 100;
+ Minibatch[1801-1900]: loss = 0.324805 * 100, metric = 11.05% * 100;
+ Minibatch[1901-2000]: loss = 0.320222 * 100, metric = 10.99% * 100;
+Finished Epoch[11 of 200]: [Training] loss = 0.321677 * 2000, metric = 10.86% * 2000 614.032s (  3.3 samples/s);
+Finished Evaluation [11]: Minibatch[1-1000]: metric = 16.61% * 1000;
+ Minibatch[   1- 100]: loss = 0.310509 * 100, metric = 10.53% * 100;
+ Minibatch[ 101- 200]: loss = 0.309999 * 100, metric = 10.43% * 100;
+ Minibatch[ 201- 300]: loss = 0.313806 * 100, metric = 10.73% * 100;
+ Minibatch[ 301- 400]: loss = 0.339887 * 100, metric = 11.74% * 100;
+ Minibatch[ 401- 500]: loss = 0.313317 * 100, metric = 10.65% * 100;
+ Minibatch[ 501- 600]: loss = 0.298411 * 100, metric = 9.88% * 100;
+ Minibatch[ 601- 700]: loss = 0.310059 * 100, metric = 10.53% * 100;
+ Minibatch[ 701- 800]: loss = 0.314327 * 100, metric = 10.83% * 100;
+ Minibatch[ 801- 900]: loss = 0.311737 * 100, metric = 10.40% * 100;
+ Minibatch[ 901-1000]: loss = 0.318446 * 100, metric = 10.88% * 100;
+ Minibatch[1001-1100]: loss = 0.320858 * 100, metric = 11.16% * 100;
+ Minibatch[1101-1200]: loss = 0.324877 * 100, metric = 11.09% * 100;
+ Minibatch[1201-1300]: loss = 0.323875 * 100, metric = 11.24% * 100;
+ Minibatch[1301-1400]: loss = 0.306370 * 100, metric = 10.21% * 100;
+ Minibatch[1401-1500]: loss = 0.321426 * 100, metric = 11.08% * 100;
+ Minibatch[1501-1600]: loss = 0.301788 * 100, metric = 10.20% * 100;
+ Minibatch[1601-1700]: loss = 0.315446 * 100, metric = 10.79% * 100;
+ Minibatch[1701-1800]: loss = 0.305524 * 100, metric = 10.32% * 100;
+ Minibatch[1801-1900]: loss = 0.306970 * 100, metric = 10.36% * 100;
+ Minibatch[1901-2000]: loss = 0.321877 * 100, metric = 10.83% * 100;
+Finished Epoch[12 of 200]: [Training] loss = 0.314475 * 2000, metric = 10.70% * 2000 626.388s (  3.2 samples/s);
+Finished Evaluation [12]: Minibatch[1-1000]: metric = 16.76% * 1000;
+ Minibatch[   1- 100]: loss = 0.317569 * 100, metric = 10.87% * 100;
+ Minibatch[ 101- 200]: loss = 0.313834 * 100, metric = 10.71% * 100;
+ Minibatch[ 201- 300]: loss = 0.307102 * 100, metric = 10.46% * 100;
+ Minibatch[ 301- 400]: loss = 0.315274 * 100, metric = 10.59% * 100;
+ Minibatch[ 401- 500]: loss = 0.317039 * 100, metric = 10.86% * 100;
+ Minibatch[ 501- 600]: loss = 0.328759 * 100, metric = 11.24% * 100;
+ Minibatch[ 601- 700]: loss = 0.306950 * 100, metric = 10.35% * 100;
+ Minibatch[ 701- 800]: loss = 0.301439 * 100, metric = 10.17% * 100;
+ Minibatch[ 801- 900]: loss = 0.308857 * 100, metric = 10.33% * 100;
+ Minibatch[ 901-1000]: loss = 0.322587 * 100, metric = 10.88% * 100;
+ Minibatch[1001-1100]: loss = 0.319661 * 100, metric = 10.76% * 100;
+ Minibatch[1101-1200]: loss = 0.307999 * 100, metric = 10.44% * 100;
+ Minibatch[1201-1300]: loss = 0.310005 * 100, metric = 10.86% * 100;
+ Minibatch[1301-1400]: loss = 0.311260 * 100, metric = 10.70% * 100;
+ Minibatch[1401-1500]: loss = 0.305880 * 100, metric = 10.56% * 100;
+ Minibatch[1501-1600]: loss = 0.301067 * 100, metric = 10.05% * 100;
+ Minibatch[1601-1700]: loss = 0.297626 * 100, metric = 10.21% * 100;
+ Minibatch[1701-1800]: loss = 0.310004 * 100, metric = 10.28% * 100;
+ Minibatch[1801-1900]: loss = 0.302872 * 100, metric = 10.36% * 100;
+ Minibatch[1901-2000]: loss = 0.311399 * 100, metric = 10.71% * 100;
+Finished Epoch[13 of 200]: [Training] loss = 0.310859 * 2000, metric = 10.57% * 2000 621.093s (  3.2 samples/s);
+Finished Evaluation [13]: Minibatch[1-1000]: metric = 17.98% * 1000;
+ Minibatch[   1- 100]: loss = 0.300728 * 100, metric = 10.08% * 100;
+ Minibatch[ 101- 200]: loss = 0.299987 * 100, metric = 10.18% * 100;
+ Minibatch[ 201- 300]: loss = 0.318132 * 100, metric = 11.01% * 100;
+ Minibatch[ 301- 400]: loss = 0.316449 * 100, metric = 11.04% * 100;
+ Minibatch[ 401- 500]: loss = 0.309987 * 100, metric = 10.47% * 100;
+ Minibatch[ 501- 600]: loss = 0.309830 * 100, metric = 10.68% * 100;
+ Minibatch[ 601- 700]: loss = 0.307588 * 100, metric = 10.24% * 100;
+ Minibatch[ 701- 800]: loss = 0.319818 * 100, metric = 10.78% * 100;
+ Minibatch[ 801- 900]: loss = 0.321763 * 100, metric = 11.10% * 100;
+ Minibatch[ 901-1000]: loss = 0.313730 * 100, metric = 10.86% * 100;
+ Minibatch[1001-1100]: loss = 0.318259 * 100, metric = 10.88% * 100;
+ Minibatch[1101-1200]: loss = 0.307079 * 100, metric = 10.38% * 100;
+ Minibatch[1201-1300]: loss = 0.289065 * 100, metric = 9.68% * 100;
+ Minibatch[1301-1400]: loss = 0.310851 * 100, metric = 10.77% * 100;
+ Minibatch[1401-1500]: loss = 0.313203 * 100, metric = 10.89% * 100;
+ Minibatch[1501-1600]: loss = 0.296705 * 100, metric = 10.15% * 100;
+ Minibatch[1601-1700]: loss = 0.304146 * 100, metric = 10.55% * 100;
+ Minibatch[1701-1800]: loss = 0.299149 * 100, metric = 10.19% * 100;
+ Minibatch[1801-1900]: loss = 0.302450 * 100, metric = 10.59% * 100;
+ Minibatch[1901-2000]: loss = 0.306293 * 100, metric = 10.38% * 100;
+Finished Epoch[14 of 200]: [Training] loss = 0.308261 * 2000, metric = 10.54% * 2000 615.502s (  3.2 samples/s);
+Finished Evaluation [14]: Minibatch[1-1000]: metric = 17.72% * 1000;
+ Minibatch[   1- 100]: loss = 0.300448 * 100, metric = 10.34% * 100;
+ Minibatch[ 101- 200]: loss = 0.308449 * 100, metric = 10.58% * 100;
+ Minibatch[ 201- 300]: loss = 0.307016 * 100, metric = 10.51% * 100;
+ Minibatch[ 301- 400]: loss = 0.289050 * 100, metric = 9.77% * 100;
+ Minibatch[ 401- 500]: loss = 0.300079 * 100, metric = 10.39% * 100;
+ Minibatch[ 501- 600]: loss = 0.290541 * 100, metric = 9.84% * 100;
+ Minibatch[ 601- 700]: loss = 0.280547 * 100, metric = 9.58% * 100;
+ Minibatch[ 701- 800]: loss = 0.314379 * 100, metric = 10.85% * 100;
+ Minibatch[ 801- 900]: loss = 0.316665 * 100, metric = 10.81% * 100;
+ Minibatch[ 901-1000]: loss = 0.303432 * 100, metric = 10.78% * 100;
+ Minibatch[1001-1100]: loss = 0.303108 * 100, metric = 10.38% * 100;
+ Minibatch[1101-1200]: loss = 0.296811 * 100, metric = 9.94% * 100;
+ Minibatch[1201-1300]: loss = 0.285569 * 100, metric = 9.60% * 100;
+ Minibatch[1301-1400]: loss = 0.314305 * 100, metric = 10.62% * 100;
+ Minibatch[1401-1500]: loss = 0.285515 * 100, metric = 9.71% * 100;
+ Minibatch[1501-1600]: loss = 0.293553 * 100, metric = 10.14% * 100;
+ Minibatch[1601-1700]: loss = 0.298761 * 100, metric = 10.27% * 100;
+ Minibatch[1701-1800]: loss = 0.288305 * 100, metric = 9.75% * 100;
+ Minibatch[1801-1900]: loss = 0.297852 * 100, metric = 10.28% * 100;
+ Minibatch[1901-2000]: loss = 0.296926 * 100, metric = 10.27% * 100;
+Finished Epoch[15 of 200]: [Training] loss = 0.298566 * 2000, metric = 10.22% * 2000 622.799s (  3.2 samples/s);
+Finished Evaluation [15]: Minibatch[1-1000]: metric = 16.20% * 1000;
+ Minibatch[   1- 100]: loss = 0.312985 * 100, metric = 10.85% * 100;
+ Minibatch[ 101- 200]: loss = 0.301793 * 100, metric = 10.52% * 100;
+ Minibatch[ 201- 300]: loss = 0.303187 * 100, metric = 10.48% * 100;
+ Minibatch[ 301- 400]: loss = 0.305829 * 100, metric = 10.59% * 100;
+ Minibatch[ 401- 500]: loss = 0.289294 * 100, metric = 9.99% * 100;
+ Minibatch[ 501- 600]: loss = 0.300081 * 100, metric = 10.06% * 100;
+ Minibatch[ 601- 700]: loss = 0.293727 * 100, metric = 10.12% * 100;
+ Minibatch[ 701- 800]: loss = 0.288156 * 100, metric = 9.77% * 100;
+ Minibatch[ 801- 900]: loss = 0.285520 * 100, metric = 9.88% * 100;
+ Minibatch[ 901-1000]: loss = 0.301462 * 100, metric = 10.59% * 100;
+ Minibatch[1001-1100]: loss = 0.285237 * 100, metric = 9.94% * 100;
+ Minibatch[1101-1200]: loss = 0.292230 * 100, metric = 10.08% * 100;
+ Minibatch[1201-1300]: loss = 0.283142 * 100, metric = 9.76% * 100;
+ Minibatch[1301-1400]: loss = 0.292801 * 100, metric = 10.22% * 100;
+ Minibatch[1401-1500]: loss = 0.288800 * 100, metric = 10.06% * 100;
+ Minibatch[1501-1600]: loss = 0.286573 * 100, metric = 9.97% * 100;
+ Minibatch[1601-1700]: loss = 0.294927 * 100, metric = 10.42% * 100;
+ Minibatch[1701-1800]: loss = 0.300988 * 100, metric = 10.30% * 100;
+ Minibatch[1801-1900]: loss = 0.299865 * 100, metric = 10.28% * 100;
+ Minibatch[1901-2000]: loss = 0.282855 * 100, metric = 10.01% * 100;
+Finished Epoch[16 of 200]: [Training] loss = 0.294473 * 2000, metric = 10.19% * 2000 616.519s (  3.2 samples/s);
+Finished Evaluation [16]: Minibatch[1-1000]: metric = 16.17% * 1000;
+ Minibatch[   1- 100]: loss = 0.285610 * 100, metric = 9.99% * 100;
+ Minibatch[ 101- 200]: loss = 0.298431 * 100, metric = 10.17% * 100;
+ Minibatch[ 201- 300]: loss = 0.302440 * 100, metric = 10.54% * 100;
+ Minibatch[ 301- 400]: loss = 0.287053 * 100, metric = 9.95% * 100;
+ Minibatch[ 401- 500]: loss = 0.297374 * 100, metric = 10.26% * 100;
+ Minibatch[ 501- 600]: loss = 0.279932 * 100, metric = 9.52% * 100;
+ Minibatch[ 601- 700]: loss = 0.272063 * 100, metric = 9.30% * 100;
+ Minibatch[ 701- 800]: loss = 0.288903 * 100, metric = 10.06% * 100;
+ Minibatch[ 801- 900]: loss = 0.291781 * 100, metric = 9.93% * 100;
+ Minibatch[ 901-1000]: loss = 0.281202 * 100, metric = 9.70% * 100;
+ Minibatch[1001-1100]: loss = 0.281912 * 100, metric = 9.69% * 100;
+ Minibatch[1101-1200]: loss = 0.292979 * 100, metric = 10.07% * 100;
+ Minibatch[1201-1300]: loss = 0.292960 * 100, metric = 10.11% * 100;
+ Minibatch[1301-1400]: loss = 0.275972 * 100, metric = 9.69% * 100;
+ Minibatch[1401-1500]: loss = 0.286040 * 100, metric = 9.91% * 100;
+ Minibatch[1501-1600]: loss = 0.291176 * 100, metric = 10.18% * 100;
+ Minibatch[1601-1700]: loss = 0.287072 * 100, metric = 9.93% * 100;
+ Minibatch[1701-1800]: loss = 0.275932 * 100, metric = 9.55% * 100;
+ Minibatch[1801-1900]: loss = 0.299459 * 100, metric = 10.55% * 100;
+ Minibatch[1901-2000]: loss = 0.302485 * 100, metric = 10.58% * 100;
+Finished Epoch[17 of 200]: [Training] loss = 0.288539 * 2000, metric = 9.98% * 2000 619.955s (  3.2 samples/s);
+Finished Evaluation [17]: Minibatch[1-1000]: metric = 15.71% * 1000;
+ Minibatch[   1- 100]: loss = 0.272183 * 100, metric = 9.33% * 100;
+ Minibatch[ 101- 200]: loss = 0.292040 * 100, metric = 10.06% * 100;
+ Minibatch[ 201- 300]: loss = 0.280157 * 100, metric = 9.76% * 100;
+ Minibatch[ 301- 400]: loss = 0.284425 * 100, metric = 9.96% * 100;
+ Minibatch[ 401- 500]: loss = 0.267794 * 100, metric = 9.25% * 100;
+ Minibatch[ 501- 600]: loss = 0.280263 * 100, metric = 9.66% * 100;
+ Minibatch[ 601- 700]: loss = 0.281480 * 100, metric = 9.89% * 100;
+ Minibatch[ 701- 800]: loss = 0.275030 * 100, metric = 9.53% * 100;
+ Minibatch[ 801- 900]: loss = 0.286606 * 100, metric = 9.93% * 100;
+ Minibatch[ 901-1000]: loss = 0.284388 * 100, metric = 9.90% * 100;
+ Minibatch[1001-1100]: loss = 0.296688 * 100, metric = 10.59% * 100;
+ Minibatch[1101-1200]: loss = 0.283024 * 100, metric = 9.68% * 100;
+ Minibatch[1201-1300]: loss = 0.293343 * 100, metric = 10.11% * 100;
+ Minibatch[1301-1400]: loss = 0.293860 * 100, metric = 10.07% * 100;
+ Minibatch[1401-1500]: loss = 0.265344 * 100, metric = 9.04% * 100;
+ Minibatch[1501-1600]: loss = 0.281196 * 100, metric = 9.63% * 100;
+ Minibatch[1601-1700]: loss = 0.267098 * 100, metric = 9.17% * 100;
+ Minibatch[1701-1800]: loss = 0.275658 * 100, metric = 9.49% * 100;
+ Minibatch[1801-1900]: loss = 0.266470 * 100, metric = 9.34% * 100;
+ Minibatch[1901-2000]: loss = 0.272784 * 100, metric = 9.24% * 100;
+Finished Epoch[18 of 200]: [Training] loss = 0.279992 * 2000, metric = 9.68% * 2000 616.347s (  3.2 samples/s);
+Finished Evaluation [18]: Minibatch[1-1000]: metric = 17.07% * 1000;
+ Minibatch[   1- 100]: loss = 0.287160 * 100, metric = 10.04% * 100;
+ Minibatch[ 101- 200]: loss = 0.287031 * 100, metric = 9.95% * 100;
+ Minibatch[ 201- 300]: loss = 0.267104 * 100, metric = 9.22% * 100;
+ Minibatch[ 301- 400]: loss = 0.282498 * 100, metric = 9.64% * 100;
+ Minibatch[ 401- 500]: loss = 0.275713 * 100, metric = 9.45% * 100;
+ Minibatch[ 501- 600]: loss = 0.271068 * 100, metric = 9.24% * 100;
+ Minibatch[ 601- 700]: loss = 0.282214 * 100, metric = 9.88% * 100;
+ Minibatch[ 701- 800]: loss = 0.266828 * 100, metric = 9.25% * 100;
+ Minibatch[ 801- 900]: loss = 0.299223 * 100, metric = 10.19% * 100;
+ Minibatch[ 901-1000]: loss = 0.266926 * 100, metric = 9.28% * 100;
+ Minibatch[1001-1100]: loss = 0.284780 * 100, metric = 9.98% * 100;
+ Minibatch[1101-1200]: loss = 0.281640 * 100, metric = 9.92% * 100;
+ Minibatch[1201-1300]: loss = 0.275599 * 100, metric = 9.61% * 100;
+ Minibatch[1301-1400]: loss = 0.272756 * 100, metric = 9.26% * 100;
+ Minibatch[1401-1500]: loss = 0.286118 * 100, metric = 10.05% * 100;
+ Minibatch[1501-1600]: loss = 0.287312 * 100, metric = 10.04% * 100;
+ Minibatch[1601-1700]: loss = 0.280107 * 100, metric = 9.82% * 100;
+ Minibatch[1701-1800]: loss = 0.263258 * 100, metric = 9.22% * 100;
+ Minibatch[1801-1900]: loss = 0.272031 * 100, metric = 9.40% * 100;
+ Minibatch[1901-2000]: loss = 0.271173 * 100, metric = 9.35% * 100;
+Finished Epoch[19 of 200]: [Training] loss = 0.278027 * 2000, metric = 9.64% * 2000 613.149s (  3.3 samples/s);
+Finished Evaluation [19]: Minibatch[1-1000]: metric = 17.37% * 1000;
+ Minibatch[   1- 100]: loss = 0.275439 * 100, metric = 9.34% * 100;
+ Minibatch[ 101- 200]: loss = 0.276203 * 100, metric = 9.66% * 100;
+ Minibatch[ 201- 300]: loss = 0.274480 * 100, metric = 9.47% * 100;
+ Minibatch[ 301- 400]: loss = 0.282388 * 100, metric = 9.54% * 100;
+ Minibatch[ 401- 500]: loss = 0.271105 * 100, metric = 9.54% * 100;
+ Minibatch[ 501- 600]: loss = 0.281088 * 100, metric = 9.80% * 100;
+ Minibatch[ 601- 700]: loss = 0.280417 * 100, metric = 9.83% * 100;
+ Minibatch[ 701- 800]: loss = 0.280546 * 100, metric = 9.86% * 100;
+ Minibatch[ 801- 900]: loss = 0.284485 * 100, metric = 9.84% * 100;
+ Minibatch[ 901-1000]: loss = 0.285647 * 100, metric = 9.93% * 100;
+ Minibatch[1001-1100]: loss = 0.262329 * 100, metric = 9.24% * 100;
+ Minibatch[1101-1200]: loss = 0.269382 * 100, metric = 9.32% * 100;
+ Minibatch[1201-1300]: loss = 0.284013 * 100, metric = 9.95% * 100;
+ Minibatch[1301-1400]: loss = 0.280101 * 100, metric = 9.64% * 100;
+ Minibatch[1401-1500]: loss = 0.274660 * 100, metric = 9.69% * 100;
+ Minibatch[1501-1600]: loss = 0.280773 * 100, metric = 9.43% * 100;
+ Minibatch[1601-1700]: loss = 0.275728 * 100, metric = 9.41% * 100;
+ Minibatch[1701-1800]: loss = 0.283019 * 100, metric = 9.96% * 100;
+ Minibatch[1801-1900]: loss = 0.274333 * 100, metric = 9.57% * 100;
+ Minibatch[1901-2000]: loss = 0.270825 * 100, metric = 9.15% * 100;
+Finished Epoch[20 of 200]: [Training] loss = 0.277348 * 2000, metric = 9.61% * 2000 636.568s (  3.1 samples/s);
+Finished Evaluation [20]: Minibatch[1-1000]: metric = 16.97% * 1000;
+ Minibatch[   1- 100]: loss = 0.274264 * 100, metric = 9.62% * 100;
+ Minibatch[ 101- 200]: loss = 0.277486 * 100, metric = 9.71% * 100;
+ Minibatch[ 201- 300]: loss = 0.275803 * 100, metric = 9.62% * 100;
+ Minibatch[ 301- 400]: loss = 0.280103 * 100, metric = 9.80% * 100;
+ Minibatch[ 401- 500]: loss = 0.264496 * 100, metric = 9.30% * 100;
+ Minibatch[ 501- 600]: loss = 0.264580 * 100, metric = 9.08% * 100;
+ Minibatch[ 601- 700]: loss = 0.270649 * 100, metric = 9.30% * 100;
+ Minibatch[ 701- 800]: loss = 0.253772 * 100, metric = 8.78% * 100;
+ Minibatch[ 801- 900]: loss = 0.272708 * 100, metric = 9.43% * 100;
+ Minibatch[ 901-1000]: loss = 0.266176 * 100, metric = 9.17% * 100;
+ Minibatch[1001-1100]: loss = 0.266736 * 100, metric = 9.20% * 100;
+ Minibatch[1101-1200]: loss = 0.271076 * 100, metric = 8.94% * 100;
+ Minibatch[1201-1300]: loss = 0.268376 * 100, metric = 9.31% * 100;
+ Minibatch[1301-1400]: loss = 0.258717 * 100, metric = 8.95% * 100;
+ Minibatch[1401-1500]: loss = 0.272748 * 100, metric = 9.39% * 100;
+ Minibatch[1501-1600]: loss = 0.285247 * 100, metric = 10.14% * 100;
+ Minibatch[1601-1700]: loss = 0.269929 * 100, metric = 9.49% * 100;
+ Minibatch[1701-1800]: loss = 0.261246 * 100, metric = 8.93% * 100;
+ Minibatch[1801-1900]: loss = 0.281522 * 100, metric = 9.82% * 100;
+ Minibatch[1901-2000]: loss = 0.260985 * 100, metric = 8.94% * 100;
+Finished Epoch[21 of 200]: [Training] loss = 0.269831 * 2000, metric = 9.35% * 2000 621.055s (  3.2 samples/s);
+Finished Evaluation [21]: Minibatch[1-1000]: metric = 16.01% * 1000;
+ Minibatch[   1- 100]: loss = 0.270021 * 100, metric = 9.26% * 100;
+ Minibatch[ 101- 200]: loss = 0.270488 * 100, metric = 9.33% * 100;
+ Minibatch[ 201- 300]: loss = 0.279241 * 100, metric = 9.87% * 100;
+ Minibatch[ 301- 400]: loss = 0.264506 * 100, metric = 9.11% * 100;
+ Minibatch[ 401- 500]: loss = 0.267672 * 100, metric = 8.97% * 100;
+ Minibatch[ 501- 600]: loss = 0.269901 * 100, metric = 9.45% * 100;
+ Minibatch[ 601- 700]: loss = 0.257626 * 100, metric = 9.06% * 100;
+ Minibatch[ 701- 800]: loss = 0.263999 * 100, metric = 9.25% * 100;
+ Minibatch[ 801- 900]: loss = 0.272048 * 100, metric = 9.59% * 100;
+ Minibatch[ 901-1000]: loss = 0.270686 * 100, metric = 9.38% * 100;
+ Minibatch[1001-1100]: loss = 0.258073 * 100, metric = 8.85% * 100;
+ Minibatch[1101-1200]: loss = 0.243661 * 100, metric = 8.41% * 100;
+ Minibatch[1201-1300]: loss = 0.266365 * 100, metric = 9.36% * 100;
+ Minibatch[1301-1400]: loss = 0.266741 * 100, metric = 9.27% * 100;
+ Minibatch[1401-1500]: loss = 0.259776 * 100, metric = 9.13% * 100;
+ Minibatch[1501-1600]: loss = 0.258284 * 100, metric = 9.06% * 100;
+ Minibatch[1601-1700]: loss = 0.262727 * 100, metric = 8.96% * 100;
+ Minibatch[1701-1800]: loss = 0.261436 * 100, metric = 9.13% * 100;
+ Minibatch[1801-1900]: loss = 0.264764 * 100, metric = 9.14% * 100;
+ Minibatch[1901-2000]: loss = 0.261147 * 100, metric = 8.96% * 100;
+Finished Epoch[22 of 200]: [Training] loss = 0.264458 * 2000, metric = 9.18% * 2000 619.918s (  3.2 samples/s);
+Finished Evaluation [22]: Minibatch[1-1000]: metric = 17.80% * 1000;
+ Minibatch[   1- 100]: loss = 0.265492 * 100, metric = 9.10% * 100;
+ Minibatch[ 101- 200]: loss = 0.274340 * 100, metric = 9.61% * 100;
+ Minibatch[ 201- 300]: loss = 0.261724 * 100, metric = 9.29% * 100;
+ Minibatch[ 301- 400]: loss = 0.268787 * 100, metric = 9.22% * 100;
+ Minibatch[ 401- 500]: loss = 0.274349 * 100, metric = 9.60% * 100;
+ Minibatch[ 501- 600]: loss = 0.266690 * 100, metric = 9.40% * 100;
+ Minibatch[ 601- 700]: loss = 0.266901 * 100, metric = 9.17% * 100;
+ Minibatch[ 701- 800]: loss = 0.252192 * 100, metric = 8.80% * 100;
+ Minibatch[ 801- 900]: loss = 0.254207 * 100, metric = 8.88% * 100;
+ Minibatch[ 901-1000]: loss = 0.269418 * 100, metric = 9.31% * 100;
+ Minibatch[1001-1100]: loss = 0.253290 * 100, metric = 8.78% * 100;
+ Minibatch[1101-1200]: loss = 0.263176 * 100, metric = 9.23% * 100;
+ Minibatch[1201-1300]: loss = 0.258976 * 100, metric = 9.26% * 100;
+ Minibatch[1301-1400]: loss = 0.272492 * 100, metric = 9.62% * 100;
+ Minibatch[1401-1500]: loss = 0.254054 * 100, metric = 8.93% * 100;
+ Minibatch[1501-1600]: loss = 0.260435 * 100, metric = 9.16% * 100;
+ Minibatch[1601-1700]: loss = 0.265204 * 100, metric = 9.43% * 100;
+ Minibatch[1701-1800]: loss = 0.263683 * 100, metric = 9.35% * 100;
+ Minibatch[1801-1900]: loss = 0.269364 * 100, metric = 9.59% * 100;
+ Minibatch[1901-2000]: loss = 0.262301 * 100, metric = 9.23% * 100;
+Finished Epoch[23 of 200]: [Training] loss = 0.263854 * 2000, metric = 9.25% * 2000 620.772s (  3.2 samples/s);
+Finished Evaluation [23]: Minibatch[1-1000]: metric = 17.53% * 1000;
+ Minibatch[   1- 100]: loss = 0.252768 * 100, metric = 9.05% * 100;
+ Minibatch[ 101- 200]: loss = 0.267909 * 100, metric = 9.50% * 100;
+ Minibatch[ 201- 300]: loss = 0.254262 * 100, metric = 9.11% * 100;
+ Minibatch[ 301- 400]: loss = 0.252074 * 100, metric = 8.71% * 100;
+ Minibatch[ 401- 500]: loss = 0.259600 * 100, metric = 9.11% * 100;
+ Minibatch[ 501- 600]: loss = 0.248673 * 100, metric = 8.79% * 100;
+ Minibatch[ 601- 700]: loss = 0.268305 * 100, metric = 9.20% * 100;
+ Minibatch[ 701- 800]: loss = 0.256718 * 100, metric = 8.97% * 100;
+ Minibatch[ 801- 900]: loss = 0.267847 * 100, metric = 9.57% * 100;
+ Minibatch[ 901-1000]: loss = 0.263173 * 100, metric = 9.36% * 100;
+ Minibatch[1001-1100]: loss = 0.252731 * 100, metric = 8.89% * 100;
+ Minibatch[1101-1200]: loss = 0.272636 * 100, metric = 9.43% * 100;
+ Minibatch[1201-1300]: loss = 0.264210 * 100, metric = 9.51% * 100;
+ Minibatch[1301-1400]: loss = 0.253703 * 100, metric = 8.91% * 100;
+ Minibatch[1401-1500]: loss = 0.254861 * 100, metric = 9.00% * 100;
+ Minibatch[1501-1600]: loss = 0.266027 * 100, metric = 9.36% * 100;
+ Minibatch[1601-1700]: loss = 0.250541 * 100, metric = 8.76% * 100;
+ Minibatch[1701-1800]: loss = 0.244822 * 100, metric = 8.54% * 100;
+ Minibatch[1801-1900]: loss = 0.259359 * 100, metric = 9.34% * 100;
+ Minibatch[1901-2000]: loss = 0.265789 * 100, metric = 9.49% * 100;
+Finished Epoch[24 of 200]: [Training] loss = 0.258800 * 2000, metric = 9.13% * 2000 620.738s (  3.2 samples/s);
+Finished Evaluation [24]: Minibatch[1-1000]: metric = 16.36% * 1000;
+ Minibatch[   1- 100]: loss = 0.257987 * 100, metric = 9.00% * 100;
+ Minibatch[ 101- 200]: loss = 0.261657 * 100, metric = 9.20% * 100;
+ Minibatch[ 201- 300]: loss = 0.260663 * 100, metric = 9.17% * 100;
+ Minibatch[ 301- 400]: loss = 0.261685 * 100, metric = 9.35% * 100;
+ Minibatch[ 401- 500]: loss = 0.258435 * 100, metric = 8.91% * 100;
+ Minibatch[ 501- 600]: loss = 0.256922 * 100, metric = 9.12% * 100;
+ Minibatch[ 601- 700]: loss = 0.261351 * 100, metric = 9.04% * 100;
+ Minibatch[ 701- 800]: loss = 0.249552 * 100, metric = 8.71% * 100;
+ Minibatch[ 801- 900]: loss = 0.245214 * 100, metric = 8.77% * 100;
+ Minibatch[ 901-1000]: loss = 0.256160 * 100, metric = 9.13% * 100;
+ Minibatch[1001-1100]: loss = 0.256893 * 100, metric = 9.05% * 100;
+ Minibatch[1101-1200]: loss = 0.259694 * 100, metric = 9.05% * 100;
+ Minibatch[1201-1300]: loss = 0.277658 * 100, metric = 9.76% * 100;
+ Minibatch[1301-1400]: loss = 0.252178 * 100, metric = 8.78% * 100;
+ Minibatch[1401-1500]: loss = 0.249291 * 100, metric = 8.58% * 100;
+ Minibatch[1501-1600]: loss = 0.266987 * 100, metric = 9.47% * 100;
+ Minibatch[1601-1700]: loss = 0.258976 * 100, metric = 9.01% * 100;
+ Minibatch[1701-1800]: loss = 0.252904 * 100, metric = 9.06% * 100;
+ Minibatch[1801-1900]: loss = 0.250964 * 100, metric = 8.66% * 100;
+ Minibatch[1901-2000]: loss = 0.244348 * 100, metric = 8.71% * 100;
+Finished Epoch[25 of 200]: [Training] loss = 0.256976 * 2000, metric = 9.03% * 2000 618.842s (  3.2 samples/s);
+Finished Evaluation [25]: Minibatch[1-1000]: metric = 17.16% * 1000;
+ Minibatch[   1- 100]: loss = 0.259912 * 100, metric = 9.18% * 100;
+ Minibatch[ 101- 200]: loss = 0.239406 * 100, metric = 8.50% * 100;
+ Minibatch[ 201- 300]: loss = 0.254698 * 100, metric = 9.01% * 100;
+ Minibatch[ 301- 400]: loss = 0.246364 * 100, metric = 8.70% * 100;
+ Minibatch[ 401- 500]: loss = 0.252465 * 100, metric = 8.88% * 100;
+ Minibatch[ 501- 600]: loss = 0.247884 * 100, metric = 8.59% * 100;
+ Minibatch[ 601- 700]: loss = 0.263616 * 100, metric = 9.20% * 100;
+ Minibatch[ 701- 800]: loss = 0.247853 * 100, metric = 8.81% * 100;
+ Minibatch[ 801- 900]: loss = 0.238211 * 100, metric = 8.32% * 100;
+ Minibatch[ 901-1000]: loss = 0.246842 * 100, metric = 8.51% * 100;
+ Minibatch[1001-1100]: loss = 0.253404 * 100, metric = 9.11% * 100;
+ Minibatch[1101-1200]: loss = 0.258794 * 100, metric = 9.09% * 100;
+ Minibatch[1201-1300]: loss = 0.248030 * 100, metric = 8.75% * 100;
+ Minibatch[1301-1400]: loss = 0.243987 * 100, metric = 8.44% * 100;
+ Minibatch[1401-1500]: loss = 0.248005 * 100, metric = 8.75% * 100;
+ Minibatch[1501-1600]: loss = 0.242299 * 100, metric = 8.41% * 100;
+ Minibatch[1601-1700]: loss = 0.265107 * 100, metric = 9.35% * 100;
+ Minibatch[1701-1800]: loss = 0.254600 * 100, metric = 8.88% * 100;
+ Minibatch[1801-1900]: loss = 0.252722 * 100, metric = 8.92% * 100;
+ Minibatch[1901-2000]: loss = 0.249561 * 100, metric = 8.83% * 100;
+Finished Epoch[26 of 200]: [Training] loss = 0.250688 * 2000, metric = 8.81% * 2000 628.531s (  3.2 samples/s);
+Finished Evaluation [26]: Minibatch[1-1000]: metric = 18.07% * 1000;
+ Minibatch[   1- 100]: loss = 0.255213 * 100, metric = 8.82% * 100;
+ Minibatch[ 101- 200]: loss = 0.263723 * 100, metric = 9.19% * 100;
+ Minibatch[ 201- 300]: loss = 0.245169 * 100, metric = 8.69% * 100;
+ Minibatch[ 301- 400]: loss = 0.244709 * 100, metric = 8.39% * 100;
+ Minibatch[ 401- 500]: loss = 0.252254 * 100, metric = 8.81% * 100;
+ Minibatch[ 501- 600]: loss = 0.250154 * 100, metric = 8.63% * 100;
+ Minibatch[ 601- 700]: loss = 0.247314 * 100, metric = 8.74% * 100;
+ Minibatch[ 701- 800]: loss = 0.253634 * 100, metric = 8.92% * 100;
+ Minibatch[ 801- 900]: loss = 0.258885 * 100, metric = 8.79% * 100;
+ Minibatch[ 901-1000]: loss = 0.255430 * 100, metric = 9.08% * 100;
+ Minibatch[1001-1100]: loss = 0.247597 * 100, metric = 8.51% * 100;
+ Minibatch[1101-1200]: loss = 0.260808 * 100, metric = 9.08% * 100;
+ Minibatch[1201-1300]: loss = 0.252949 * 100, metric = 8.83% * 100;
+ Minibatch[1301-1400]: loss = 0.261073 * 100, metric = 9.31% * 100;
+ Minibatch[1401-1500]: loss = 0.251886 * 100, metric = 8.95% * 100;
+ Minibatch[1501-1600]: loss = 0.254084 * 100, metric = 8.92% * 100;
+ Minibatch[1601-1700]: loss = 0.242160 * 100, metric = 8.37% * 100;
+ Minibatch[1701-1800]: loss = 0.250475 * 100, metric = 8.56% * 100;
+ Minibatch[1801-1900]: loss = 0.250305 * 100, metric = 8.57% * 100;
+ Minibatch[1901-2000]: loss = 0.254352 * 100, metric = 8.98% * 100;
+Finished Epoch[27 of 200]: [Training] loss = 0.252609 * 2000, metric = 8.81% * 2000 636.786s (  3.1 samples/s);
+Finished Evaluation [27]: Minibatch[1-1000]: metric = 16.28% * 1000;
+ Minibatch[   1- 100]: loss = 0.255528 * 100, metric = 9.07% * 100;
+ Minibatch[ 101- 200]: loss = 0.243924 * 100, metric = 8.33% * 100;
+ Minibatch[ 201- 300]: loss = 0.264424 * 100, metric = 9.29% * 100;
+ Minibatch[ 301- 400]: loss = 0.253801 * 100, metric = 8.67% * 100;
+ Minibatch[ 401- 500]: loss = 0.255169 * 100, metric = 9.08% * 100;
+ Minibatch[ 501- 600]: loss = 0.262039 * 100, metric = 9.36% * 100;
+ Minibatch[ 601- 700]: loss = 0.247762 * 100, metric = 8.68% * 100;
+ Minibatch[ 701- 800]: loss = 0.245970 * 100, metric = 8.55% * 100;
+ Minibatch[ 801- 900]: loss = 0.252641 * 100, metric = 8.87% * 100;
+ Minibatch[ 901-1000]: loss = 0.259109 * 100, metric = 9.18% * 100;
+ Minibatch[1001-1100]: loss = 0.253365 * 100, metric = 8.97% * 100;
+ Minibatch[1101-1200]: loss = 0.244124 * 100, metric = 8.61% * 100;
+ Minibatch[1201-1300]: loss = 0.257090 * 100, metric = 9.02% * 100;
+ Minibatch[1301-1400]: loss = 0.247151 * 100, metric = 8.70% * 100;
+ Minibatch[1401-1500]: loss = 0.256887 * 100, metric = 9.04% * 100;
+ Minibatch[1501-1600]: loss = 0.251007 * 100, metric = 8.75% * 100;
+ Minibatch[1601-1700]: loss = 0.248798 * 100, metric = 8.55% * 100;
+ Minibatch[1701-1800]: loss = 0.246015 * 100, metric = 8.75% * 100;
+ Minibatch[1801-1900]: loss = 0.253499 * 100, metric = 8.96% * 100;
+ Minibatch[1901-2000]: loss = 0.254625 * 100, metric = 8.93% * 100;
+Finished Epoch[28 of 200]: [Training] loss = 0.252646 * 2000, metric = 8.87% * 2000 677.104s (  3.0 samples/s);
+Finished Evaluation [28]: Minibatch[1-1000]: metric = 16.06% * 1000;
+ Minibatch[   1- 100]: loss = 0.243593 * 100, metric = 8.53% * 100;
+ Minibatch[ 101- 200]: loss = 0.252035 * 100, metric = 8.74% * 100;
+ Minibatch[ 201- 300]: loss = 0.254065 * 100, metric = 9.08% * 100;
+ Minibatch[ 301- 400]: loss = 0.260691 * 100, metric = 9.34% * 100;
+ Minibatch[ 401- 500]: loss = 0.243251 * 100, metric = 8.54% * 100;
+ Minibatch[ 501- 600]: loss = 0.249771 * 100, metric = 8.83% * 100;
+ Minibatch[ 601- 700]: loss = 0.251414 * 100, metric = 8.92% * 100;
+ Minibatch[ 701- 800]: loss = 0.256559 * 100, metric = 9.03% * 100;
+ Minibatch[ 801- 900]: loss = 0.248016 * 100, metric = 8.71% * 100;
+ Minibatch[ 901-1000]: loss = 0.259525 * 100, metric = 9.32% * 100;
+ Minibatch[1001-1100]: loss = 0.254508 * 100, metric = 9.01% * 100;
+ Minibatch[1101-1200]: loss = 0.238506 * 100, metric = 8.40% * 100;
+ Minibatch[1201-1300]: loss = 0.254024 * 100, metric = 8.92% * 100;
+ Minibatch[1301-1400]: loss = 0.241575 * 100, metric = 8.52% * 100;
+ Minibatch[1401-1500]: loss = 0.260228 * 100, metric = 9.14% * 100;
+ Minibatch[1501-1600]: loss = 0.242046 * 100, metric = 8.57% * 100;
+ Minibatch[1601-1700]: loss = 0.258028 * 100, metric = 9.32% * 100;
+ Minibatch[1701-1800]: loss = 0.242472 * 100, metric = 8.60% * 100;
+ Minibatch[1801-1900]: loss = 0.259762 * 100, metric = 9.21% * 100;
+ Minibatch[1901-2000]: loss = 0.252483 * 100, metric = 9.07% * 100;
+Finished Epoch[29 of 200]: [Training] loss = 0.251128 * 2000, metric = 8.89% * 2000 691.027s (  2.9 samples/s);
+Finished Evaluation [29]: Minibatch[1-1000]: metric = 19.07% * 1000;
+ Minibatch[   1- 100]: loss = 0.259162 * 100, metric = 9.01% * 100;
+ Minibatch[ 101- 200]: loss = 0.236194 * 100, metric = 8.16% * 100;
+ Minibatch[ 201- 300]: loss = 0.245115 * 100, metric = 8.46% * 100;
+ Minibatch[ 301- 400]: loss = 0.251618 * 100, metric = 9.05% * 100;
+ Minibatch[ 401- 500]: loss = 0.244820 * 100, metric = 8.62% * 100;
+ Minibatch[ 501- 600]: loss = 0.227132 * 100, metric = 8.06% * 100;
+ Minibatch[ 601- 700]: loss = 0.252815 * 100, metric = 8.93% * 100;
+ Minibatch[ 701- 800]: loss = 0.241759 * 100, metric = 8.69% * 100;
+ Minibatch[ 801- 900]: loss = 0.256177 * 100, metric = 8.80% * 100;
+ Minibatch[ 901-1000]: loss = 0.231702 * 100, metric = 8.00% * 100;
+ Minibatch[1001-1100]: loss = 0.248912 * 100, metric = 8.65% * 100;
+ Minibatch[1101-1200]: loss = 0.248716 * 100, metric = 8.76% * 100;
+ Minibatch[1201-1300]: loss = 0.240764 * 100, metric = 8.36% * 100;
+ Minibatch[1301-1400]: loss = 0.246465 * 100, metric = 8.66% * 100;
+ Minibatch[1401-1500]: loss = 0.244059 * 100, metric = 8.61% * 100;
+ Minibatch[1501-1600]: loss = 0.246995 * 100, metric = 8.74% * 100;
+ Minibatch[1601-1700]: loss = 0.251009 * 100, metric = 8.93% * 100;
+ Minibatch[1701-1800]: loss = 0.250659 * 100, metric = 8.81% * 100;
+ Minibatch[1801-1900]: loss = 0.245154 * 100, metric = 8.61% * 100;
+ Minibatch[1901-2000]: loss = 0.258643 * 100, metric = 8.99% * 100;
+Finished Epoch[30 of 200]: [Training] loss = 0.246393 * 2000, metric = 8.64% * 2000 693.451s (  2.9 samples/s);
+Finished Evaluation [30]: Minibatch[1-1000]: metric = 16.82% * 1000;
+creating eval model
+Stored eval model at /home/s124262/Source/Nuclei-CNTK/FasterRCNN/Output/faster_rcnn_eval_VGG16_e2e.model
+Evaluating Faster R-CNN model for 30200 images.
+Processed 100 samples
+Processed 200 samples
+Processed 300 samples
+Processed 400 samples
+Processed 500 samples
+Processed 600 samples
+Processed 700 samples
+Processed 800 samples
+Processed 900 samples
+Processed 1000 samples
+Processed 1100 samples
+Processed 1200 samples
+Processed 1300 samples
+Processed 1400 samples
+Processed 1500 samples
+Processed 1600 samples
+Processed 1700 samples
+Processed 1800 samples
+Processed 1900 samples
+Processed 2000 samples
+Processed 2100 samples
+Processed 2200 samples
+Processed 2300 samples
+Processed 2400 samples
+Processed 2500 samples
+Processed 2600 samples
+Processed 2700 samples
+Processed 2800 samples
+Processed 2900 samples
+Processed 3000 samples
+Processed 3100 samples
+Processed 3200 samples
+Processed 3300 samples
+Processed 3400 samples
+Processed 3500 samples
+Processed 3600 samples
+Processed 3700 samples
+Processed 3800 samples
+Processed 3900 samples
+Processed 4000 samples
+Processed 4100 samples
+Processed 4200 samples
+Processed 4300 samples
+Processed 4400 samples
+Processed 4500 samples
+Processed 4600 samples
+Processed 4700 samples
+Processed 4800 samples
+Processed 4900 samples
+Processed 5000 samples
+Processed 5100 samples
+Processed 5200 samples
+Processed 5300 samples
+Processed 5400 samples
+Processed 5500 samples
+Processed 5600 samples
+Processed 5700 samples
+Processed 5800 samples
+Processed 5900 samples
+Processed 6000 samples
+Processed 6100 samples
+Processed 6200 samples
+Processed 6300 samples
+Processed 6400 samples
+Processed 6500 samples
+Processed 6600 samples
+Processed 6700 samples
+Processed 6800 samples
+Processed 6900 samples
+Processed 7000 samples
+Processed 7100 samples
+Processed 7200 samples
+Processed 7300 samples
+Processed 7400 samples
+Processed 7500 samples
+Processed 7600 samples
+Processed 7700 samples
+Processed 7800 samples
+Processed 7900 samples
+Processed 8000 samples
+Processed 8100 samples
+Processed 8200 samples
+Processed 8300 samples
+Processed 8400 samples
+Processed 8500 samples
+Processed 8600 samples
+Processed 8700 samples
+Processed 8800 samples
+Processed 8900 samples
+Processed 9000 samples
+Processed 9100 samples
+Processed 9200 samples
+Processed 9300 samples
+Processed 9400 samples
+Processed 9500 samples
+Processed 9600 samples
+Processed 9700 samples
+Processed 9800 samples
+Processed 9900 samples
+Processed 10000 samples
+Processed 10100 samples
+Processed 10200 samples
+Processed 10300 samples
+Processed 10400 samples
+Processed 10500 samples
+Processed 10600 samples
+Processed 10700 samples
+Processed 10800 samples
+Processed 10900 samples
+Processed 11000 samples
+Processed 11100 samples
+Processed 11200 samples
+Processed 11300 samples
+Processed 11400 samples
+Processed 11500 samples
+Processed 11600 samples
+Processed 11700 samples
+Processed 11800 samples
+Processed 11900 samples
+Processed 12000 samples
+Processed 12100 samples
+Processed 12200 samples
+Processed 12300 samples
+Processed 12400 samples
+Processed 12500 samples
+Processed 12600 samples
+Processed 12700 samples
+Processed 12800 samples
+Processed 12900 samples
+Processed 13000 samples
+Processed 13100 samples
+Processed 13200 samples
+Processed 13300 samples
+Processed 13400 samples
+Processed 13500 samples
+Processed 13600 samples
+Processed 13700 samples
+Processed 13800 samples
+Processed 13900 samples
+Processed 14000 samples
+Processed 14100 samples
+Processed 14200 samples
+Processed 14300 samples
+Processed 14400 samples
+Processed 14500 samples
+Processed 14600 samples
+Processed 14700 samples
+Processed 14800 samples
+Processed 14900 samples
+Processed 15000 samples
+Processed 15100 samples
+Processed 15200 samples
+Processed 15300 samples
+Processed 15400 samples
+Processed 15500 samples
+Processed 15600 samples
+Processed 15700 samples
+Processed 15800 samples
+Processed 15900 samples
+Processed 16000 samples
+Processed 16100 samples
+Processed 16200 samples
+Processed 16300 samples
+Processed 16400 samples
+Processed 16500 samples
+Processed 16600 samples
+Processed 16700 samples
+Processed 16800 samples
+Processed 16900 samples
+Processed 17000 samples
+Processed 17100 samples
+Processed 17200 samples
+Processed 17300 samples
+Processed 17400 samples
+Processed 17500 samples
+Processed 17600 samples
+Processed 17700 samples
+Processed 17800 samples
+Processed 17900 samples
+Processed 18000 samples
+Processed 18100 samples
+Processed 18200 samples
+Processed 18300 samples
+Processed 18400 samples
+Processed 18500 samples
+Processed 18600 samples
+Processed 18700 samples
+Processed 18800 samples
+Processed 18900 samples
+Processed 19000 samples
+Processed 19100 samples
+Processed 19200 samples
+Processed 19300 samples
+Processed 19400 samples
+Processed 19500 samples
+Processed 19600 samples
+Processed 19700 samples
+Processed 19800 samples
+Processed 19900 samples
+Processed 20000 samples
+Processed 20100 samples
+Processed 20200 samples
+Processed 20300 samples
+Processed 20400 samples
+Processed 20500 samples
+Processed 20600 samples
+Processed 20700 samples
+Processed 20800 samples
+Processed 20900 samples
+Processed 21000 samples
+Processed 21100 samples
+Processed 21200 samples
+Processed 21300 samples
+Processed 21400 samples
+Processed 21500 samples
+Processed 21600 samples
+Processed 21700 samples
+Processed 21800 samples
+Processed 21900 samples
+Processed 22000 samples
+Processed 22100 samples
+Processed 22200 samples
+Processed 22300 samples
+Processed 22400 samples
+Processed 22500 samples
+Processed 22600 samples
+Processed 22700 samples
+Processed 22800 samples
+Processed 22900 samples
+Processed 23000 samples
+Processed 23100 samples
+Processed 23200 samples
+Processed 23300 samples
+Processed 23400 samples
+Processed 23500 samples
+Processed 23600 samples
+Processed 23700 samples
+Processed 23800 samples
+Processed 23900 samples
+Processed 24000 samples
+Processed 24100 samples
+Processed 24200 samples
+Processed 24300 samples
+Processed 24400 samples
+Processed 24500 samples
+Processed 24600 samples
+Processed 24700 samples
+Processed 24800 samples
+Processed 24900 samples
+Processed 25000 samples
+Processed 25100 samples
+Processed 25200 samples
+Processed 25300 samples
+Processed 25400 samples
+Processed 25500 samples
+Processed 25600 samples
+Processed 25700 samples
+Processed 25800 samples
+Processed 25900 samples
+Processed 26000 samples
+Processed 26100 samples
+Processed 26200 samples
+Processed 26300 samples
+Processed 26400 samples
+Processed 26500 samples
+Processed 26600 samples
+Processed 26700 samples
+Processed 26800 samples
+Processed 26900 samples
+Processed 27000 samples
+Processed 27100 samples
+Processed 27200 samples
+Processed 27300 samples
+Processed 27400 samples
+Processed 27500 samples
+Processed 27600 samples
+Processed 27700 samples
+Processed 27800 samples
+Processed 27900 samples
+Processed 28000 samples
+Processed 28100 samples
+Processed 28200 samples
+Processed 28300 samples
+Processed 28400 samples
+Processed 28500 samples
+Processed 28600 samples
+Processed 28700 samples
+Processed 28800 samples
+Processed 28900 samples
+Processed 29000 samples
+Processed 29100 samples
+Processed 29200 samples
+Processed 29300 samples
+Processed 29400 samples
+Processed 29500 samples
+Processed 29600 samples
+Processed 29700 samples
+Processed 29800 samples
+Processed 29900 samples
+Processed 30000 samples
+Processed 30100 samples
+Processed 30200 samples
+Number of rois before non-maximum suppression: 4321996
+Number of rois  after non-maximum suppression: 2824247
+AP for        Positive = 0.4490
+AP for        Negative = 0.4299
+Mean AP = 0.4395

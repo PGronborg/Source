@@ -1,0 +1,34 @@
+Selected GPU[0] GeForce GTX TITAN X as the process wide default device.
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Jan 31 2018 15:03:41
+		Last modified date: Tue Jan 30 03:26:13 2018
+		Build type: release
+		Build target: GPU
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		CUDA version: 9.0.0
+		CUDNN version: 7.0.3
+		Build Branch: HEAD
+		Build SHA1: a70455c7abe76596853f8e6a77a4d6de1e3ba76e
+		MPI distribution: Open MPI
+		MPI version: 1.10.7
+-------------------------------------------------------------------
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:59: RuntimeWarning: overflow encountered in exp
+  pred_w = np.exp(dw) * widths[:, np.newaxis]
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:59: RuntimeWarning: overflow encountered in multiply
+  pred_w = np.exp(dw) * widths[:, np.newaxis]
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:60: RuntimeWarning: overflow encountered in exp
+  pred_h = np.exp(dh) * heights[:, np.newaxis]
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:60: RuntimeWarning: overflow encountered in multiply
+  pred_h = np.exp(dh) * heights[:, np.newaxis]
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:64: RuntimeWarning: invalid value encountered in subtract
+  pred_boxes[:, 0::4] = pred_ctr_x - 0.5 * pred_w
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:68: RuntimeWarning: invalid value encountered in add
+  pred_boxes[:, 2::4] = pred_ctr_x + 0.5 * pred_w
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:70: RuntimeWarning: invalid value encountered in add
+  pred_boxes[:, 3::4] = pred_ctr_y + 0.5 * pred_h
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/proposal_layer.py:201: RuntimeWarning: invalid value encountered in greater_equal
+  keep = np.where((ws >= min_size) & (hs >= min_size))[0]

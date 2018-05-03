@@ -1,0 +1,8 @@
+
+real	178m7.475s
+user	128m18.352s
+sys	49m19.196s
+
+real	272m12.150s
+user	228m13.425s
+sys	43m1.329s
