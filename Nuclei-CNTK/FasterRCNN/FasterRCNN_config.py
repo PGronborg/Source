@@ -41,7 +41,8 @@ __C.CNTK.BIAS_LR_MULT = 2.0
 
 # E2E learning parameters
 __C.CNTK.E2E_MAX_EPOCHS = 200
-__C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001] * 20 + [0.000001]
+__C.CNTK.E2E_LR_PER_SAMPLE = [0.0001] * 10 + [0.00001] * 10 + [0.000001] * 20 + [0.0000001]
+#[0.001] * 10 + [0.0001] * 10 + [0.00001] * 20 + [0.000001]
 
 # 4-stage learning parameters (alternating training scheme)
 __C.CNTK.RPN_EPOCHS = 16
@@ -63,7 +64,7 @@ __C.SIGMA_RPN_L1 = 3.0
 __C.SIGMA_DET_L1 = 1.0
 
 # Weight on the centers
-__C.WEIGHT_CENTER = 100.0
+__C.WEIGHT_CENTER = 1.0
 
 # NMS threshold used to discard overlapping predicted bounding boxes
 __C.RESULTS_NMS_THRESHOLD = 0.5
