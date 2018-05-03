@@ -12,7 +12,7 @@ mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start testrun"
 #time CUDA_VISIBLE_DEVICES=3 python3 run_faster_rcnn_VGG16.py Layers/Last_relu6 pool2 relu6 > Output/Layers/Last_Relu6Out.txt 2> Output/Layers/Last_Relu6Err.txt &
 #time CUDA_VISIBLE_DEVICES=0 python3 run_faster_rcnn_VGG16.py Ref/Ref_1 > Output/Ref/Ref_1Out.txt 2> Output/Ref/Ref_1Err.txt &
 #time CUDA_VISIBLE_DEVICES=2 python3 run_faster_rcnn_VGG16.py Ref/Ref_2 > Output/Ref/Ref_2Out.txt 2> Output/Ref/Ref_2Err.txt &
-time CUDA_VISIBLE_DEVICES=5 python3 run_faster_rcnn_VGG16.py Learning/Pyra_0001 > Output/Learning/Out/Pyra_0001.txt 2> Output/Learning/Err/Pyra_0001.txt &
+time CUDA_VISIBLE_DEVICES=6 python3 run_faster_rcnn_VGG16.py Learning/Pyra_01 > Output/Learning/Out/Pyra_01.txt 2> Output/Learning/Err/Pyra_01.txt &
 
 
 wait
