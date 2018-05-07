@@ -14,3 +14,7 @@ sys	41m49.836s
 real	433m16.967s
 user	352m30.525s
 sys	79m38.186s
+
+real	323m33.130s
+user	262m33.812s
+sys	60m13.954s
