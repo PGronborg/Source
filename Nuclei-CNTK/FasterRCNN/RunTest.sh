@@ -15,9 +15,9 @@ mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start testrun"
 
 #time CUDA_VISIBLE_DEVICES=5 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/0_01 0.01 > Output/SigmaCenter/Center1/Out/0_01.txt 2> Output/SigmaCenter/Center1/Err/0_01.txt &
 #time CUDA_VISIBLE_DEVICES=6 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/0_1 0.1 > Output/SigmaCenter/Center1/Out/0_1.txt 2> Output/SigmaCenter/Center1/Err/0_1.txt &
-time CUDA_VISIBLE_DEVICES=6 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/1 1.0 > Output/SigmaCenter/Center1/Out/1.txt 2> Output/SigmaCenter/Center1/Err/1.txt &
-time CUDA_VISIBLE_DEVICES=7 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/10 10.0 > Output/SigmaCenter/Center1/Out/10.txt 2> Output/SigmaCenter/Center1/Err/10.txt &
-#time CUDA_VISIBLE_DEVICES=5 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/100 100.0 > Output/SigmaCenter/Center1/Out/100.txt 2> Output/SigmaCenter/Center1/Err/100.txt &
+#time CUDA_VISIBLE_DEVICES=6 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/1 1.0 > Output/SigmaCenter/Center1/Out/1.txt 2> Output/SigmaCenter/Center1/Err/1.txt &
+#time CUDA_VISIBLE_DEVICES=7 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/10 10.0 > Output/SigmaCenter/Center1/Out/10.txt 2> Output/SigmaCenter/Center1/Err/10.txt &
+time CUDA_VISIBLE_DEVICES=7 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center1/100 100.0 > Output/SigmaCenter/Center1/Out/100.txt 2> Output/SigmaCenter/Center1/Err/100.txt &
 
 wait
 
