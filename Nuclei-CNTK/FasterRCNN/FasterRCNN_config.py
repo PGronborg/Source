@@ -64,7 +64,7 @@ __C.SIGMA_RPN_L1 = 3.0
 __C.SIGMA_DET_L1 = 1.0
 
 # Weight on the centers
-__C.WEIGHT_CENTER = 0.01
+__C.WEIGHT_CENTER = 0.1
 
 # NMS threshold used to discard overlapping predicted bounding boxes
 __C.RESULTS_NMS_THRESHOLD = 0.5
