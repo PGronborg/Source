@@ -1,20 +1,21 @@
 
-real	407m10.139s
-user	346m8.788s
-sys	59m27.247s
+real	341m33.174s
+user	287m53.400s
+sys	51m22.530s
 
-real	445m31.942s
-user	385m46.844s
-sys	58m40.328s
+real	342m54.578s
+user	293m55.022s
+sys	46m32.115s
 
-real	382m27.568s
-user	320m25.132s
-sys	60m11.359s
+real	385m9.844s
+user	321m57.839s
+sys	60m35.189s
 
-real	279m40.897s
-user	237m24.976s
-sys	39m35.075s
+real	385m23.854s
+user	321m49.561s
+sys	61m11.206s
 
-real	259m54.887s
-user	219m39.301s
-sys	38m54.124s
+real	505m36.735s
+user	421m52.973s
+sys	79m19.669s
+./RunTest.sh: error reading input file: Stale file handle
