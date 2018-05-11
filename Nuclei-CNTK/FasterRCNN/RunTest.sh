@@ -13,11 +13,11 @@ mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start testrun"
 #time CUDA_VISIBLE_DEVICES=0 python3 run_faster_rcnn_VGG16.py Ref/Ref_1 > Output/Ref/Ref_1Out.txt 2> Output/Ref/Ref_1Err.txt &
 #time CUDA_VISIBLE_DEVICES=2 python3 run_faster_rcnn_VGG16.py Ref/Ref_2 > Output/Ref/Ref_2Out.txt 2> Output/Ref/Ref_2Err.txt &
 
-time CUDA_VISIBLE_DEVICES=1 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center100/0_01 0.01 > Output/SigmaCenter/Center100/Out/0_01.txt 2> Output/SigmaCenter/Center100/Err/0_01.txt &
-time CUDA_VISIBLE_DEVICES=2 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center100/0_1 0.1 > Output/SigmaCenter/Center100/Out/0_1.txt 2> Output/SigmaCenter/Center100/Err/0_1.txt &
-time CUDA_VISIBLE_DEVICES=3 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center100/1 1.0 > Output/SigmaCenter/Center100/Out/1.txt 2> Output/SigmaCenter/Center100/Err/1.txt &
-time CUDA_VISIBLE_DEVICES=5 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center100/10 10.0 > Output/SigmaCenter/Center100/Out/10.txt 2> Output/SigmaCenter/Center100/Err/10.txt &
-time CUDA_VISIBLE_DEVICES=7 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center100/100 100.0 > Output/SigmaCenter/Center100/Out/100.txt 2> Output/SigmaCenter/Center100/Err/100.txt &
+time CUDA_VISIBLE_DEVICES=1 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center10/0_01 0.01 > Output/SigmaCenter/Center10/Out/0_01.txt 2> Output/SigmaCenter/Center10/Err/0_01.txt &
+time CUDA_VISIBLE_DEVICES=2 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center10/0_1 0.1 > Output/SigmaCenter/Center10/Out/0_1.txt 2> Output/SigmaCenter/Center10/Err/0_1.txt &
+time CUDA_VISIBLE_DEVICES=3 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center10/1 1.0 > Output/SigmaCenter/Center10/Out/1.txt 2> Output/SigmaCenter/Center10/Err/1.txt &
+time CUDA_VISIBLE_DEVICES=5 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center10/10 10.0 > Output/SigmaCenter/Center10/Out/10.txt 2> Output/SigmaCenter/Center10/Err/10.txt &
+time CUDA_VISIBLE_DEVICES=7 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center10/100 100.0 > Output/SigmaCenter/Center10/Out/100.txt 2> Output/SigmaCenter/Center10/Err/100.txt &
 
 wait
 
