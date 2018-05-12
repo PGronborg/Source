@@ -18,17 +18,9 @@ Build info:
 -------------------------------------------------------------------
 /home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:59: RuntimeWarning: overflow encountered in exp
   pred_w = np.exp(dw) * widths[:, np.newaxis]
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:59: RuntimeWarning: overflow encountered in multiply
+  pred_w = np.exp(dw) * widths[:, np.newaxis]
 /home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:60: RuntimeWarning: overflow encountered in exp
   pred_h = np.exp(dh) * heights[:, np.newaxis]
-/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/proposal_layer.py:201: RuntimeWarning: invalid value encountered in greater_equal
-  keep = np.where((ws >= min_size) & (hs >= min_size))[0]
-Traceback (most recent call last):
-  File "run_faster_rcnn_VGG16.py", line 47, in <module>
-    trained_model = train_faster_rcnn(cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 297, in train_faster_rcnn
-    eval_model = train_faster_rcnn_e2e(cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 335, in train_faster_rcnn_e2e
-    e2e_lr_per_sample_scaled, mm_schedule, cfg["CNTK"].L2_REG_WEIGHT, cfg["CNTK"].E2E_MAX_EPOCHS, cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/FasterRCNN_train.py", line 663, in train_model
-    valwriter.writerow([saver,epoch_train_loss[saver],epoch_train_loss2[saver],epoch_train_error[saver],val_losses[saver],val_error[saver]])
-OSError: [Errno 28] No space left on device
+/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/rpn/bbox_transform.py:60: RuntimeWarning: overflow encountered in multiply
+  pred_h = np.exp(dh) * heights[:, np.newaxis]

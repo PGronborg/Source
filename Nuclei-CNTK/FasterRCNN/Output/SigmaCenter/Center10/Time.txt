@@ -1,9 +1,20 @@
-./RunTest.sh: line 20:  6331 Aborted                 CUDA_VISIBLE_DEVICES=5 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center10/100 100.0 > Output/SigmaCenter/Center10/Out/100.txt 2> Output/SigmaCenter/Center10/Err/100.txt
 
-real	153m51.332s
-user	107m14.508s
-sys	45m16.682s
+real	175m40.056s
+user	123m52.031s
+sys	48m34.408s
 
-real	154m17.460s
-user	107m36.880s
-sys	45m18.270s
+real	202m16.996s
+user	160m39.382s
+sys	39m47.219s
+
+real	210m58.496s
+user	168m35.891s
+sys	40m41.295s
+
+real	214m54.585s
+user	172m22.294s
+sys	40m51.094s
+
+real	275m11.609s
+user	232m13.873s
+sys	41m6.748s
