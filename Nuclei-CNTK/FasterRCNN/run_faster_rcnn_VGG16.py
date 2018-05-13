@@ -32,7 +32,7 @@ def get_configuration():
 if __name__ == '__main__':
     cfg = get_configuration()
     cfg.SAVE_NAME = sys.argv[1]
-    cfg.SIGMA_RPN_L1 = float(sys.argv[2])
+    #cfg.SIGMA_RPN_L1 = float(sys.argv[2])
     #cfg.SIGMA_DET_L1 = float(sys.argv[2])
     #cfg.MODEL.START_TRAIN_CONV_NODE_NAME = sys.argv[2]
     #cfg.MODEL.LAST_HIDDEN_NODE_NAME = sys.argv[3]
@@ -51,10 +51,10 @@ if __name__ == '__main__':
     for class_name in eval_results: print('AP for {:>15} = {:.4f}'.format(class_name, eval_results[class_name]))
     print('Mean AP = {:.4f}'.format(np.nanmean(list(eval_results.values()))))
 
-    #results_folder = os.path.join(cfg.OUTPUT_PATH, cfg["DATA"].DATASET)
-    #evaluator = FasterRCNN_Evaluator(trained_model, cfg)
-    #num_eval = min(cfg["DATA"].NUM_TEST_IMAGES, 100)
-    #save_data(evaluator, num_eval, results_folder, cfg)
+    results_folder = os.path.join(cfg.OUTPUT_PATH, cfg["DATA"].DATASET)
+    evaluator = FasterRCNN_Evaluator(trained_model, cfg)
+    num_eval = min(cfg["DATA"].NUM_TEST_IMAGES, 4000)
+    save_data(evaluator, num_eval, results_folder, cfg)
     # Plot results on test set images
     if cfg.VISUALIZE_RESULTS:
         num_eval = min(cfg["DATA"].NUM_TEST_IMAGES, 100)
