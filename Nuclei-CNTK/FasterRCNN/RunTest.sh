@@ -13,7 +13,7 @@ mail -s 'Starting'  peter.gronborg.7@gmail.com <<< "Start testrun"
 #time CUDA_VISIBLE_DEVICES=0 python3 run_faster_rcnn_VGG16.py Ref/Ref_1 > Output/Ref/Ref_1Out.txt 2> Output/Ref/Ref_1Err.txt &
 #time CUDA_VISIBLE_DEVICES=2 python3 run_faster_rcnn_VGG16.py Ref/Ref_2 > Output/Ref/Ref_2Out.txt 2> Output/Ref/Ref_2Err.txt &
 
-time CUDA_VISIBLE_DEVICES=3 python3 run_faster_rcnn_VGG16.py RefNew/Ref > Output/RefNew/Out/Ref.txt 2> Output/RefNew/Err/Ref.txt &
+time CUDA_VISIBLE_DEVICES=4 python3 run_faster_rcnn_VGG16.py RefNew/Ref > Output/RefNew/Out/Ref.txt 2> Output/RefNew/Err/Ref.txt &
 #time CUDA_VISIBLE_DEVICES=1 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center_01/0_1 0.1 > Output/SigmaCenter/Center_01/Out/0_1.txt 2> Output/SigmaCenter/Center_01/Err/0_1.txt &
 #time CUDA_VISIBLE_DEVICES=2 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center_01/1 1.0 > Output/SigmaCenter/Center_01/Out/1.txt 2> Output/SigmaCenter/Center_01/Err/1.txt &
 #time CUDA_VISIBLE_DEVICES=3 python3 run_faster_rcnn_VGG16.py SigmaCenter/Center_01/10 10.0 > Output/SigmaCenter/Center_01/Out/10.txt 2> Output/SigmaCenter/Center_01/Err/10.txt &
