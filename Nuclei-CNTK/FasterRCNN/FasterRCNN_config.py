@@ -61,7 +61,7 @@ __C.IMAGE_HEIGHT = 256
 
 # Sigma parameter for smooth L1 loss in the RPN and the detector (DET)
 __C.SIGMA_RPN_L1 = 3.0
-__C.SIGMA_DET_L1 = 1.0
+__C.SIGMA_DET_L1 = 100.0
 
 # Weight on the centers
 __C.WEIGHT_CENTER = 1.0
