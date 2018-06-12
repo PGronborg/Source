@@ -35,15 +35,16 @@ def save_data(evaluator, num_eval, results_base_path, cfg):
 
 			# apply regression and nms to bbox coordinates
 			regressed_rois = regress_rois(out_rpn_rois, out_bbox_regr, labels, dims)
+
 			nmsKeepIndices = apply_nms_to_single_image_results(regressed_rois, labels, scores,
 			                                                   use_gpu_nms=cfg.USE_GPU_NMS,
 			                                                   device_id=cfg.GPU_ID,
 			                                                   nms_threshold=cfg.RESULTS_NMS_THRESHOLD,
 			                                                   conf_threshold=cfg.RESULTS_NMS_CONF_THRESHOLD)
 
-			filtered_bboxes = regressed_rois[nmsKeepIndices]
-			filtered_labels = labels[nmsKeepIndices]
-			filtered_scores = scores[nmsKeepIndices]
+			filtered_bboxes = [nmsKeepIndices]
+			filtered_labels = [nmsKeepIndices]
+			filtered_scores = [nmsKeepIndices]
 
 			txtString = ""
 			for roiIndex in range(len(filtered_bboxes)):

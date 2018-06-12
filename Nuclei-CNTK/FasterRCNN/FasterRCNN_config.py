@@ -31,7 +31,7 @@ __C.CNTK.FAST_MODE = False
 __C.CNTK.DEBUG_OUTPUT = False
 __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 # Set to True if you want to store an eval model with native UDFs (e.g. for inference using C++ or C#)
-__C.STORE_EVAL_MODEL_WITH_NATIVE_UDF = False
+__C.STORE_EVAL_MODEL_WITH_NATIVE_UDF = True
 
 # Learning parameters
 __C.CNTK.L2_REG_WEIGHT = 0.00005
@@ -60,16 +60,16 @@ __C.IMAGE_WIDTH = 256
 __C.IMAGE_HEIGHT = 256
 
 # Sigma parameter for smooth L1 loss in the RPN and the detector (DET)
-__C.SIGMA_RPN_L1 = 3.0
+__C.SIGMA_RPN_L1 = 10.0
 __C.SIGMA_DET_L1 = 1.0
 
 # Weight on the centers
 __C.WEIGHT_CENTER = 1.0
 
 # NMS threshold used to discard overlapping predicted bounding boxes
-__C.RESULTS_NMS_THRESHOLD = 0.5
+__C.RESULTS_NMS_THRESHOLD = 0.35
 # all bounding boxes with a score lower than this threshold will be considered background
-__C.RESULTS_NMS_CONF_THRESHOLD = 0.0
+__C.RESULTS_NMS_CONF_THRESHOLD = 0.74
 
 # Enable plotting of results generally / also plot background boxes / also plot unregressed boxes
 __C.VISUALIZE_RESULTS = False
@@ -138,7 +138,7 @@ __C.TEST.RPN_NMS_THRESH = 0.7
 ## Number of top scoring boxes to keep before apply NMS to RPN proposals
 __C.TEST.RPN_PRE_NMS_TOP_N = 6000
 ## Number of top scoring boxes to keep after applying NMS to RPN proposals
-__C.TEST.RPN_POST_NMS_TOP_N = 300
+__C.TEST.RPN_POST_NMS_TOP_N = 600
 # Proposal height and width both need to be greater than RPN_MIN_SIZE (at orig image scale)
 __C.TEST.RPN_MIN_SIZE = 8
 

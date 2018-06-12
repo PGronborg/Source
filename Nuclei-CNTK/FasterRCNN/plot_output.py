@@ -46,7 +46,7 @@ plt.plot(count, val_loss, 'b-'),plt.text(np.percentile(count,70.0), 0.85,'-- Val
 plt.title('Training vs. validation')
 plt.xticks(count[0:-1:4])
 plt.xlabel('Epoch')
-#plt.ylabel('%')
+plt.ylabel('Loss')
 
 # Setting legend
 #plt.text(np.percentile(count,70.0), 90,'-- Training error',{'color': 'r','fontsize': 11})

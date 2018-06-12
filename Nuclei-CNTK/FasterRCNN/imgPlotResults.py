@@ -163,24 +163,28 @@ for i in range(int(len(roi)/5)):
     ind = int(i*5)
     if pltNum==1:
         cv2.rectangle(img,(round(float(roi[ind])),round(float(roi[ind+1]))),(round(float(roi[ind+2])),round(float(roi[ind+3]))),(0,255,0),1)
-    else:
+    elif pltNum ==2:
+        cv2.rectangle(img,(round(float(roi[ind])),round(float(roi[ind+1]))),(round(float(roi[ind+2])),round(float(roi[ind+3]))),(0,255,0),1)
         cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),3,(0,255,0),-1)
-    #if int(round(float(roi[ind+4]))) == 1:
-     #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(255,0,0),-1)
-    #else:
-     #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(0,255,0),-1)
+    else:
+        if int(round(float(roi[ind+4]))) == 1:
+            cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),3,(0,255,0),-1)
+        else:
+            cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),3,(0,0,255),-1)
 
 
 for i in range(int(len(roiEval)/6)):
     ind = int(i*6)
     if pltNum==1:
-        cv2.rectangle(img,(round(float(roiEval[ind])),round(float(roiEval[ind+1]))),(round(float(roiEval[ind+2])),round(float(roiEval[ind+3]))),(255,0,0),1)
+        cv2.rectangle(img,(round(float(roiEval[ind])),round(float(roiEval[ind+1]))),(round(float(roiEval[ind+2])),round(float(roiEval[ind+3]))),(0,0,255),1)
+    elif pltNum==2:
+        cv2.rectangle(img,(round(float(roiEval[ind])),round(float(roiEval[ind+1]))),(round(float(roiEval[ind+2])),round(float(roiEval[ind+3]))),(0,0,255),1)
+        cv2.circle(img,(int(round(np.mean((float(roiEval[ind]),float(roiEval[ind+2]))))),int(round(np.mean((float(roiEval[ind+1]),float(roiEval[ind+3])))))),2,(0,0,255),-1)
     else:
-        cv2.circle(img,(int(round(np.mean((float(roiEval[ind]),float(roiEval[ind+2]))))),int(round(np.mean((float(roiEval[ind+1]),float(roiEval[ind+3])))))),2,(255,0,0),-1)
-    #if int(round(float(roi[ind+4]))) == 1:
-     #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(255,0,0),-1)
-    #else:
-     #   cv2.circle(img,(int(round(np.mean((float(roi[ind]),float(roi[ind+2]))))),int(round(np.mean((float(roi[ind+1]),float(roi[ind+3])))))),2,(0,255,0),-1)
+        if int(round(float(roiEval[ind+4]))) == 1:
+            cv2.circle(img,(int(round(np.mean((float(roiEval[ind]),float(roiEval[ind+2]))))),int(round(np.mean((float(roiEval[ind+1]),float(roiEval[ind+3])))))),3,(0,255,0),-1)
+        else:
+            cv2.circle(img,(int(round(np.mean((float(roiEval[ind]),float(roiEval[ind+2]))))),int(round(np.mean((float(roiEval[ind+1]),float(roiEval[ind+3])))))),3,(0,0,255),-1)
 
 
 plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))

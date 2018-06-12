@@ -1,32 +1,21 @@
 Notes!!
-Loss for test image, virker ikke til at være muligt med trainer...........
-Efter train_minibatch, kan man få loss ud med previous_minibatch_loss_average
-Virker bare ikke efter test_minibatch.
-Kan løses med enten at gemme checkpoint, bruge train_minibatch og derefter kalde previous_minibatch_loss_average, hvorefter man kalder, restore_from_checkpoint og gør det hele igen.
-Eller man skal hive det hele ud og beregne det et andet sted..... Her vil man ende med at få mAP, kan det sammenlignes???
-Kan også løses ved at "nøjes" med pred_error.
-
-
 
 
 To-do!
 
 Skrive:
-Deep learning!
 Skrive generelt
 - ALLE de forskellige parametre
-Faster R-CNN
+RPN
+Fast R-CNN
 
 
-Plan:
-uge 16:
-Kør dobbelt eksperiment med Sigma RPN og center RPN.
-Kør eksperiment med Sigma Detektor
-Analyser resultater
-Start med eksperiment for L2 regu. weight evt momentum
-Skriv om Faster R-CNN i rapporten
-Uge 17:
-Forsæt med L2 regu. weight
-Lav Momentum per mb.
-Learning rate constant vs decreasing
-Begynd på at ændre hvilke lag som bliver taget med
+Start:
+16:55
+
+Slut:
+23:22
+
+Diff = 6 timer 27 minutter.... 23220 minutter
+Mean time = 5.805 sekuner/6 sekunder
+
