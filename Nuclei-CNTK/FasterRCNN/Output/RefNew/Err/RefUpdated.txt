@@ -1,0 +1,24 @@
+Selected GPU[0] GeForce GTX TITAN X as the process wide default device.
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Jan 31 2018 15:03:41
+		Last modified date: Tue Jan 30 03:26:13 2018
+		Build type: release
+		Build target: GPU
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		CUDA version: 9.0.0
+		CUDNN version: 7.0.3
+		Build Branch: HEAD
+		Build SHA1: a70455c7abe76596853f8e6a77a4d6de1e3ba76e
+		MPI distribution: Open MPI
+		MPI version: 1.10.7
+-------------------------------------------------------------------
+Traceback (most recent call last):
+  File "run_faster_rcnn_VGG16.py", line 57, in <module>
+    save_data(evaluator, num_eval, results_folder, cfg)
+  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/save_helpers.py", line 54, in save_data
+    if cfg.RESULTS_BGR_PLOT_THRESHOLD and score < cfg.RESULTS_BGR_PLOT_THRESHOLD:
+TypeError: unorderable types: list() < float()
