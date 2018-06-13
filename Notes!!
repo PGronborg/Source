@@ -19,3 +19,25 @@ Slut:
 Diff = 6 timer 27 minutter.... 23220 minutter
 Mean time = 5.805 sekuner/6 sekunder
 
+
+
+
+NMS = 50-60: Prec 0.2375, recall 0.2
+NMS = 40-50: Prec 0.3457, recall 0.2353
+NMS = 30-50: Prec 0.2853, recall 0.2308
+NMS = 20-30: Prec 0.225, recall 0.2333
+
+Thres = 30-40: Prec(3403) 0.0262, recall(487) 0.0526
+Thres = 40-50: Prec(1937) 0.058, recall(76) 0.0714
+Thres = 50-60: Prec(2747) 0.125, recall(3326) 0.1429
+Thres = 60-70: Prec(1466) 0.1714, recall(1937) 0.1667
+Thres = 70-80: Prec(2482) 0.2857, recall(3829) 0.2222
+Thres = 80-90: Prec(1205) 0.2595, recall(428) 0.4706
+
+
+NMSTP = 0.55-0.5: Prec , recall
+NMSTP = 0.5-0.45: Prec , recall
+NMSTP = 0.45-0.4: Prec , recall
+NMSTP = 0.4-0.35: Prec , recall
+NMSTP = 0.35-0.3: Prec , recall
+NMSTP = 0.3-0.25: Prec , recall
