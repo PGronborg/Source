@@ -16,9 +16,3 @@ Build info:
 		MPI distribution: Open MPI
 		MPI version: 1.10.7
 -------------------------------------------------------------------
-Traceback (most recent call last):
-  File "run_faster_rcnn_VGG16.py", line 57, in <module>
-    save_data(evaluator, num_eval, results_folder, cfg)
-  File "/home/s124262/Source/Nuclei-CNTK/FasterRCNN/../utils/save_helpers.py", line 54, in save_data
-    if cfg.RESULTS_BGR_PLOT_THRESHOLD and score < cfg.RESULTS_BGR_PLOT_THRESHOLD:
-TypeError: unorderable types: list() < float()
